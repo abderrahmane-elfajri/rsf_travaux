@@ -1,0 +1,7 @@
+# Robots.txt pour RSF Travaux (https://rsftravaux.ma)
+User-agent: *
+Allow: /
+
+# Directives pour les sitemaps
+Sitemap: https://rsftravaux.ma/sitemap.xml
+

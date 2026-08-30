@@ -198,10 +198,7 @@ html[data-theme="dark"] .brand-mark {
   text-transform: uppercase;
 }
 
-/* Navigation Links (Desktop & Laptop) */
-.nav-mobile-header {
-  display: none;
-}
+/* Navigation Links (Desktop) */
 .nav-menu-wrapper {
   display: flex;
   align-items: center;
@@ -216,10 +213,6 @@ html[data-theme="dark"] .brand-mark {
   margin: 0;
   align-items: center;
 }
-.nav-links li {
-  display: flex;
-  align-items: center;
-}
 .nav-links a {
   text-decoration: none;
   font-size: 14px;
@@ -231,17 +224,6 @@ html[data-theme="dark"] .brand-mark {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
-}
-.nav-links a .link-num {
-  display: none;
-}
-.nav-links a .link-title {
-  display: inline;
-  font-family: inherit;
-  font-size: inherit;
-  letter-spacing: inherit;
-  text-transform: none;
-  font-weight: inherit;
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a.active { color: var(--ink); font-weight: 600; }
@@ -256,37 +238,6 @@ html[data-theme="dark"] .brand-mark {
   border-radius: 2px;
 }
 .nav-mobile-bottom { display: none; }
-
-/* Laptop Specific Navigation Tuning (1081px - 1260px) */
-@media (min-width: 1081px) and (max-width: 1260px) {
-  .nav-inner {
-    padding: 12px 20px;
-    gap: 16px;
-  }
-  .nav-links {
-    gap: 16px;
-  }
-  .nav-links a {
-    font-size: 13px;
-    padding: 6px 2px;
-  }
-  .brand-name {
-    font-size: 15px;
-    letter-spacing: 0.12em;
-  }
-  .brand-sub {
-    font-size: 8px;
-    letter-spacing: 0.18em;
-  }
-  .nav-cta {
-    padding: 8px 14px;
-    font-size: 12px;
-  }
-  .theme-toggle {
-    width: 36px;
-    height: 36px;
-  }
-}
 
 /* Nav Actions */
 .nav-actions {

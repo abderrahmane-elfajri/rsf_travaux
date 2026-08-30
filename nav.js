@@ -20,7 +20,7 @@
         <div class="nav-menu-wrapper" id="nav-menu">
           <div class="nav-mobile-header">
             <span class="nav-mobile-eyebrow">RSF TRAVAUX · ARCHITECTURE &amp; RÉNOVATION</span>
-            <span class="nav-mobile-location">Casablanca &middot; Maroc</span>
+            <span class="nav-mobile-location">Casablanca · Dar Bouazza · Tamaris · Sidi Rahal</span>
           </div>
 
           <ul class="nav-links">
@@ -42,7 +42,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
                 +212 6 64 32 96 98
               </a>
-              <span class="nav-mobile-city">Garantie décennale &middot; Clé en main</span>
+              <span class="nav-mobile-city">21 ans d'expérience · Garantie décennale</span>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
             </div>
             <div class="display">RSF Travaux</div>
             <p class="footer-tagline">S.A.R.L. AU · Aménagement &amp; Rénovation</p>
-            <p class="footer-desc">Entreprise générale de bâtiment basée à Casablanca, intervenant partout au Maroc. Aménagement, rénovation, finition — livrés dans les délais avec garantie décennale.</p>
+            <p class="footer-desc">Entreprise générale de bâtiment forte de 21 ans d'expérience, basée à Casablanca, intervenant à Dar Bouazza, Tamaris, Sidi Rahal et partout au Maroc. Travaux clé en main avec garantie décennale.</p>
           </div>
           <div class="footer-col footer-col-nav">
             <h4>Navigation</h4>
@@ -95,6 +95,7 @@
           <div class="footer-col footer-col-services">
             <h4>Nos métiers</h4>
             <ul>
+              <li><a href="services.html">Vitrage accordéon &amp; pivotant</a></li>
               <li><a href="services.html">Aménagement intérieur</a></li>
               <li><a href="services.html">Rénovation complète</a></li>
               <li><a href="services.html">Peinture &amp; finitions</a></li>
@@ -102,7 +103,6 @@
               <li><a href="services.html">Plâtrerie &amp; staff</a></li>
               <li><a href="services.html">Étanchéité</a></li>
               <li><a href="services.html">Sols époxy</a></li>
-              <li><a href="services.html">Peintures décoratives</a></li>
             </ul>
           </div>
           <div class="footer-col footer-col-contact">
@@ -126,7 +126,7 @@
                   <span>WhatsApp direct</span>
                 </a>
               </li>
-              <li class="footer-city-tag">Casablanca — partout au Maroc</li>
+              <li class="footer-city-tag">Casablanca · Dar Bouazza · Tamaris · Sidi Rahal · Partout au Maroc</li>
             </ul>
           </div>
         </div>
@@ -177,33 +177,34 @@
     applyTheme(current === "dark" ? "light" : "dark");
   });
 
-  // Scrolled nav state — shrinks + adds shadow after 20px scroll
+  // Scrolled nav state — shrinks + adds shadow after 10px scroll
   function updateNavScrollState() {
     const nav = document.querySelector(".nav");
     if (!nav) return;
-    if (window.scrollY > 20) nav.classList.add("nav-scrolled");
+    if (window.scrollY > 10) nav.classList.add("nav-scrolled");
     else nav.classList.remove("nav-scrolled");
   }
   window.addEventListener("scroll", updateNavScrollState, { passive: true });
   updateNavScrollState();
 
   // Mobile menu management
-  const navEl = document.querySelector(".nav");
-  const navToggleBtn = document.querySelector(".nav-toggle");
-
   function setMobileMenu(isOpen) {
-    if (!navEl) return;
-    navEl.classList.toggle("nav-open", isOpen);
-    if (navToggleBtn) {
-      navToggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    const nav = document.querySelector(".nav");
+    const toggleBtn = document.querySelector(".nav-toggle");
+    if (!nav) return;
+    nav.classList.toggle("nav-open", isOpen);
+    if (toggleBtn) {
+      toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     }
-    document.body.classList.toggle("nav-locked", isOpen);
   }
 
   document.addEventListener("click", (e) => {
+    const nav = document.querySelector(".nav");
+    if (!nav) return;
+
     // Toggle button clicked
     if (e.target.closest(".nav-toggle")) {
-      const willOpen = !navEl.classList.contains("nav-open");
+      const willOpen = !nav.classList.contains("nav-open");
       setMobileMenu(willOpen);
       return;
     }
@@ -215,22 +216,25 @@
     }
 
     // Nav link or mobile CTA clicked
-    if (e.target.closest(".nav-links a") || e.target.closest(".nav-mobile-wa")) {
+    if (e.target.closest(".nav-links a") || e.target.closest(".nav-mobile-cta") || e.target.closest(".nav-mobile-tel")) {
       setMobileMenu(false);
     }
   });
 
   // Close on Escape key
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && navEl && navEl.classList.contains("nav-open")) {
+    const nav = document.querySelector(".nav");
+    if (e.key === "Escape" && nav && nav.classList.contains("nav-open")) {
       setMobileMenu(false);
     }
   });
 
   // Close when viewport is resized to desktop
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1080 && navEl && navEl.classList.contains("nav-open")) {
+    const nav = document.querySelector(".nav");
+    if (window.innerWidth > 1080 && nav && nav.classList.contains("nav-open")) {
       setMobileMenu(false);
     }
   }, { passive: true });
 })();
+

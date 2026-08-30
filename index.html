@@ -77,6 +77,9 @@
     ],
     "areaServed": [
       { "@type": "City", "name": "Casablanca" },
+      { "@type": "City", "name": "Dar Bouazza" },
+      { "@type": "City", "name": "Tamaris" },
+      { "@type": "City", "name": "Sidi Rahal" },
       { "@type": "City", "name": "Rabat" },
       { "@type": "City", "name": "Marrakech" },
       { "@type": "City", "name": "Tanger" },
@@ -92,7 +95,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="styles.css?v=27">
   <script>
     // Editable defaults — bound to the Tweaks panel.
     const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -116,19 +119,20 @@
   <div id="nav-slot"></div>
 
   <main>
-    <!-- HERO -->
-    <section class="hero-v2">
+    <!-- HERO WITH LUXURY BACKGROUND IMAGE -->
+    <section class="hero-v2 hero-bg-layout">
+      <div class="hero-bg-overlay"></div>
       <div class="wrap-wide hero-v2-inner">
 
         <div class="hero-v2-copy">
-          <span class="eyebrow">RSF Travaux S.A.R.L. AU · Casablanca</span>
+          <span class="eyebrow">RSF Travaux S.A.R.L. AU · Casablanca </span>
 
           <h1 class="hero-v2-title" data-hero-headline>
             Bâtir des espaces<br>qui vous <em>ressemblent</em>.
           </h1>
 
           <p class="hero-v2-lead">
-            De l'appartement casablancais à la villa de Marrakech, quatorze métiers réunis sous un même toit — clé en main, garantie décennale.
+            21 ans de savoir-faire d'excellence en aménagement et rénovation de standing. De Casablanca à Marrakech, quatorze métiers d'exception réunis sous un même toit — clé en main, garantie décennale.
           </p>
 
           <div class="hero-v2-ctas">
@@ -144,26 +148,16 @@
 
           <div class="hero-v2-facts">
             <div class="fact">
+              <span class="fact-n">21<em>ans</em></span>
+              <span class="fact-l">D'expérience</span>
+            </div>
+            <div class="fact">
               <span class="fact-n">100<em>+</em></span>
               <span class="fact-l">Projets livrés</span>
             </div>
             <div class="fact">
-              <span class="fact-n">14</span>
-              <span class="fact-l">Métiers</span>
-            </div>
-            <div class="fact">
               <span class="fact-n">10<em>ans</em></span>
               <span class="fact-l">Garantie décennale</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-v2-media">
-          <div class="hero-v2-photo">
-            <img src="assets/hero-living.jpg" alt="Salon marocain moderne aménagé par RSF Travaux">
-            <div class="hero-v2-caption">
-              <span class="dot"></span>
-              Villa Bouskoura · 2025
             </div>
           </div>
         </div>
@@ -174,6 +168,7 @@
     <!-- MARQUEE -->
     <div class="marquee">
       <div class="marquee-track">
+        <span class="marquee-item">Vitrage Accordéon</span>
         <span class="marquee-item">Aménagement</span>
         <span class="marquee-item">Rénovation</span>
         <span class="marquee-item">Finition</span>
@@ -182,6 +177,7 @@
         <span class="marquee-item">Plâtrerie</span>
         <span class="marquee-item">Étanchéité</span>
         <span class="marquee-item">Sols Époxy</span>
+        <span class="marquee-item">Vitrage Accordéon</span>
         <span class="marquee-item">Aménagement</span>
         <span class="marquee-item">Rénovation</span>
         <span class="marquee-item">Finition</span>
@@ -201,53 +197,58 @@
             <span class="eyebrow">Ce que nous faisons</span>
             <h2 style="margin-top: 24px;">Un seul interlocuteur, tous les corps de métier.</h2>
           </div>
-          <p>Neuf expertises réunies sous un même toit : de la première esquisse au dernier coup de peinture, votre projet n'a qu'une seule adresse.</p>
+          <p>Dix expertises réunies sous un même toit : de la première esquisse au dernier coup de peinture, votre projet n'a qu'une seule adresse.</p>
         </div>
       </div>
       <div class="wrap-wide">
         <div class="services-grid">
           <article class="service">
             <span class="service-num">01</span>
+            <h3>Système de vitrage accordéon coulissant &amp; pivotant</h3>
+            <p>Rideaux de verre panoramiques sans montants verticaux pour terrasses, balcons, pergolas bioclimatiques et vérandas.</p>
+          </article>
+          <article class="service">
+            <span class="service-num">02</span>
             <h3>Aménagement intérieur</h3>
             <p>Optimisation spatiale sur mesure pour espaces résidentiels et professionnels. Plans cotés et rendus 3D.</p>
           </article>
           <article class="service">
-            <span class="service-num">02</span>
+            <span class="service-num">03</span>
             <h3>Rénovation complète</h3>
             <p>Refonte structurelle clé en main — démolition, maçonnerie, plomberie, électricité. Un seul contrat.</p>
           </article>
           <article class="service">
-            <span class="service-num">03</span>
+            <span class="service-num">04</span>
             <h3>Travaux de finition</h3>
             <p>Détail haute précision, angles parfaits, contrôles rigoureux à chaque étape. Rien ne dépasse.</p>
           </article>
           <article class="service">
-            <span class="service-num">04</span>
+            <span class="service-num">05</span>
             <h3>Revêtements &amp; marbre</h3>
             <p>Pose de grands formats, marbre, parquet, céramique de luxe. Coupe sur mesure, joints millimétrés.</p>
           </article>
           <article class="service">
-            <span class="service-num">05</span>
+            <span class="service-num">06</span>
             <h3>Peinture intérieure &amp; extérieure</h3>
             <p>Applications lavables, mates, satinées, brillantes. Façades anti-UV et anti-humidité pour le climat marocain.</p>
           </article>
           <article class="service">
-            <span class="service-num">06</span>
+            <span class="service-num">07</span>
             <h3>Plâtrerie &amp; BA13</h3>
             <p>Cloisons, isolation phonique, faux plafonds modernes avec gorges LED intégrées. Ambiance lumineuse maîtrisée.</p>
           </article>
           <article class="service">
-            <span class="service-num">07</span>
+            <span class="service-num">08</span>
             <h3>Étanchéité</h3>
             <p>Protection anti-eau pour terrasses, toitures, balcons et pièces humides. Membranes, résines, protection décennale.</p>
           </article>
           <article class="service">
-            <span class="service-num">08</span>
+            <span class="service-num">09</span>
             <h3>Peintures décoratives</h3>
             <p>Stucco vénitien, Ambra, Khayal, effet travertin, effet pasta. Chaque mur devient une pièce unique.</p>
           </article>
           <article class="service">
-            <span class="service-num">09</span>
+            <span class="service-num">10</span>
             <h3>Sols époxy &amp; moulures PVC</h3>
             <p>Résine autolissante pour garages, showrooms, cuisines pro. Moulures PVC hydrofuges pour ornements durables.</p>
           </article>
@@ -260,7 +261,7 @@
       <div class="wrap-wide">
         <div class="numbers-grid">
           <div>
-            <span class="stat-num">2</span>
+            <span class="stat-num">21</span>
             <span class="stat-label">Années d'expérience</span>
           </div>
           <div>
@@ -268,7 +269,7 @@
             <span class="stat-label">Projets livrés</span>
           </div>
           <div>
-            <span class="stat-num">8</span>
+            <span class="stat-num">10</span>
             <span class="stat-label">Métiers en interne</span>
           </div>
           <div>

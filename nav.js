@@ -193,10 +193,12 @@
     const toggleBtn = document.querySelector(".nav-toggle");
     if (!nav) return;
     nav.classList.toggle("nav-open", isOpen);
+    document.body.classList.toggle("nav-locked", isOpen);
     if (toggleBtn) {
       toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     }
   }
+
 
   document.addEventListener("click", (e) => {
     const nav = document.querySelector(".nav");

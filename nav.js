@@ -79,7 +79,7 @@
             </div>
             <div class="display">RSF Travaux</div>
             <p class="footer-tagline">S.A.R.L. AU · Aménagement &amp; Rénovation</p>
-            <p class="footer-desc">Entreprise générale de bâtiment forte de 21 ans d'expérience. Zones d'intervention : Casablanca, Dar Bouazza, Tamaris, Sidi Rahal et partout au Maroc. Travaux clé en main avec garantie décennale.</p>
+            <p class="footer-desc">Entreprise générale de bâtiment forte de 21 ans d'expérience. Casablanca et partout au Maroc. Travaux clé en main avec garantie décennale.</p>
           </div>
           <div class="footer-col footer-col-nav">
             <h4>Navigation</h4>
@@ -126,7 +126,7 @@
                   <span>WhatsApp direct</span>
                 </a>
               </li>
-              <li class="footer-city-tag"><strong>Zones d'intervention :</strong> Casablanca · Dar Bouazza · Tamaris · Sidi Rahal · Partout au Maroc</li>
+              <li class="footer-city-tag">Casablanca et partout au Maroc</li>
             </ul>
           </div>
         </div>

@@ -1240,6 +1240,7 @@ html[data-theme="dark"] .hero-bg-overlay {
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.03em;
+  cursor: pointer;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.2s ease;
 }
 .floating-whatsapp:hover {
@@ -1247,6 +1248,10 @@ html[data-theme="dark"] .hero-bg-overlay {
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 12px 36px rgba(37, 211, 102, 0.6);
   color: #ffffff !important;
+}
+.floating-whatsapp:active {
+  transform: translateY(0) scale(0.96);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
 }
 .floating-wa-pulse {
   position: absolute;

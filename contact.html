@@ -81,7 +81,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=35">
+  <link rel="stylesheet" href="styles.css?v=36">
 </head>
 <body data-page="contact">
 
@@ -128,7 +128,7 @@
             <span class="value">Lundi – Vendredi · 9h – 18h<br>Samedi · 9h – 13h<br>Visites de chantier sur rendez-vous</span>
           </div>
 
-          <a class="whatsapp-big" href="https://wa.me/212664329698" target="_blank" rel="noopener">
+          <a class="whatsapp-big" href="https://wa.me/212664329698?text=Bonjour%20RSF%20Travaux%2C%20je%20souhaite%20planifier%20un%20%C3%A9change%20pour%20mon%20projet%20de%20r%C3%A9novation." target="_blank" rel="noopener">
             <div>
               <h4>Discuter sur WhatsApp</h4>
               <span>Réponse en moins de 4 heures</span>
@@ -143,72 +143,83 @@
           <form class="contact-form" id="rsf-contact-form" novalidate>
             <div class="field-row">
               <div class="field">
-                <label>Nom complet</label>
+                <label>Nom complet *</label>
                 <input type="text" name="name" placeholder="Fatima El Amrani" required/>
               </div>
               <div class="field">
-                <label>Téléphone</label>
+                <label>Téléphone WhatsApp *</label>
                 <input type="tel" name="phone" placeholder="+212 6 …" required/>
               </div>
             </div>
             <div class="field">
-              <label>Email</label>
+              <label>Email *</label>
               <input type="email" name="email" placeholder="vous@exemple.com" required/>
             </div>
             <div class="field-row">
               <div class="field">
                 <label>Type de bien</label>
-                <select name="type" required>
+                <select name="property_type">
                   <option value="">Choisir…</option>
-                  <option>Système de vitrage accordéon coulissant &amp; pivotant</option>
-                  <option>Aménagement intérieur</option>
-                  <option>Aménagement extérieur</option>
-                  <option>Rénovation complète</option>
-                  <option>Travaux de finition</option>
-                  <option>Peinture intérieure</option>
-                  <option>Peinture extérieure &amp; façades</option>
-                  <option>Revêtements &amp; marbre</option>
-                  <option>Plâtrerie &amp; staff</option>
-                  <option>Étanchéité</option>
-                  <option>Moulure PVC</option>
-                  <option>Peinture décorative (Stucco, Ambra, Khayal)</option>
-                  <option>Effet Travertin</option>
-                  <option>Effet Pasta</option>
-                  <option>Sols époxy</option>
-                  <option>Autre</option>
+                  <option>Villa / Maison de standing</option>
+                  <option>Appartement / Duplex</option>
+                  <option>Espace professionnel / Bureau</option>
+                  <option>Riad / Demeure de charme</option>
+                  <option>Showroom / Commerce</option>
+                  <option>Autre bien</option>
                 </select>
               </div>
               <div class="field">
-                <label>Surface (m²)</label>
-                <input type="text" name="surface" placeholder="Ex. 145" inputmode="numeric"/>
+                <label>Prestation principale *</label>
+                <select name="type" required>
+                  <option value="">Sélectionner…</option>
+                  <option>Rénovation complète clé en main</option>
+                  <option>Aménagement intérieur</option>
+                  <option>Système de vitrage accordéon coulissant &amp; pivotant</option>
+                  <option>Peinture intérieure de standing</option>
+                  <option>Peinture extérieure &amp; façades</option>
+                  <option>Peinture décorative (Stucco, Ambra, Khayal)</option>
+                  <option>Effet Travertin / Effet Pasta</option>
+                  <option>Revêtements, carrelage grand format &amp; marbre</option>
+                  <option>Plâtrerie, faux plafonds &amp; gorges LED</option>
+                  <option>Étanchéité toitures &amp; terrasses</option>
+                  <option>Sols résine époxy</option>
+                  <option>Moulures PVC &amp; finitions</option>
+                  <option>Autre intervention</option>
+                </select>
               </div>
             </div>
             <div class="field-row">
               <div class="field">
-                <label>Ville</label>
-                <input type="text" name="city" placeholder="Casablanca"/>
+                <label>Surface approximative (m²)</label>
+                <input type="text" name="surface" placeholder="Ex. 180" inputmode="numeric"/>
               </div>
+              <div class="field">
+                <label>Ville du chantier</label>
+                <input type="text" name="city" placeholder="Casablanca, Rabat, Marrakech…"/>
+              </div>
+            </div>
+            <div class="field-row">
               <div class="field">
                 <label>Budget prévisionnel</label>
                 <select name="budget">
                   <option>À définir</option>
-                  <option>Moin de 250k MAD</option>
-                  <option>250 K – 500 K MAD</option>
-                  <option>500 K – 1 M MAD</option>
-                  <option>1 M – 3 M MAD</option>
-                  <option>Plus de 3 M MAD</option>
+                  <option>Moins de 250 000 MAD</option>
+                  <option>250 000 – 500 000 MAD</option>
+                  <option>500 000 – 1 000 000 MAD</option>
+                  <option>1 000 000 – 3 000 000 MAD</option>
+                  <option>Plus de 3 000 000 MAD</option>
                 </select>
               </div>
-            </div>
-            <div class="field">
-              <label>Délai de démarrage souhaité</label>
-              <select name="delay">
-                <option>À définir</option>
-                <option>Immédiat (dans le mois)</option>
-                <option>Dans 1 à 3 mois</option>
-                <option>Dans 3 à 6 mois</option>
-                <option>Plus de 6 mois</option>
-              </select>
+              <div class="field">
+                <label>Délai de démarrage souhaité</label>
+                <select name="delay">
+                  <option>À définir</option>
+                  <option>Immédiat (dans le mois)</option>
+                  <option>Dans 1 à 3 mois</option>
+                  <option>Dans 3 à 6 mois</option>
+                  <option>Plus de 6 mois</option>
+                </select>
+              </div>
             </div>
             <div class="field">
               <label>Décrivez votre projet</label>
@@ -289,7 +300,7 @@
                 phone: form.elements["phone"].value.trim(),
                 email: form.elements["email"].value.trim(),
                 city: form.elements["city"].value.trim(),
-                type: form.elements["type"].value,
+                type: (form.elements["property_type"] && form.elements["property_type"].value ? "[" + form.elements["property_type"].value + "] " : "") + form.elements["type"].value,
                 surface: form.elements["surface"].value.trim(),
                 budget: form.elements["budget"].value,
                 delay: form.elements["delay"].value,
@@ -354,7 +365,7 @@
     <span class="floating-wa-text">Discuter</span>
   </a>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="nav.js?v=35"></script>
-  <script src="tweaks.js?v=35"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="nav.js?v=36"></script>
+  <script src="tweaks.js?v=36"></script>
 </body>
 </html>

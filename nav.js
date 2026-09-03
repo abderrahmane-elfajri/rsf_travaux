@@ -9,7 +9,7 @@
       <div class="nav-inner">
         <a class="brand" href="index.html" aria-label="RSF Travaux - Page d'accueil">
           <span class="brand-mark">
-            <img src="assets/rsf-logo.png" alt="RSF Travaux" width="44" height="44">
+            <img src="assets/rsf-logo.webp" alt="RSF Travaux" width="44" height="44">
           </span>
           <span class="brand-text">
             <span class="brand-name">RSF Travaux</span>
@@ -33,7 +33,7 @@
           </ul>
 
           <div class="nav-mobile-bottom">
-            <a class="btn btn-primary nav-mobile-cta" href="https://wa.me/212664329698" target="_blank" rel="noopener">
+            <a class="btn btn-primary nav-mobile-cta" href="https://wa.me/212664329698?text=Bonjour%20RSF%20Travaux%2C%20je%20souhaite%20un%20renseignement%20pour%20un%20projet%20de%20r%C3%A9novation." target="_blank" rel="noopener">
               ${WA_ICON}
               <span>Discuter sur WhatsApp</span>
             </a>
@@ -75,7 +75,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-brand-mark">
-              <img src="assets/rsf-logo.png" alt="RSF Travaux Logo" width="56" height="56">
+              <img src="assets/rsf-logo.webp" alt="RSF Travaux Logo" width="56" height="56">
             </div>
             <div class="display">RSF Travaux</div>
             <p class="footer-tagline">S.A.R.L. AU · Aménagement &amp; Rénovation</p>

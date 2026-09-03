@@ -5,7 +5,7 @@
     primaryColor: "#c59b27",
     fontPairing: "architectural",
     theme: "light",
-    heroHeadline: "Bâtir des espaces qui vous ressemblent."
+    heroHeadline: "Nous transformons votre bâtiment en un espace moderne qui vous *ressemble*."
   };
 
   // Load from localStorage first (survives across pages)

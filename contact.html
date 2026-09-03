@@ -24,7 +24,7 @@
   <meta property="og:url" content="https://rsftravaux.ma/contact.html"/>
   <meta property="og:title" content="Contact & Devis Gratuit | RSF Travaux Casablanca"/>
   <meta property="og:description" content="Demandez votre devis gratuit en ligne ou contactez nos experts sur WhatsApp pour vos travaux de rénovation et aménagement au Maroc."/>
-  <meta property="og:image" content="https://rsftravaux.ma/assets/hero-living.jpg"/>
+  <meta property="og:image" content="https://rsftravaux.ma/assets/hero-living.webp"/>
   <meta property="og:locale" content="fr_MA"/>
 
   <!-- Twitter Card -->
@@ -32,7 +32,7 @@
   <meta name="twitter:url" content="https://rsftravaux.ma/contact.html"/>
   <meta name="twitter:title" content="Contact & Devis Gratuit | RSF Travaux Casablanca"/>
   <meta name="twitter:description" content="Demandez votre devis gratuit en ligne ou contactez nos experts sur WhatsApp pour vos travaux de rénovation et aménagement au Maroc."/>
-  <meta name="twitter:image" content="https://rsftravaux.ma/assets/hero-living.jpg"/>
+  <meta name="twitter:image" content="https://rsftravaux.ma/assets/hero-living.webp"/>
 
   <!-- JSON-LD Structured Data: BreadcrumbList & ContactPage -->
   <script type="application/ld+json">
@@ -113,7 +113,7 @@
           </div>
           <div class="row">
             <span class="label">Email</span>
-            <span class="value"><a href="/cdn-cgi/l/email-protection#9fedecf9ebedfee9feeae7b9bca9aba4f8f2fef6f3b1fcf0f2" class="rsf-email" data-email="rsftravaux@gmail.com">rsftravaux&#64;gmail&#46;com</a></span>
+            <span class="value"><a href="mailto:rsftravaux@gmail.com" class="rsf-email">rsftravaux@gmail.com</a></span>
           </div>
           <div class="row">
             <span class="label">Siège social</span>
@@ -236,7 +236,7 @@
             </div>
           </form>
 
-          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+          <script>
           (function () {
             const ENDPOINT = "https://script.google.com/macros/s/AKfycbwe_xFXnYF3QXcimKpu72_d18GEueZbEWB16mpo3kE6_V2jUrKEJezF6nCLGTEHIUT0/exec";
             const form = document.getElementById("rsf-contact-form");
@@ -295,12 +295,20 @@
                 }
               }
 
+              const propType = form.elements["property_type"] ? form.elements["property_type"].value : "";
+              const serviceType = form.elements["type"] ? form.elements["type"].value : "";
+              const combinedType = propType && serviceType
+                ? propType + " — " + serviceType
+                : (propType || serviceType);
+
               const payload = {
                 name: form.elements["name"].value.trim(),
                 phone: form.elements["phone"].value.trim(),
                 email: form.elements["email"].value.trim(),
                 city: form.elements["city"].value.trim(),
-                type: (form.elements["property_type"] && form.elements["property_type"].value ? "[" + form.elements["property_type"].value + "] " : "") + form.elements["type"].value,
+                property_type: propType,
+                service: serviceType,
+                type: combinedType,
                 surface: form.elements["surface"].value.trim(),
                 budget: form.elements["budget"].value,
                 delay: form.elements["delay"].value,
@@ -365,7 +373,7 @@
     <span class="floating-wa-text">Discuter</span>
   </a>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="nav.js?v=36"></script>
+  <script src="nav.js?v=36"></script>
   <script src="tweaks.js?v=36"></script>
 </body>
 </html>

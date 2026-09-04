@@ -151,7 +151,7 @@
   if (!document.querySelector(".floating-whatsapp")) {
     const floatBtn = document.createElement("a");
     floatBtn.className = "floating-whatsapp";
-    floatBtn.href = "https://wa.me/212664329698";
+    floatBtn.href = "https://wa.me/212664329698?text=Bonjour%20RSF%20Travaux%2C%20je%20souhaite%20un%20renseignement%20pour%20un%20projet%20de%20r%C3%A9novation.";
     floatBtn.target = "_blank";
     floatBtn.rel = "noopener";
     floatBtn.setAttribute("aria-label", "Discuter sur WhatsApp avec RSF Travaux");

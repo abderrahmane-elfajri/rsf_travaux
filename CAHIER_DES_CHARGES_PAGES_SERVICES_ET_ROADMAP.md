@@ -273,3 +273,4 @@ Pour déployer ces pages sans dispersion, la méthode recommandée est un **dép
 
 ### 💡 CONCLUSION :
 Ce cahier des charges constitue la **feuille de route complète**. Dès validation, nous pouvons générer les pages de services dédiées en injectant le gabarit optimisé, les visuels haute définition et les formulaires pré-remplis.
+

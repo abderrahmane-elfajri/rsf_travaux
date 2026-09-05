@@ -97,3 +97,4 @@ Pour enrichir davantage votre écosystème commercial, vous pouvez fournir (quan
 | **Antigravity (Agent)** | Créer les 18 pages HTML dédiées avec le système de cartes et CTA | 🚀 Prêt à exécuter |
 | **Antigravity (Agent)** | Relier les 18 pages au hub `services.html` et au menu de navigation | 🚀 Prêt à exécuter |
 | **Antigravity (Agent)** | Inscrire les 18 nouvelles URLs dans `sitemap.xml` pour Google | 🚀 Prêt à exécuter |
+

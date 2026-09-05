@@ -335,6 +335,7 @@
                 );
                 form.reset();
               } catch (err) {
+                console.error("Erreur lors de l'envoi du formulaire:", err);
                 setStatus("error",
                   "Impossible d'envoyer le formulaire",
                   "Une erreur temporaire est survenue. Vous pouvez nous écrire directement sur WhatsApp ou par email.",

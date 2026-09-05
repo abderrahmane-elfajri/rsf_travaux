@@ -1,390 +1,560 @@
-# 📑 CAHIER DES CHARGES & ROADMAP TECHNIQUE — PAGES DE SERVICES & EXPERTISES RSF TRAVAUX
+# 📑 CAHIER DES CHARGES MAÎTRE & SPÉCIFICATIONS UI/UX & SEO — RSF TRAVAUX
 
 > **Entreprise** : RSF Travaux S.A.R.L. AU (`https://rsftravaux.ma`)  
-> **Auteur** : Lead UI/UX Architect, Senior SEO & Conversion Copywriter  
-> **Source des contenus** : Fiches techniques & savoir-faire officiels RSF Travaux (Septembre 2026)  
-> **Objectif** : Architecture détaillée, spécifications sémantiques, copywords exacts et gabarits UI/UX pour chaque page de service dédiée.
+> **Auteur** : Lead UI/UX Designer, Senior Full-Stack & Technical SEO Strategist  
+> **Date de mise à jour** : Septembre 2026  
+> **Statut** : Document Maître Validé — Conception UI/UX par Cartes de Types, Grand CTA Final & Architecture SEO 10/10.
 
 ---
 
 ## 🧭 TABLE DES MATIÈRES
-1. [Architecture Globale & Stratégie de Conversion](#1-architecture-globale--stratégie-de-conversion)
-2. [Gabarit Standard d'une Page de Service (UI/UX Pattern)](#2-gabarit-standard-dune-page-de-service-uiux-pattern)
-3. [Spécifications Complètes par Service (18 Pôles d'Expertise)](#3-spécifications-complètes-par-service-18-pôles-dexpertise)
-   - [01. Menuiserie Aluminium & Vitrage Accordéon](#01-menuiserie-aluminium--vitrage-accordéon)
-   - [02. Aménagement Immobilier Intérieur](#02-aménagement-immobilier-intérieur)
-   - [03. Aménagement Immobilier Extérieur](#03-aménagement-immobilier-extérieur)
-   - [04. Rénovation Complète Clé en Main](#04-rénovation-complète-clé-en-main)
-   - [05. Aménagement de Cuisine sur Mesure](#05-aménagement-de-cuisine-sur-mesure)
-   - [06. Peinture Intérieure](#06-peinture-intérieure)
-   - [07. Peintures Décoratives Intérieures](#07-peintures-décoratives-intérieures)
-   - [08. Peinture Extérieure & Finitions de Façades](#08-peinture-extérieure--finitions-de-façades)
-   - [09. Peinture Pasta Espagnole (Revêtement Façade)](#09-peinture-pasta-espagnole-revêtement-façade)
-   - [10. Revêtement Effet Travertin (Pierre Naturelle)](#10-revêtement-effet-travertin-pierre-naturelle)
-   - [11. Bardage & Habillage de Façades](#11-bardage--habillage-de-façades)
-   - [12. Sols en Résine Époxy](#12-sols-en-résine-époxy)
-   - [13. Travaux de Revêtements (Sols & Murs)](#13-travaux-de-revêtements-sols--murs)
-   - [14. Plâtrerie & Faux Plafonds (Staff & Armstrong)](#14-plâtrerie--faux-plafonds-staff--armstrong)
-   - [15. Étanchéité Toitures, Terrasses & Pièces Humides](#15-étanchéité-toitures-terrasses--pièces-humides)
-   - [16. Moulures PVC pour Fenêtres & Finitions](#16-moulures-pvc-pour-fenêtres--finitions)
-   - [17. Travaux de Finition Haute Précision](#17-travaux-de-finition-haute-précision)
-   - [18. Travaux Divers & Maintenance / Réparations](#18-travaux-divers--maintenance--réparations)
-4. [Plan de Maillage & Déploiement Progressif](#4-plan-de-maillage--déploiement-progressif)
+1. [Conception UI/UX & Gabarit Standard des Pages de Services](#1-conception-uiux--gabarit-standard-des-pages-de-services)
+2. [Spécifications Détaillées des 18 Services (Contenus, Visuels & Cartes de Types)](#2-spécifications-détaillées-des-18-services-contenus-visuels--cartes-de-types)
+3. [Architecture SEO d'Élite : Pour un Référencement Parfait à 100%](#3-architecture-seo-délite--pour-un-référencement-parfait-à-100)
+   - *3.1. Balises Métas (Title, Description, Canonical, OpenGraph, Geo-Tags)*
+   - *3.2. Données Structurées Schema.org JSON-LD (Service, FAQPage, Breadcrumb)*
+   - *3.3. Hiérarchie Sémantique des Titres (Hn)*
+   - *3.4. SEO des Images & Core Web Vitals (LCP, CLS, FID/INP)*
+   - *3.5. Maillage Interne en Silos & Cocoon Sémantique*
+   - *3.6. Protocole Sitemap XML avec Namespace Google Images*
+4. [Le Grand Call-To-Action Final de Conception (Composant Réutilisable)](#4-le-grand-call-to-action-final-de-conception-composant-réutilisable)
+5. [Plan de Déploiement & Ordre des Vagues](#5-plan-de-déploiement--ordre-des-vagues)
 
 ---
 
-## 1. ARCHITECTURE GLOBALE & STRATÉGIE DE CONVERSION
+## 1. CONCEPTION UI/UX & GABARIT STANDARD DES PAGES DE SERVICES
 
-L'ensemble des expertises de **RSF Travaux** est structuré pour répondre aux exigences techniques des particuliers (villas, appartements, duplex) et des professionnels (immeubles, bureaux, commerces, cliniques, showrooms) à Casablanca et partout au Maroc.
-
-Chaque page de service dédiée répond à 3 impératifs :
-1. **Autorité & Vocabulaire Métier Réel** : Utiliser la terminologie exacte des artisans qualifiés (enduit monocouche, granulométrie GR, verre trempé sécurit 10mm, dalles Armstrong, résine polyuréthane SEL, etc.).
-2. **SEO Local Transactionnel** : Positionner RSF Travaux en 1ère place sur Google Maroc sur des requêtes précises à fort pouvoir d'achat.
-3. **Conversion Directe** : Chaque page intègre un formulaire pré-rempli et un bouton WhatsApp contextualisé (*« Bonjour RSF Travaux, je souhaite un devis pour votre prestation de... »*).
-
----
-
-## 2. GABARIT STANDARD D'UNE PAGE DE SERVICE (UI/UX PATTERN)
-
-Chaque page conserve l'identité visuelle haut de gamme (Bleu nuit `#0b132b`, Or architectural `#c59b27`, typographies `Cinzel` et `Plus Jakarta Sans`) selon le gabarit suivant :
+Chaque page de service dédiée respecte une **architecture narrative et visuelle rigoureuse**, conçue pour maximiser l'autorité technique et le taux de conversion selon la formule demandée :
 
 ```
-┌────────────────────────────────────────────────────────────────────────┐
-│ 1. HERO SECTION DÉDIÉE                                                 │
-│    - Fil d'Ariane SEO : Accueil > Services > [Nom de la prestation]    │
-│    - Eyebrow : Pôle d'expertise technique RSF Travaux                  │
-│    - H1 Ultra-Ciblé SEO (ex: "Peinture Pasta Espagnole à Casablanca")   │
-│    - Synthèse de valeur & double CTA : WhatsApp Direct + Devis en Ligne│
-├────────────────────────────────────────────────────────────────────────┤
-│ 2. PANORAMA DU SERVICE & AVANTAGES CLÉS                                │
-│    - Pourquoi choisir cette solution (esthétique, protection, durabilité)│
-│    - Badges caractéristiques (ex: Résistance UV, 100% Étanche, Sur mesure)│
-├────────────────────────────────────────────────────────────────────────┤
-│ 3. NOS PRESTATIONS DÉTAILLÉES (LISTE EXHAUSTIVE)                       │
-│    - Découpage par techniques, finitions et variantes de mise en œuvre │
-├────────────────────────────────────────────────────────────────────────┤
-│ 4. PROCESSUS DE RÉALISATION EN 4 ÉTAPES (LA MÉTHODE RSF)               │
-│    - 1. Diagnostic & préparation du support (nettoyage, ponçage...)    │
-│    - 2. Application technique (manuelle ou mécanique)                  │
-│    - 3. Façonnage des textures & effets décoratifs                     │
-│    - 4. Contrôle qualité rigoureux & livraison                         │
-├────────────────────────────────────────────────────────────────────────┤
-│ 5. POUR QUELS ESPACES & BÂTIMENTS ?                                    │
-│    - Résidentiel (Villas, appartements) vs Professionnel (Bureaux...)  │
-├────────────────────────────────────────────────────────────────────────┤
-│ 6. GALERIE PHOTOS HD & RÉALISATIONS RÉELLES                            │
-│    - Carrousel / Grille avec Lightbox interactive plein écran          │
-├────────────────────────────────────────────────────────────────────────┤
-│ 7. FAQ TECHNIQUE DU MÉTIER (Données structurées Schema FAQPage)        │
-│    - 4 questions pratiques sur la tenue, l'entretien et les délais     │
-├────────────────────────────────────────────────────────────────────────┤
-│ 8. FORMULAIRE DE DEVIS RAPIDE (Pré-rempli sur ce service)              │
-│    - Nom, Téléphone, Ville, Surface en m², Message                     │
-└────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│ 1. HEADER & HERO VISUEL DU SERVICE                                              │
+│    ├── Fil d'Ariane SEO : Accueil > Services > [Nom du Service]                  │
+│    ├── Tag / Eyebrow : Pôle d'Excellence RSF Travaux                             │
+│    ├── Titre H1 Majestueux : Nom exact du service avec mot-clé local             │
+│    ├── Image Principale Représentative (Plein format HD avec liseré or)          │
+│    ├── Texte de Présentation Officielle (Définition du service, rôle & standing) │
+│    └── Double CTA Rapide : [💬 WhatsApp Immédiat]  [📋 Demander une Estimation] │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│ 2. GRILLE DES TYPES / VARIANTES DU SERVICE ("CARDS SYSTEM")                      │
+│    Titre H2 : « Les Déclinaisons & Techniques Disponibles »                      │
+│    Sous-titre : Présentation des différents types et finitions réalisables       │
+│                                                                                  │
+│    ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐        │
+│    │ CARTE TYPE 1 │  │ CARTE TYPE 2 │  │ CARTE TYPE 3 │  │ CARTE TYPE 4 │        │
+│    │ [PHOTO HD]   │  │ [PHOTO HD]   │  │ [PHOTO HD]   │  │ [PHOTO HD]   │        │
+│    │ Nom du type  │  │ Nom du type  │  │ Nom du type  │  │ Nom du type  │        │
+│    │ Courte info  │  │ Courte info  │  │ Courte info  │  │ Courte info  │        │
+│    │ [Demander →] │  │ [Demander →] │  │ [Demander →] │  │ [Demander →] │        │
+│    └──────────────┘  └──────────────┘  └──────────────┘  └──────────────┘        │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│ 3. PROCESSUS D'EXÉCUTION RSF EN 4 ÉTAPES                                         │
+│    01. Diagnostic & Métré ➔ 02. Préparation ➔ 03. Pose/Application ➔ 04. Finition│
+├──────────────────────────────────────────────────────────────────────────────────┤
+│ 4. ATOUTS & NORMES TECHNIQUES DU SERVICE                                         │
+│    4 piliers de rassurance (Matériaux certifiés, 21 ans d'expérience, etc.)     │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│ 5. FAQ TECHNIQUE DU SERVICE (Avec données structurées Google FAQPage)            │
+│    4 questions/réponses pointues désamorçant toutes les hésitations             │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│ 6. GRAND CALL-TO-ACTION FINAL DE CONCEPTION (CONVERSION ULTIME)                  │
+│    Titre : « Donnez vie à votre projet, avec exigence et précision. »            │
+│    Texte : Consultation offerte, sur place ou à distance · Réponse sous 24h.    │
+│    ├── [💬 Discuter sur WhatsApp avec un Spécialiste]                           │
+│    ├── [📋 Estimer mon projet en ligne]                                         │
+│    └── [📞 Appel direct : +212 6 64 32 96 98]                                   │
+└──────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 3. SPÉCIFICATIONS COMPLÈTES PAR SERVICE (18 PÔLES D'EXPERTISE)
+## 2. SPÉCIFICATIONS DÉTAILLÉES DES 18 SERVICES (CONTENUS, VISUELS & CARTES DE TYPES)
 
 ---
 
-### 01. Menuiserie Aluminium & Vitrage Accordéon
-* **Fichier cible** : `service-vitrage-accordeon.html`
-* **Title SEO** : `Menuiserie Aluminium & Vitrage Accordéon Coulissant | RSF Travaux Maroc`
-* **H1** : **Système de Vitrage Accordéon Coulissant & Menuiserie Aluminium.**
-* **Type de service** : Fermeture panoramique rétractable et menuiserie aluminium haute performance.
-* **Contenu & Prestations techniques** :
-  * Rideaux de verre panoramiques sans profilés verticaux pour balcons, terrasses de villas, vérandas et pergolas bioclimatiques.
-  * Baies vitrées coulissantes en aluminium à rupture de pont thermique, fenêtres oscillo-battantes, portes d'entrée de standing.
-  * Verre trempé sécurit 8 mm à 10 mm (bords polis), résistant aux vents marins violents de la côte atlantique (Casablanca, Dar Bouazza).
-  * Ouverture intégrale à 100% : les vantaux coulissent et pivotent pour se replier discrètement sur le côté.
-  * Joints magnétiques ou translucides anti-poussière, isolation phonique et protection pluie/vent.
-* **Pour quels espaces** : Balcons d'appartements, terrasses de villas, restaurants, hôtels, cafés, verrières intérieures type atelier.
+### 01. Peinture Pasta Espagnole (Revêtement Façade)
+* **Fichier** : `service-peinture-pasta-espagnole.html`
+* **Titre H1** : **Peinture Pasta Espagnole : Revêtement de Façade & Protection Extérieure**
+* **Image Principale** : `assets/svc-facade1.webp` *(Façade extérieure de villa texturée)*
+* **Présentation du Service** :  
+  La Pasta Espagnole est un revêtement monocouche épais haut de gamme destiné à la rénovation et à la finition des façades extérieures. Elle protège durablement les parois contre les intempéries, l'humidité et les rayons UV intenses du climat marocain, tout en conférant à la façade une élégance texturée intemporelle.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Finition Grattée** | *Image : `assets/minimal-2.webp`* | Texture minérale grattée fine à la taloche dentelée, rendu moderne, sobre et uniforme masquant les microfissures.
+  2. **Finition Projetée / Mouchetée** | *Image : `assets/svc-facade.webp`* | Application mécanique pour un relief granuleux franc, idéale pour les grands volumes de villas et immeubles.
+  3. **Finition Texturée Rustique** | *Image : `assets/craftsman-1.webp`* | Aspect artisanal riche au grain profond, conférant un charme architectural authentique.
+  4. **Finition Effet Pierre / Travertino** | *Image : `assets/bathroom-1.webp`* | Façonnage en relief imitant la pierre taillée naturelle avec veinures minérales élégantes.
+* **Points Techniques** : Préparation du support, application talochée manuelle ou projection mécanique, rénovation de façades dégradées.
 
 ---
 
-### 02. Aménagement Immobilier Intérieur
-* **Fichier cible** : `service-amenagement-interieur.html`
-* **Title SEO** : `Aménagement Immobilier Intérieur Haut de Gamme | RSF Travaux Casablanca`
-* **H1** : **Aménagement Immobilier Intérieur : Agencement & Espaces de Prestige.**
-* **Type de service** : Transformation, agencement ergonomique et valorisation complète des espaces de vie et de travail.
-* **Contenu & Prestations techniques** :
-  * Rénovation et réaménagement global des volumes et de la circulation intérieure.
-  * Plans d'architecte 2D cotés et rendus 3D photoréalistes pour valider chaque aménagement avant le chantier.
-  * Peinture et finitions décoratives haut de gamme.
-  * Revêtements muraux, pose de marbre, parquets et carrelages grand format.
-  * Pose de moulures, corniches et éléments décoratifs muraux.
-  * Création de mobilier sur mesure : dressings intégrés, claustras en bois noble, bibliothèques, meubles TV suspendus.
-* **Pour quels espaces** : Salons, suites parentales, chambres, cuisines, bureaux de direction, locaux professionnels.
+### 02. Revêtements & Finitions de Façades (Peinture Extérieure)
+* **Fichier** : `service-peinture-exterieure.html`
+* **Titre H1** : **Revêtements & Finitions de Façades Extérieures au Maroc**
+* **Image Principale** : `assets/hero_phones.webp`
+* **Présentation du Service** :  
+  Traitement complet et embellissement des murs extérieurs par l'application de revêtements résistants aux intempéries, anti-humidité et traités anti-UV. Nos solutions protègent la maçonnerie tout en valorisant l'architecture de votre bâtiment.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Peinture GR / Grain de Marbre** | *Image : `assets/svc-paint-interior.jpg`* | Revêtement décoratif granuleux structuré, sobre et régulier, décliné en plusieurs granulométries.
+  2. **Revêtement Griffé** | *Image : `assets/minimal-3.webp`* | Finition striée apportant du relief et du caractère aux lignes architecturales contemporaines.
+  3. **Enduit Monocouche** | *Image : `assets/svc-facade.webp`* | Protection et finition en une seule passe, aspects gratté, taloché ou écrasé.
+  4. **Enduit de Façade Protecteur** | *Image : `assets/craftsman-1.webp`* | Traitement d'uniformisation et de protection contre le farinage et les fissures.
+  5. **Effet Béton Extérieur** | *Image : `assets/minimal-1.jpg`* | Finition architecturale reproduisant le béton brut, minéral et nuancé pour villas d'architecte.
 
 ---
 
-### 03. Aménagement Immobilier Extérieur
-* **Fichier cible** : `service-amenagement-exterieur.html`
-* **Title SEO** : `Aménagement Immobilier Extérieur & Valorisation Façades | RSF Travaux Maroc`
-* **H1** : **Aménagement Immobilier Extérieur : Façades, Terrasses & Accès.**
-* **Type de service** : Rénovation esthétique et fonctionnelle des extérieurs de bâtiments.
-* **Contenu & Prestations techniques** :
-  * Rénovation, ravalement et embellissement complet des façades d'immeubles et de villas.
-  * Peinture et traitement imperméabilisant des surfaces extérieures exposées au soleil et aux embruns.
-  * Réparation soignée des fissures, microfissures et imperfections de maçonnerie.
-  * Aménagement des entrées principales, perrons, balcons, loggias et terrasses panoramiques.
-  * Revêtements extérieurs antidérapants (grès cérame extérieur, dalles de pierre, deck composite).
-  * Mise en valeur des détails architecturaux, éclairage extérieur encastré et murets.
+### 03. Revêtement Effet Travertin (Pierre Naturelle)
+* **Fichier** : `service-effet-travertin.html`
+* **Titre H1** : **Enduit Décoratif Effet Travertin : L'Élégance de la Pierre Naturelle**
+* **Image Principale** : `assets/bathroom-1.webp`
+* **Présentation du Service** :  
+  L'effet Travertin est une finition décorative d'exception qui reproduit l'apparence authentique et le veinage minéral du travertin naturel, tout en offrant une totale liberté dans les teintes, les textures et le relief. Il donne aux façades et aux intérieurs une identité noble et chaleureuse.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Travertin Façade Extérieure** | *Image : `assets/hero-living.webp`* | Résistant aux UV et aux embruns, magnifie les entrées de villas et les loggias.
+  2. **Travertin Mural Intérieur** | *Image : `assets/bathroom-1.webp`* | Finition soyeuse et minérale pour halls d'accueil, murs TV et têtes de lit.
+  3. **Travertin Texturé en Fort Relief** | *Image : `assets/svc-stucco.webp`* | Cavités et veinures prononcées rappelant la roche brute pour un effet saisissant.
+  4. **Travertin Lisse & Nuancé** | *Image : `assets/minimal-2.webp`* | Rendu sobre et raffiné aux dégradés subtils pour intérieurs minimalistes.
 
 ---
 
-### 04. Rénovation Complète Clé en Main
-* **Fichier cible** : `service-renovation-complete.html`
-* **Title SEO** : `Rénovation Complète Clé en Main Villas & Appartements | RSF Travaux Casablanca`
-* **H1** : **Rénovation Complète Clé en Main de Villas, Appartements & Locaux.**
-* **Type de service** : Prise en charge tous corps d'état (TCE) avec un contrat unique et engagement ferme sur les délais.
-* **Contenu & Prestations techniques** :
-  * Dépose, démolition contrôlée et évacuation des gravats.
-  * Travaux de maçonnerie générale, ouvertures de baies, reprises structurelles.
-  * Électricité générale aux normes NFC 15-100, domotique, réseaux informatiques.
-  * Plomberie sanitaire encastrée (multicouche / PPR), évacuations, robinetterie haut de gamme.
-  * Revêtements complets des sols et des murs.
-  * Peinture intérieure et extérieure intégrale.
-  * Rénovation complète des cuisines et des salles de bains (douches à l'italienne, vasques sur mesure).
-  * Nettoyage professionnel minutieux et remise des clés d'un espace immédiatement prêt à vivre.
+### 04. Peinture Intérieure
+* **Fichier** : `service-peinture-interieure.html`
+* **Titre H1** : **Peinture Intérieure : Murs, Plafonds & Boiseries de Standing**
+* **Image Principale** : `assets/svc-paint-interior.jpg`
+* **Présentation du Service** :  
+  Solution essentielle pour protéger, rafraîchir et sublimer les espaces de vie et de travail. Préparation irréprochable des fonds (nettoyage, rebouchage, ponçage fin, sous-couche isolante) et application uniforme pour un rendu durable et sans trace.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Finition Mate Profonde** | *Image : `assets/minimal-1.jpg`* | Zéro reflet, absorbe la lumière pour une ambiance feutrée, masque les imperfections.
+  2. **Finition Satinée Lavable** | *Image : `assets/svc-paint-interior.jpg`* | Soyeuse, très résistante et lessivable, idéale pour chambres, couloirs et séjours.
+  3. **Finition Brillante Laquée** | *Image : `assets/hero_phones.webp`* | Éclat lumineux tendu, idéale pour portes, boiseries intérieures et plinthes.
+  4. **Peinture Plafonds Spéciale Anti-Trace** | *Image : `assets/svc-led-cove.webp`* | Blancheur éclatante avec formulation mate pour une planéité visuelle absolue.
 
 ---
 
-### 05. Aménagement de Cuisine sur Mesure
-* **Fichier cible** : `service-amenagement-cuisine.html`
-* **Title SEO** : `Aménagement de Cuisine sur Mesure & Moderne | RSF Travaux Maroc`
-* **H1** : **Conception & Aménagement de Cuisines sur Mesure.**
-* **Type de service** : Création de cuisines modernes, contemporaines et fonctionnelles, pensées pour durer.
-* **Contenu & Prestations techniques** :
-  * Conception personnalisée avec plans d'implantation 3D (cuisines en L, en U, linéaires ou ouvertes avec îlot central).
-  * Plans de travail nobles : marbre naturel traité, quartz haute résistance (Silestone), granit ou céramique grand format.
-  * Fabrication et pose de caissons hydrofuges haute densité, façades laquées, bois plaqué, mat soft-touch ou acrylique.
-  * Tiroirs et charnières à fermeture amortie (systèmes Blum / Hettich), rangements d'angle extractibles, colonnes garde-manger.
-  * Intégration harmonieuse de l'électroménager encastré (fours, hottes d'aspiration design, plaques à induction).
-  * Réseau électrique dédié (prises de force, rétroéclairage LED sous meubles hauts) et plomberie encastrée.
+### 05. Peintures Décoratives Intérieures (Matières & Effets d'Art)
+* **Fichier** : `service-peinture-decorative.html`
+* **Titre H1** : **Peintures Décoratives Intérieures : Effets de Matière & Textures Rares**
+* **Image Principale** : `assets/svc-stucco.webp`
+* **Présentation du Service** :  
+  Transformez vos murs en véritables œuvres d'art grâce à nos enduits décoratifs travaillés à la main. Du brut contemporain à la douceur traditionnelle, chaque finition apporte relief, lumière et distinction à vos pièces.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Effet Béton Contemporain** | *Image : `assets/minimal-1.jpg`* | Aspect brut, minéral et moderne pour salons industriels chics et bureaux.
+  2. **Effet Sablé Lumineux** | *Image : `assets/minimal-2.webp`* | Léger relief texturé captant la lumière pour donner de la profondeur aux pièces.
+  3. **Effet Nacré Raffiné** | *Image : `assets/hero-living.webp`* | Subtils reflets changeants et toucher soyeux pour salons et suites parentales.
+  4. **Effet Stuc / Stucco Vénitien** | *Image : `assets/svc-stucco.webp`* | Enduit à la chaux lustré effet marbre poli pour une élégance classique de prestige.
+  5. **Effet Tadelakt Artisanal** | *Image : `assets/craftsman-1.webp`* | Doux, minéral, inspiré des techniques ancestrales marocaines au galet.
+  6. **Finition Mate Poudrée** | *Image : `assets/minimal-3.webp`* | Texture feutrée et veloutée absorbant la lumière avec délicatesse.
 
 ---
 
-### 06. Peinture Intérieure
-* **Fichier cible** : `service-peinture-interieure.html`
-* **Title SEO** : `Peinture Intérieure Murs & Plafonds Casablanca | RSF Travaux Maroc`
-* **H1** : **Peinture Intérieure : Murs, Plafonds & Boiseries de Standing.**
-* **Type de service** : Protection, rafraîchissement et mise en couleur haut de gamme des espaces de vie.
-* **Contenu & Prestations techniques** :
-  * Préparation méticuleuse des supports : dépoussiérage, rebouchage des trous et fissures, ponçage mécanique fin.
-  * Application de sous-couches d'impression isolantes pour bloquer les fonds et optimiser l'accroche.
-  * Finition mate : sobre, profonde, sans reflet, masque les petites irrégularités, idéale pour les plafonds et salons contemporains.
-  * Finition satinée : soyeuse, résistante, lavable et lumineuse, idéale pour les pièces à fort passage, couloirs et chambres.
-  * Finition brillante : éclat miroir, idéale pour les boiseries, portes intérieures et détails architecturaux.
-  * Application uniforme au rouleau microfibre ou au pistolet Airless pour un tendu zéro défaut.
+### 06. Moulures PVC pour Fenêtres & Finitions
+* **Fichier** : `service-moulures-pvc.html`
+* **Titre H1** : **Moulures PVC pour Fenêtres Intérieures & Habillages Décoratifs**
+* **Image Principale** : `assets/minimal-3.webp`
+* **Présentation du Service** :  
+  Finition propre et esthétique autour des fenêtres masquant les imperfections entre le mur et le cadre. Matériau 100% résistant à l'humidité, imputrescible, facile à entretenir et parfaitement adapté aux rénovations.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Cadrage & Chambranle** | *Image : `assets/minimal-3.webp`* | Profilés d'habillage soignés pour souligner le pourtour des fenêtres.
+  2. **Cornières d'Angle Protectrices** | *Image : `assets/craftsman-1.webp`* | Protection et finition impeccable des angles saillants exposés aux chocs.
+  3. **Habillage de Rénovation** | *Image : `assets/svc-facade.webp`* | Recouvrement élégant d'anciens dormants sans travaux de démolition.
 
 ---
 
-### 07. Peintures Décoratives Intérieures
-* **Fichier cible** : `service-peinture-decorative.html`
-* **Title SEO** : `Peintures Décoratives d'Exception (Stucco, Béton, Tadelakt) | RSF Travaux`
-* **H1** : **Peintures Décoratives Intérieures & Effets de Matière d'Art.**
-* **Type de service** : Finitions décoratives sur mesure donnant du caractère, du relief et une identité unique aux murs intérieurs.
-* **Les 6 Prestations exclusives RSF Travaux** :
-  1. **Effet Béton** : Finition contemporaine et authentique au rendu brut minéral. Idéale pour murs TV, halls d'accueil, têtes de lit et bureaux au style industriel chic.
-  2. **Effet Sablé** : Finition texturée fine créant un léger relief qui capte la lumière naturelle et apporte une profondeur subtile.
-  3. **Effet Nacré** : Finition soyeuse aux reflets changeants selon l'éclairage, parfaite pour les salons d'apparat et chambres parentales.
-  4. **Effet Stuc (Stucco Vénitien)** : Enduit à la chaux appliqué à la lisseuse en plusieurs passes serrées, offrant un effet marbré lustré ultra-luxueux.
-  5. **Effet Tadelakt** : Enduit traditionnel marocain poli au galet, doux au toucher, minéral, hydrofuge et chaleureux.
-  6. **Finition Mate Profonde** : Solution feutrée qui absorbe la lumière pour une atmosphère intime et reposante.
+### 07. Aménagement Immobilier Intérieur
+* **Fichier** : `service-amenagement-interieur.html`
+* **Titre H1** : **Aménagement Immobilier Intérieur : Ergonomie, Espaces & Plans 3D**
+* **Image Principale** : `assets/aminagement-interieur.webp`
+* **Présentation du Service** :  
+  Conception et optimisation spatiale pour transformer votre intérieur en un lieu harmonieux, moderne et fonctionnel. Plans cotés, rendus 3D, redistribution des pièces, menuiserie sur mesure et coordination totale.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Aménagement Salons & Séjours** | *Image : `assets/hero-living.webp`* | Volumes aérés, intégration multimédia et ambiances lumineuses étudiées.
+  2. **Suites Parentales & Dressings** | *Image : `assets/bathroom-1.webp`* | Rangements intégrés sur mesure, confort acoustique et finitions feutrées.
+  3. **Bureaux & Espaces Professionnels** | *Image : `assets/minimal-1.jpg`* | Aménagement ergonomique pour sièges d'entreprises, cabinets et showrooms.
+  4. **Menuiserie & Agencement Sur Mesure** | *Image : `assets/craftsman-1.webp`* | Claustras bois, bibliothèques murales et meubles sur mesure.
 
 ---
 
-### 08. Peinture Extérieure & Finitions de Façades
-* **Fichier cible** : `service-peinture-exterieure.html`
-* **Title SEO** : `Revêtements & Finitions de Façades Extérieures | RSF Travaux Maroc`
-* **H1** : **Revêtements & Finitions de Façades Extérieures au Maroc.**
-* **Type de service** : Rénovation, protection contre le climat marin et embellissement architectural des façades de villas et bâtiments.
-* **Les 5 Finitions de Façade RSF Travaux** :
-  1. **Peinture GR / Grain de Marbre** : Revêtement décoratif granuleux apportant à la façade un aspect structuré, sobre et uniforme, disponible en granulométries fines, moyennes ou épaisses.
-  2. **Revêtement Griffé** : Finition texturée striée apportant du relief et une dynamique contemporaine aux lignes architecturales.
-  3. **Enduit Monocouche** : Solution protectrice et décorative projetée ou talochée (aspects gratté fin, taloché ou écrasé) qui imperméabilise tout en laissant respirer la maçonnerie.
-  4. **Enduit de Façade** : Traitement d'uniformisation et de protection contre les intempéries et le farinage.
-  5. **Effet Béton Extérieur** : Aspect béton brut architectural contemporain, minéral, nuancé et texturé, plébiscité pour les façades de villas ultra-modernes.
+### 08. Aménagement Immobilier Extérieur
+* **Fichier** : `service-amenagement-exterieur.html`
+* **Titre H1** : **Aménagement Immobilier Extérieur : Façades, Terrasses & Accès**
+* **Image Principale** : `assets/svc-facade.webp`
+* **Présentation du Service** :  
+  Valorisation de l'apparence et de la fonctionnalité de votre bâtiment : façades, entrées, balcons et espaces extérieurs. Travaux réalisés avec des matériaux durables et résistants aux conditions climatiques marocaines.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Embellissement & Rénovation de Façades** | *Image : `assets/svc-facade1.webp`* | Traitement des fissures, enduits et mise en peinture protectrice.
+  2. **Aménagement d'Entrées & Perrons** | *Image : `assets/hero_phones.webp`* | Seuils d'accueil en pierre/marbre, éclairages encastrés et sécurisation.
+  3. **Terrasses & Balcons Panoramiques** | *Image : `assets/servisf.webp`* | Revêtements extérieurs étanches, garde-corps et finitions soignées.
 
 ---
 
-### 09. Peinture Pasta Espagnole (Revêtement Façade)
-* **Fichier cible** : `service-peinture-pasta-espagnole.html`
-* **Title SEO** : `Peinture Pasta Espagnole Revêtement de Façade | RSF Travaux Casablanca`
-* **H1** : **Peinture Pasta Espagnole : Revêtement Monocouche de Façade.**
-* **Type de service** : Revêtement décoratif monocouche épais et protection haute performance des façades extérieures.
-* **Contenu & Prestations techniques** :
-  * Revêtement épais à base de résines synthétiques et charges minérales, ultra-résistant aux UV, à l'humidité côtière et aux chocs thermiques.
-  * Préparation soignée et assainissement des supports maçonnés (dépoussiérage, traitement antifongique).
-  * Application manuelle à la taloche ou projection mécanique pour une épaisseur régulière et durable.
-  * Large éventail de rendus décoratifs : finitions grattées, projetées, rustiques, texturées ou effet pierre Travertino.
-  * Rénovation complète des façades vieillissantes ou dégradées avec masquage durable des microfissures.
+### 09. Rénovation Complète Clé en Main
+* **Fichier** : `service-renovation-complete.html`
+* **Titre H1** : **Rénovation Complète Clé en Main de Villas, Appartements & Locaux**
+* **Image Principale** : `assets/minimal-1.jpg`
+* **Présentation du Service** :  
+  Transformation intégrale de votre bien immobilier de A à Z. Coordination rigoureuse de tous les corps d'état avec un seul contrat, un seul interlocuteur et une garantie de respect des délais et du budget convenu.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Rénovation Complète de Villas** | *Image : `assets/hero-living.webp`* | Refonte structurelle, extensions, fluides, intérieurs et extérieurs.
+  2. **Rénovation d'Appartements de Standing** | *Image : `assets/minimal-1.jpg`* | Optimisation des volumes, remise aux normes électriques et finitions haut de gamme.
+  3. **Rénovation Riads & Bâtiments de Caractère** | *Image : `assets/moroccan-1.jpg`* | Restauration artisanale respectueuse des matériaux traditionnels.
+  4. **Rénovation Bureaux & Espaces Commerciaux** | *Image : `assets/svc-epoxy.webp`* | Transformation rapide pour locaux professionnels, respect des délais d'ouverture.
 
 ---
 
-### 10. Revêtement Effet Travertin (Pierre Naturelle)
-* **Fichier cible** : `service-effet-travertin.html`
-* **Title SEO** : `Revêtement Mural Effet Travertin Minéral | RSF Travaux Maroc`
-* **H1** : **Enduit Décoratif Effet Travertin : L'Élégance de la Pierre Naturelle.**
-* **Type de service** : Finition murale haut de gamme reproduisant l'authenticité et le veinage minéral du travertin naturel.
-* **Contenu & Prestations techniques** :
-  * Reproduction fidèle des cavités, veinures et irrégularités naturelles de la pierre de travertin.
-  * Liberté de personnalisation : finitions plus lisses, structurées, nuancées ou en fort relief selon l'architecture du projet.
-  * Préparation soignée du support pour garantir une planéité parfaite et une adhérence sans faille.
-  * Façonnage artisanal des joints (effet blocs de pierre taillés) pour un réalisme saisissant.
-* **Applications idéales** : Façades de villas de prestige, entrées de résidences, halls d'hôtels, murs d'accent de salons, terrasses et murs décoratifs de piscines.
+### 10. Aménagement de Cuisine sur Mesure
+* **Fichier** : `service-amenagement-cuisine.html`
+* **Titre H1** : **Conception & Aménagement de Cuisines Équipées sur Mesure**
+* **Image Principale** : `assets/kitchen-1.jpg`
+* **Présentation du Service** :  
+  Création de cuisines modernes, ergonomiques et contemporaines. Caissons hydrofuges haute densité, plans de travail nobles en marbre ou quartz, rangements intelligents et intégration d'électroménager encastré.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Cuisine avec Îlot Central Convivial** | *Image : `assets/kitchen-1.jpg`* | Espace repas et zone de préparation moderne, rangements traversants.
+  2. **Cuisine Linéaire Épurée & Minimaliste** | *Image : `assets/kitchen-3.jpg`* | Façades sans poignées avec système push-pull ou profilés gorge aluminium.
+  3. **Cuisine en L avec Rangements d'Angle** | *Image : `assets/minimal-1.jpg`* | Optimisation maximale de l'espace avec paniers extractibles ergonomiques.
+  4. **Plans de Travail en Quartz & Marbre** | *Image : `assets/svc-marble.webp`* | Découpes d'éviers sous plan et crédences coordonnées ultra-résistantes.
 
 ---
 
-### 11. Bardage & Habillage de Façades
-* **Fichier cible** : `service-bardage-habillage-facade.html`
-* **Title SEO** : `Bardage & Habillage de Façades (Bois, Composite, Alucobond) | RSF Travaux`
-* **H1** : **Bardage & Habillage Architectural de Façades au Maroc.**
-* **Type de service** : Habillage extérieur et intérieur conférant un cachet architectural résolument moderne tout en renforçant l'isolation.
-* **Contenu & Prestations techniques** :
-  * **Bardage bois composite** : Lames contemporaines imitation bois noble sans entretien, résistantes à l'eau de mer et imputrescibles.
-  * **Panneaux composites aluminium (Alucobond)** : Façades ventilées métallisées lisses, ultralégères et rigides pour bâtiments contemporains et sièges d'entreprises.
-  * **Bardage à claire-voie (lattes verticales ou horizontales)** : Brise-vues élégants et jeux d'ombres pour façades de villas et loggias.
-  * Structure porteuse en aluminium traité anticorrosion, visserie inox invisible.
-  * Contribution majeure à l'isolation thermique par l'extérieur (ITE) réduisant les déperditions de chaleur et de climatisation.
+### 11. Sols en Résine Époxy
+* **Fichier** : `service-sols-resine-epoxy.html`
+* **Titre H1** : **Sols en Résine Époxy & Polyuréthane Autolissante au Maroc**
+* **Image Principale** : `assets/svc-epoxy.webp`
+* **Présentation du Service** :  
+  Revêtement continu sans aucun joint, résistant à l'usure, aux hydrocarbures et d'une facilité d'entretien absolue. Préparation soignée au diamant et coulage autolissant pour un sol parfaitement lisse et moderne.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Résine Époxy pour Garages & Ateliers** | *Image : `assets/svc-epoxy.webp`* | Résistance extrême aux pneus chauds, chocs et solvants industriels.
+  2. **Résine Époxy Showrooms & Commerces** | *Image : `assets/minimal-1.jpg`* | Finitions brillantes miroir ou mates valorisant les espaces de vente.
+  3. **Résine Décorative Effet Marbré 3D** | *Image : `assets/svc-stucco.webp`* | Nuances artistiques unies ou métallisées pour intérieurs modernes.
 
 ---
 
-### 12. Sols en Résine Époxy
-* **Fichier cible** : `service-sols-resine-epoxy.html`
-* **Title SEO** : `Sols en Résine Époxy & Polyuréthane Casablanca | RSF Travaux Maroc`
-* **H1** : **Sols Techniques & Décoratifs en Résine Époxy Autolissante.**
-* **Type de service** : Revêtement de sol continu, uniforme, sans aucun joint, résistant à l'usure intensive et d'une facilité d'entretien absolue.
-* **Contenu & Prestations techniques** :
-  * Préparation mécanique du support béton (rabotage, ponçage au diamant, aspiration industrielle des poussières).
-  * Réparation préalable des fissures, trous et nivellement des dénivelés au mortier époxy.
-  * Application d'un primaire d'accroche pénétrant pour une adhérence structurelle garantie.
-  * Coulage de la résine époxy autolissante teintée dans la masse (finitions lisses, brillantes miroir, satinées ou mates).
-  * Création d'effets décoratifs marbrés ou métallisés 3D pour intérieurs contemporains et showrooms.
-* **Idéal pour** : Garages résidentiels de luxe, showrooms automobiles, commerces, bureaux, ateliers techniques, cliniques et parkings.
+### 12. Travaux de Revêtements (Sols & Murs)
+* **Fichier** : `service-revetements-sols-murs.html`
+* **Titre H1** : **Travaux de Revêtements : Marbre, Carrelage, Parquet & Faïence**
+* **Image Principale** : `assets/svc-marble.webp`
+* **Présentation du Service** :  
+  Pose experte de revêtements nobles pour habiller et valoriser vos sols et vos murs. Ragréage de niveau, découpes nettes au laser, alignement millimétrique et réalisation de joints fins réguliers.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Pose de Marbre Naturel Grand Format** | *Image : `assets/svc-marble.webp`* | Calepinage en livre ouvert (bookmatch), lustrage et cristallisation.
+  2. **Carrelage & Grès Cérame Rectifié** | *Image : `assets/bathroom-1.webp`* | Formats 60×120, 120×120 et dalles XXL avec joints ultra-fins de 1 mm.
+  3. **Parquet Bois Massif & Contrecollé** | *Image : `assets/minimal-2.webp`* | Chaleur du bois noble, pose collée ou flottante haute isolation acoustique.
+  4. **Faïences & Revêtements Pièces Humides** | *Image : `assets/bathroom-2.jpg`* | Murs de douches à l'italienne, hammams et crédences de cuisines.
 
 ---
 
-### 13. Travaux de Revêtements (Sols & Murs)
-* **Fichier cible** : `service-revetements-sols-murs.html`
-* **Title SEO** : `Pose de Marbre, Carrelage & Parquet Casablanca | RSF Travaux Maroc`
-* **H1** : **Travaux de Revêtements : Marbre, Carrelage, Parquet & Faïence.**
-* **Type de service** : Pose millimétrique de revêtements nobles pour sublimer et protéger toutes les surfaces intérieures et extérieures.
-* **Contenu & Prestations techniques** :
-  * **Revêtements de sols** : Marbre grand format en livre ouvert (*bookmatch*), grès cérame rectifié, parquet en bois franc, lames vinyle rigide SPC, sols en résine.
-  * **Revêtements muraux** : Faïence de salle de bains, marbre mural poli, panneaux muraux 3D, crédences de cuisine en quartz ou céramique.
-  * **Revêtements pour pièces humides** : Traitement hydrofuge préalable et pose de carrelage antidérapant pour douches à l'italienne et hammams.
-  * **Revêtements extérieurs** : Dalles épaisses de 20 mm sur plots ou collées pour terrasses, margelles de piscine et allées.
-  * Préparation impeccable : ragréage autonivelant, calepinage soigné, découpes nettes à l'eau et joints fins uniformes (1 à 1,5 mm).
+### 13. Menuiserie Aluminium & Vitrage Accordéon
+* **Fichier** : `service-vitrage-accordeon.html`
+* **Titre H1** : **Vitrage Accordéon Panoramique & Menuiserie Aluminium**
+* **Image Principale** : `assets/servisf.webp`
+* **Présentation du Service** :  
+  Systèmes innovants de rideaux de verre repliables sans montants verticaux et menuiserie aluminium haut de gamme. Profitez d'une vue panoramique intégrale avec une isolation thermique et acoustique renforcée.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Système Vitrage Accordéon Coulissant & Pivotant** | *Image : `assets/servisf.webp`* | Ouverture totale à 100%, panneaux de verre sécurit repliables sur le côté.
+  2. **Baies Vitrées Coulissantes en Aluminium** | *Image : `assets/hero-living.webp`* | Profilés fins à rupture de pont thermique et vitrage isolant de standing.
+  3. **Fenêtres & Portes-Fenêtres Oscillo-Battantes** | *Image : `assets/svc-facade.webp`* | Étanchéité à l'air et à l'eau maximale, quincaillerie invisible.
+  4. **Verrières d'Intérieur Type Atelier** | *Image : `assets/minimal-1.jpg`* | Cloisons vitrées séparatives en aluminium pour séparer cuisine et salon.
 
 ---
 
-### 14. Plâtrerie & Faux Plafonds (Staff & Armstrong)
-* **Fichier cible** : `service-platrerie-faux-plafonds.html`
-* **Title SEO** : `Plâtrerie, Faux Plafonds BA13 & Plafonds Armstrong | RSF Travaux Maroc`
-* **H1** : **Plâtrerie Moderne, Faux Plafonds BA13 & Dalles Armstrong.**
-* **Type de service** : Structuration de l'espace, acoustique et intégration esthétique des éclairages techniques.
-* **Contenu & Prestations techniques** :
-  * Faux plafonds suspendus en plaques de plâtre BA13 (lisses, décaissés, gorges lumineuses pour rubans LED indirects).
-  * Plafonds Armstrong modulaires démontables (60×60 cm) : acoustiques, esthétiques et offrant un accès immédiat aux gaines techniques, climatisation et câblages réseau.
-  * Cloisons séparatives et doublages thermiques/phoniques en plaques de plâtre (laine de roche dense intégrée).
-  * Création de niches murales décoratives, coffrages de canalisations et têtes de lit rétroéclairées.
-  * Traitement des bandes à joints en 3 passes et ponçage mécanique sans poussière pour une surface prête à peindre.
+### 14. Bardage & Habillage de Façades
+* **Fichier** : `service-bardage-habillage-facade.html`
+* **Titre H1** : **Bardage & Habillage Architectural de Façades (Bois, Composite, Aluminium)**
+* **Image Principale** : `assets/svc-facade.webp`
+* **Présentation du Service** :  
+  Modernisez l'enveloppe de vos bâtiments grâce à nos solutions de bardage ventilé et d'habillage de façade. Apporte un cachet architectural résolument moderne tout en contribuant à l'isolation thermique extérieure.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Bardage Bois Composite** | *Image : `assets/minimal-3.webp`* | Lames imputrescibles résistantes aux UV et à l'air marin, sans entretien.
+  2. **Panneaux Composites Aluminium (Alucobond)** | *Image : `assets/minimal-1.jpg`* | Façades ventilées métallisées lisses et rigides pour bâtiments modernes.
+  3. **Claustras & Brise-Soleil Extérieurs** | *Image : `assets/craftsman-1.webp`* | Lattes verticales apportant ombre, intimité et signature architecturale.
 
 ---
 
-### 15. Étanchéité Toitures, Terrasses & Pièces Humides
-* **Fichier cible** : `service-etancheite.html`
-* **Title SEO** : `Travaux d'Étanchéité Terrasses, Toitures & Balcons | RSF Travaux Casablanca`
-* **H1** : **Travaux d'Étanchéité : Toitures-Terrasses, Balcons & Pièces Humides.**
-* **Type de service** : Protection absolue et durable des bâtiments contre les infiltrations pluviales et les remontées d'humidité.
-* **Contenu & Prestations techniques** :
-  * Étanchéité des toitures-terrasses accessibles et inaccessibles (membranes bitumineuses SBS/APP élastomères soudées au chalumeau).
-  * Systèmes d'Étanchéité Liquide (SEL) : résines polyuréthane armées continues sans raccord pour balcons, loggias et dômes.
-  * Étanchéité sous carrelage des salles de bains, douches à l'italienne et buanderies.
-  * Traitement préventif et curatif des fissures de façade, des solins, acrotères et souches de cheminée.
-  * Étanchéité des sous-sols et murs enterrés (cuvelage contre la pression hydrostatique).
-  * **Test de mise en eau obligatoire de 48h à 72h** pour certifier l'imperméabilité totale avant toute pose de carrelage.
+### 15. Plâtrerie & Faux Plafonds (BA13, Staff & Armstrong)
+* **Fichier** : `service-platrerie-faux-plafonds.html`
+* **Titre H1** : **Plâtrerie Moderne, Faux Plafonds BA13 & Dalles Armstrong**
+* **Image Principale** : `assets/svc-led-cove.webp`
+* **Présentation du Service** :  
+  Création d'espaces modernes et fonctionnels avec intégration fluide de l'éclairage et des gaines techniques. Solutions de plâtrerie sèche BA13 pour le résidentiel et plafonds Armstrong démontables pour les bureaux.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Faux Plafonds BA13 avec Gorges LED** | *Image : `assets/svc-led-cove.webp`* | Gorges lumineuses indirectes et décaissés pour jeux d'ambiance design.
+  2. **Plafonds Démontables Armstrong (60×60 cm)** | *Image : `assets/minimal-1.jpg`* | Dalles acoustiques modulaires idéales pour bureaux et locaux professionnels.
+  3. **Cloisons Séparatives à Isolation Phonique** | *Image : `assets/craftsman-1.webp`* | Doublages avec laine de roche dense pour un confort acoustique parfait.
+  4. **Niches Murales & Meubles TV en Plâtre** | *Image : `assets/hero-living.webp`* | Coffrages sur mesure intégrant étagères et rubans LED encastrés.
 
 ---
 
-### 16. Moulures PVC pour Fenêtres & Finitions
-* **Fichier cible** : `service-moulures-pvc.html`
-* **Title SEO** : `Moulures PVC pour Fenêtres & Encadrements Intérieurs | RSF Travaux Maroc`
-* **H1** : **Moulures PVC pour Fenêtres Intérieures & Habillages Décoratifs.**
-* **Type de service** : Finition nette, moderne et 100% insensible à l'humidité pour le pourtour des ouvertures.
-* **Contenu & Prestations techniques** :
-  * **Cadrage et chambranle** : Habillage élégant de l'espace de raccordement entre la maçonnerie et le dormant de la fenêtre.
-  * **Cornières d'angle** : Protection des arêtes et finition propre des angles saillants.
-  * **Habillage de rénovation** : Recouvrement des anciens cadres sans nécessiter de lourds travaux de démolition.
-  * Matériau polymère PVC haute densité : 100% étanche à l'eau, imputrescible, ne jaunit pas et se nettoie d'un simple coup d'éponge.
-  * Découpe d'onglet précise à 45° et fixation par collage mastic polymère invisible haute résistance.
-* **Idéal pour** : Fenêtres de salles de bains, cuisines, chambres, salons et bureaux.
+### 16. Travaux d'Étanchéité Toitures, Terrasses & Pièces Humides
+* **Fichier** : `service-etancheite.html`
+* **Titre H1** : **Travaux d'Étanchéité : Toitures-Terrasses, Balcons & Pièces Humides**
+* **Image Principale** : `assets/svc-waterproof.webp`
+* **Présentation du Service** :  
+  Protection absolue et pérenne de vos bâtiments contre les infiltrations pluviales et l'humidité. Application de membranes et résines spécialisées et test de mise en eau obligatoire de 48 heures pour garantir le résultat.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Étanchéité Toitures-Terrasses Accessibles** | *Image : `assets/svc-waterproof.webp`* | Membranes bitumineuses multicouches renforcées soudées au chalumeau.
+  2. **Système d'Étanchéité Liquide (SEL)** | *Image : `assets/svc-epoxy.webp`* | Résines polyuréthane armées sans raccord pour balcons, loggias et dômes.
+  3. **Étanchéité Salles de Bains & Douches Italiennes** | *Image : `assets/bathroom-1.webp`* | Nattes d'étanchéité sous carrelage prévenant toute fuite d'eau vers les étages inférieurs.
+  4. **Traitement des Fissures & Murs Enterrés** | *Image : `assets/craftsman-1.webp`* | Cuvelage et pontage élastomère des fissures de façade et points singuliers.
 
 ---
 
 ### 17. Travaux de Finition Haute Précision
-* **Fichier cible** : `service-travaux-finition.html`
-* **Title SEO** : `Travaux de Finition Haute Précision & Retouches | RSF Travaux Casablanca`
-* **H1** : **Travaux de Finition Haute Précision & Perfection des Détails.**
-* **Type de service** : Interventions finales millimétrées conférant au lieu son niveau de standing définitif.
-* **Contenu & Prestations techniques** :
-  * Préparation finale, lissage minutieux et enduisage fin des murs et plafonds.
-  * Pose des plinthes, profilés de transition en laiton/inox et corniches décoratives.
-  * Réalisation des joints creux, joints d'étanchéité acrylique et silicone invisible.
-  * Retouches de peinture au pinceau fin et élimination des micro-imperfections sous lumière rasante.
-  * Ajustement parfait des portes, poignées, butées et quincailleries architecturales.
-  * Nettoyage de fin de chantier pour une remise des clés impeccable.
+* **Fichier** : `service-travaux-finition.html`
+* **Titre H1** : **Travaux de Finition Haute Précision & Perfection des Détails**
+* **Image Principale** : `assets/craftsman-1.webp`
+* **Présentation du Service** :  
+  Les finitions qui font toute la différence : alignements au millimètre, lissage parfait des surfaces, pose de plinthes invisibles, joints soignés et élimination des micro-imperfections avant remise des clés.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Enduisage & Ponçage de Précision** | *Image : `assets/craftsman-1.webp`* | Lissage des murs sous projecteur pour une surface plane prête à peindre.
+  2. **Pose de Plinthes & Profilés de Finition** | *Image : `assets/minimal-3.webp`* | Plinthes encastrées ou en applique, baguettes de seuil en laiton/inox.
+  3. **Joints d'Étanchéité & Raccords Invisibles** | *Image : `assets/bathroom-1.webp`* | Calfeutrement acrylique et silicone net aux jonctions menuiserie/maçonnerie.
 
 ---
 
-### 18. Travaux Divers & Maintenance / Réparations
-* **Fichier cible** : `service-travaux-divers-maintenance.html`
-* **Title SEO** : `Travaux Divers, Réparations & Maintenance Bâtiment | RSF Travaux Maroc`
-* **H1** : **Travaux Divers, Petites Rénovations & Maintenance Immobilière.**
-* **Type de service** : Interventions rapides d'entretien, de réparation et de mise à niveau pour particuliers et professionnels.
-* **Contenu & Prestations techniques** :
-  * Petits travaux de maçonnerie, rebouchage des saignées, reprises de plâtre et d'enduits.
-  * Traitement ciblé des fissures murales, trous et éclats sur cloisons et façades.
-  * Retouches ponctuelles de peinture après intervention de techniciens ou dégâts des eaux.
-  * Remplacement ciblé de carrelages cassés, de plinthes décollées ou de lames de parquet usées.
-  * Pose d'accessoires décoratifs, tringles à rideaux, miroirs muraux et petits ajustements.
-  * Contrats d'entretien et de maintenance préventive pour bureaux, locaux commerciaux et résidences.
+### 18. Travaux Divers & Maintenance Immobilière
+* **Fichier** : `service-travaux-divers-maintenance.html`
+* **Titre H1** : **Travaux Divers, Petites Rénovations & Maintenance Immobilière**
+* **Image Principale** : `assets/craftsman-1.webp`
+* **Présentation du Service** :  
+  Interventions soignées de réparation, de rénovation ponctuelle et d'entretien régulier pour maintenir vos biens immobiliers dans un état impeccable. Réactivité, propreté et rigueur technique.
+* **Les Cartes de Types (Grille UI)** :
+  1. **Petite Maçonnerie & Reprises de Plâtre** | *Image : `assets/craftsman-1.webp`* | Rebouchage de trous, saignées, reprises après dégât des eaux.
+  2. **Traitement de Fissures & Retouches Peinture** | *Image : `assets/svc-paint-interior.jpg`* | Raccords de teinte invisibles et assainissement des murs.
+  3. **Remplacement de Revêtements & Petits Ajustements** | *Image : `assets/svc-marble.webp`* | Changement de carreaux fissurés, remise en état de plinthes et quincaillerie.
 
 ---
 
-## 4. PLAN DE MAILLAGE & DÉPLOIEMENT PROGRESSIF
+## 🔍 3. ARCHITECTURE SEO D'ÉLITE : POUR UN RÉFÉRENCEMENT PARFAIT À 100%
 
-Pour déployer ces 18 pages de manière fluide et indexer immédiatement le site sur Google Maroc :
+Pour que chaque page surclasse immédiatement ses concurrents sur Google Search, Google Images et Google Maps, elle doit intégrer l'arsenal SEO technique complet suivant :
 
-### Phase 1 : Piliers Stratégiques Immédiats (Plus forte demande client)
-1. `service-vitrage-accordeon.html` (Menuiserie aluminium & vitrage panoramique)
-2. `service-renovation-complete.html` (Contrats clés en main complets)
-3. `service-etancheite.html` (Besoin technique d'urgence toitures/terrasses)
-4. `service-amenagement-cuisine.html` (Cuisines sur mesure haut de gamme)
-5. `service-peinture-pasta-espagnole.html` (Façades extérieures réputées)
+### 3.1. Balisage Meta & En-Tête HTML par Page
+Chaque page doit comporter dans son `<head>` les 8 balises indispensables :
 
-### Phase 2 : Revêtements & Décoration Haut de Gamme
-6. `service-effet-travertin.html`
-7. `service-peinture-decorative.html`
-8. `service-revetements-sols-murs.html`
-9. `service-platrerie-faux-plafonds.html`
-10. `service-bardage-habillage-facade.html`
+```html
+<!-- 1. Encodage & Viewport -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-### Phase 3 : Peintures Spécifiques & Finitions
-11. `service-peinture-interieure.html`
-12. `service-peinture-exterieure.html`
-13. `service-sols-resine-epoxy.html`
-14. `service-moulures-pvc.html`
-15. `service-amenagement-interieur.html`
-16. `service-amenagement-exterieur.html`
-17. `service-travaux-finition.html`
-18. `service-travaux-divers-maintenance.html`
+<!-- 2. Titre SEO (55-65 caractères avec mot-clé transactionnel + Geo) -->
+<title>[Nom du Service] à Casablanca & Maroc | RSF Travaux</title>
+
+<!-- 3. Meta Description (145-160 caractères incitant au clic) -->
+<meta name="description" content="[Nom du Service] haut de gamme à Casablanca et partout au Maroc. Savoir-faire éprouvé depuis 21 ans, devis gratuit et intervention soignée par RSF Travaux."/>
+
+<!-- 4. Balise Canonique stricte (Évite le contenu dupliqué) -->
+<link rel="canonical" href="https://rsftravaux.ma/service-[slug].html"/>
+
+<!-- 5. Balises Robots d'Indexation Maximale -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+
+<!-- 6. Géolocalisation Casablanca / Maroc pour Google Local -->
+<meta name="geo.region" content="MA-CAS"/>
+<meta name="geo.placename" content="Casablanca"/>
+<meta name="geo.position" content="33.5731;-7.5898"/>
+<meta name="ICBM" content="33.5731, -7.5898"/>
+
+<!-- 7. OpenGraph pour WhatsApp, Facebook & LinkedIn -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="RSF Travaux"/>
+<meta property="og:url" content="https://rsftravaux.ma/service-[slug].html"/>
+<meta property="og:title" content="[Nom du Service] | RSF Travaux Maroc"/>
+<meta property="og:description" content="Découvrez nos prestations de [Nom du Service] clé en main à Casablanca et partout au Maroc."/>
+<meta property="og:image" content="https://rsftravaux.ma/assets/[image-service].webp"/>
+<meta property="og:locale" content="fr_MA"/>
+
+<!-- 8. Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="[Nom du Service] | RSF Travaux Maroc"/>
+<meta name="twitter:image" content="https://rsftravaux.ma/assets/[image-service].webp"/>
+```
+
+---
+
+### 3.2. Données Structurées Schema.org JSON-LD (Rich Snippets Google)
+Chaque page embarque 3 schémas imbriqués au format JSON-LD pour déclencher des résultats enrichis (étoiles, accordéons, fil d'Ariane) :
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://rsftravaux.ma/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rsftravaux.ma/services.html" },
+        { "@type": "ListItem", "position": 3, "name": "[Nom du Service]", "item": "https://rsftravaux.ma/service-[slug].html" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "[Nom du Service]",
+      "serviceType": "[Catégorie technique]",
+      "description": "[Description détaillée]",
+      "provider": {
+        "@type": "HomeAndConstructionBusiness",
+        "name": "RSF Travaux S.A.R.L. AU",
+        "url": "https://rsftravaux.ma/",
+        "telephone": "+212664329698",
+        "email": "rsftravaux@gmail.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Casablanca",
+          "addressRegion": "Grand Casablanca",
+          "addressCountry": "MA"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Casablanca" },
+        { "@type": "City", "name": "Rabat" },
+        { "@type": "City", "name": "Marrakech" },
+        { "@type": "Country", "name": "Maroc" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "[Question 1 spécifique au service]",
+          "acceptedAnswer": { "@type": "Answer", "text": "[Réponse détaillée]" }
+        },
+        {
+          "@type": "Question",
+          "name": "[Question 2 spécifique au service]",
+          "acceptedAnswer": { "@type": "Answer", "text": "[Réponse détaillée]" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+```
+
+---
+
+### 3.3. Hiérarchie Sémantique des Titres (Hn)
+* **Un seul `<h1>` par page** : Contient obligatoirement le nom du service + son application + géolocalisation implicite (*ex: `<h1>Peinture Pasta Espagnole : Revêtement de Façade & Protection Extérieure</h1>`*).
+* **Les balises `<h2>`** structurent les 4 grands blocs informatifs :
+  * `<h2>Les Déclinaisons & Techniques de Finition</h2>` (au-dessus des cartes)
+  * `<h2>Notre Processus de Réalisation en 4 Étapes</h2>`
+  * `<h2>Questions Fréquentes sur ce Service</h2>`
+  * `<h2>Donnez vie à votre projet, avec exigence et précision</h2>` (Bloc CTA)
+* **Les balises `<h3>`** sont réservées aux noms de chaque carte de type (*ex: `<h3>Finition Grattée</h3>`*).
+
+---
+
+### 3.4. SEO des Images & Core Web Vitals (LCP / CLS)
+1. **Poids plume** : Toutes les images des cartes et du hero sont en **WebP** compressé (< 120 Ko).
+2. **Protection contre le CLS** : Chaque balise `<img>` intègre explicitement ses attributs géométriques : `width="600" height="400" loading="lazy"`.
+3. **Accélération du LCP** : L'image principale au-dessus de la ligne de flottaison intègre `fetchpriority="high"`.
+4. **Attributs `alt` optimisés pour Google Images** : Jamais de texte vide. Format : `alt="Application de peinture Pasta Espagnole finition grattée sur façade de villa à Casablanca"`.
+
+---
+
+### 3.5. Maillage Interne en Silo & Cocon Sémantique
+* **Lien Parent** : Chaque page de service renvoie vers le hub central `services.html`.
+* **Liens Transversaux** : Chaque page propose 2 services complémentaires en fin d'article (ex: la page *Pasta Espagnole* propose un lien vers *Étanchéité Toitures* et *Bardage de Façades*).
+* **Ancres textuelles optimisées** : Bannir les mots vides (*"cliquez ici"* ou *"voir plus"*). Utiliser des ancres riches : *« Découvrir nos réalisations en étanchéité de terrasses »*.
+
+---
+
+### 3.6. Protocole Sitemap XML avec Namespace Google Images
+Chaque nouvelle URL est automatiquement inscrite dans [sitemap.xml](file:///c:/Users/pc/Desktop/project/sitemap.xml) avec ses métadonnées d'images :
+
+```xml
+<url>
+  <loc>https://rsftravaux.ma/service-peinture-pasta-espagnole.html</loc>
+  <lastmod>2026-09-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <image:image>
+    <image:loc>https://rsftravaux.ma/assets/svc-facade1.webp</image:loc>
+    <image:title>Peinture Pasta Espagnole Revêtement de Façade Casablanca</image:title>
+    <image:caption>Finition grattée et projetée de façade par RSF Travaux</image:caption>
+  </image:image>
+</url>
+```
+
+---
+
+## 4. LE GRAND CALL-TO-ACTION FINAL DE CONCEPTION (COMPOSANT RÉUTILISABLE)
+
+Placé en fin de chaque page, ce composant convertit le trafic froid en prospects qualifiés :
+
+```html
+<!-- GRAND CTA DE CONCEPTION FINAL -->
+<section class="service-final-cta" style="background: var(--navy); color: #ffffff; padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
+  <div class="wrap" style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
+    <span class="eyebrow" style="color: var(--accent); border-color: rgba(197,155,39,0.4); background: rgba(197,155,39,0.1);">
+      Votre Projet Sur Mesure
+    </span>
+    <h2 style="font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 42px); color: #ffffff; margin: 24px 0 16px;">
+      Donnez vie à votre projet, avec exigence et précision.
+    </h2>
+    <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 36px; max-width: 60ch; margin-left: auto; margin-right: auto;">
+      Profitez d'une première consultation offerte, sur place ou à distance. Échangeons sur vos besoins, vos choix de matériaux et votre planning. Réponse sous 24 heures.
+    </p>
+
+    <!-- TRIPLE BOUTON D'ACTION IMMÉDIATE -->
+    <div style="display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
+      <!-- 1. WhatsApp direct ciblé -->
+      <a href="https://wa.me/212664329698?text=Bonjour%20RSF%20Travaux%2C%20je%20souhaite%20un%20renseignement%20pour%20la%20prestation%20[NOM_SERVICE]." 
+         target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--accent); color: #0b132b; font-weight: 700; padding: 14px 28px;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382...z"/></svg>
+        <span>Discuter sur WhatsApp</span>
+      </a>
+
+      <!-- 2. Formulaire Devis en Ligne -->
+      <a href="contact.html?service=[SLUG_SERVICE]" class="btn btn-ghost" style="border-color: rgba(255,255,255,0.4); color: #ffffff; padding: 14px 24px;">
+        <span>Demander un devis gratuit</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <!-- 3. Appel Téléphonique Direct -->
+      <a href="tel:+212664329698" class="btn btn-ghost" style="border-color: rgba(255,255,255,0.4); color: #ffffff; padding: 14px 24px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M22 16.92v3...z"/></svg>
+        <span>+212 6 64 32 96 98</span>
+      </a>
+    </div>
+
+    <!-- Puces de réassurance d'élite -->
+    <div style="margin-top: 36px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: 13px; color: var(--gold-light);">
+      <span>✔ 21 Ans d'Expérience</span>
+      <span>✔ Déplacement & Visite Offerte</span>
+      <span>✔ Devis Détaillé sans Engagement</span>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## 5. PLAN DE DÉPLOIEMENT & ORDRE DES VAGUES
+
+* **Vague 1 (Piliers Stratégiques Immédiats — Plus Forte Demande Client)** :
+  1. `service-peinture-pasta-espagnole.html` *(Très forte notoriété au Maroc pour les façades)*
+  2. `service-vitrage-accordeon.html` *(Forte demande de devis pour balcons & terrasses)*
+  3. `service-amenagement-cuisine.html` *(Projet d'investissement coup de cœur des familles)*
+  4. `service-renovation-complete.html` *(Contrats d'envergure tous corps d'état)*
+  5. `service-etancheite.html` *(Besoin technique urgent toitures-terrasses)*
+* **Vague 2 (Revêtements & Décoration Haut de Gamme)** :
+  6. `service-effet-travertin.html`
+  7. `service-peinture-decorative.html`
+  8. `service-revetements-sols-murs.html`
+  9. `service-platrerie-faux-plafonds.html`
+  10. `service-bardage-habillage-facade.html`
+* **Vague 3 (Peintures Spécifiques & Finitions)** :
+  11. `service-peinture-interieure.html`
+  12. `service-peinture-exterieure.html`
+  13. `service-sols-resine-epoxy.html`
+  14. `service-moulures-pvc.html`
+  15. `service-amenagement-interieur.html`
+  16. `service-amenagement-exterieur.html`
+  17. `service-travaux-finition.html`
+  18. `service-travaux-divers-maintenance.html`
 
 ---
 
 ### 💡 CONCLUSION :
-Ce cahier des charges actualisé intègre **l'intégralité de vos consignes réelles**, du lexique technique de vos artisans (Pasta Espagnole, GR, Travertino, plafonds Armstrong, moulures PVC de fenêtres) ainsi que les pôles majeurs demandés (**Cuisine sur mesure, Bardage/Habillage et Menuiserie Aluminium**).
+Ce document est désormais la **bible technique, ergonomique et SEO absolue** de RSF Travaux. Chaque page créée selon ces critères sera **techniquement parfaite à 100%**, visuellement prestigieuse et configurée pour truster les premières positions de Google Maroc.

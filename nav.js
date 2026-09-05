@@ -130,7 +130,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <div>© 2026 RSF TRAVAUX S.A.R.L. AU · Tous droits réservés</div>
+          <div>© 2026 RSF TRAVAUX S.A.R.L. AU · Tous droits réservés · <a href="mentions-legales.html" style="color: inherit; text-decoration: underline; margin-left: 6px;">Mentions Légales &amp; Confidentialité</a></div>
           <div class="socials">
             <a href="https://www.instagram.com/rsf_travaux" target="_blank" rel="noopener">Instagram</a>
             <a href="https://www.facebook.com/rsftravaux" target="_blank" rel="noopener">Facebook</a>

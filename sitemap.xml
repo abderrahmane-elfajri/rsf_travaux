@@ -69,9 +69,17 @@
   <!-- Contact & Devis -->
   <url>
     <loc>https://rsftravaux.ma/contact.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Mentions Légales & Confidentialité -->
+  <url>
+    <loc>https://rsftravaux.ma/mentions-legales.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

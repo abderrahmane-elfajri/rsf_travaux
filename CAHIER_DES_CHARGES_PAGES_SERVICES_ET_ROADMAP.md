@@ -37,6 +37,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
 │    └── Double CTA Rapide : [💬 WhatsApp Immédiat]  [📋 Demander une Estimation] │
 ├──────────────────────────────────────────────────────────────────────────────────┤
 │ 2. GRILLE DES TYPES / VARIANTES DU SERVICE ("CARDS SYSTEM")                      │
+│    Titre : « Les Déclinaisons & Techniques Disponibles »                         │
 │    Titre H2 : « Les Déclinaisons & Techniques Disponibles »                      │
 │    Sous-titre : Présentation des différents types et finitions réalisables       │
 │                                                                                  │
@@ -54,6 +55,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
 │ 4. ATOUTS & NORMES TECHNIQUES DU SERVICE                                         │
 │    4 piliers de rassurance (Matériaux certifiés, 21 ans d'expérience, etc.)     │
 ├──────────────────────────────────────────────────────────────────────────────────┤
+│ 5. GRAND CALL-TO-ACTION FINAL DE CONCEPTION (CONVERSION ULTIME)                  │
 │ 5. FAQ TECHNIQUE DU SERVICE (Avec données structurées Google FAQPage)            │
 │    4 questions/réponses pointues désamorçant toutes les hésitations             │
 ├──────────────────────────────────────────────────────────────────────────────────┤
@@ -68,12 +70,16 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
 
 ---
 
+## 🏛️ 2. DÉCLINAISON DES 18 SERVICES : CONTENUS, IMAGES & CARTES DE TYPES
 ## 2. SPÉCIFICATIONS DÉTAILLÉES DES 18 SERVICES (CONTENUS, VISUELS & CARTES DE TYPES)
 
 ---
 
+### 01. Peinture Pasta Espagnole (Revêtement de Façade)
 ### 01. Peinture Pasta Espagnole (Revêtement Façade)
 * **Fichier** : `service-peinture-pasta-espagnole.html`
+* **Titre H1** : **Peinture Pasta Espagnole : Revêtement Décoratif & Protection de Façade**
+* **Image Principale** : `assets/svc-facade1.webp` (Façade texturée de villa contemporaine)
 * **Titre H1** : **Peinture Pasta Espagnole : Revêtement de Façade & Protection Extérieure**
 * **Image Principale** : `assets/svc-facade1.webp` *(Façade extérieure de villa texturée)*
 * **Présentation du Service** :  
@@ -83,6 +89,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Finition Projetée / Mouchetée** | *Image : `assets/svc-facade.webp`* | Application mécanique pour un relief granuleux franc, idéale pour les grands volumes de villas et immeubles.
   3. **Finition Texturée Rustique** | *Image : `assets/craftsman-1.webp`* | Aspect artisanal riche au grain profond, conférant un charme architectural authentique.
   4. **Finition Effet Pierre / Travertino** | *Image : `assets/bathroom-1.webp`* | Façonnage en relief imitant la pierre taillée naturelle avec veinures minérales élégantes.
+* **CTA Final** : Devis sur mesure pour ravalement de façade en Pasta Espagnole.
 * **Points Techniques** : Préparation du support, application talochée manuelle ou projection mécanique, rénovation de façades dégradées.
 
 ---
@@ -99,6 +106,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   3. **Enduit Monocouche** | *Image : `assets/svc-facade.webp`* | Protection et finition en une seule passe, aspects gratté, taloché ou écrasé.
   4. **Enduit de Façade Protecteur** | *Image : `assets/craftsman-1.webp`* | Traitement d'uniformisation et de protection contre le farinage et les fissures.
   5. **Effet Béton Extérieur** | *Image : `assets/minimal-1.jpg`* | Finition architecturale reproduisant le béton brut, minéral et nuancé pour villas d'architecte.
+* **CTA Final** : Chiffrage d'embellissement et protection de façade.
 
 ---
 
@@ -113,6 +121,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Travertin Mural Intérieur** | *Image : `assets/bathroom-1.webp`* | Finition soyeuse et minérale pour halls d'accueil, murs TV et têtes de lit.
   3. **Travertin Texturé en Fort Relief** | *Image : `assets/svc-stucco.webp`* | Cavités et veinures prononcées rappelant la roche brute pour un effet saisissant.
   4. **Travertin Lisse & Nuancé** | *Image : `assets/minimal-2.webp`* | Rendu sobre et raffiné aux dégradés subtils pour intérieurs minimalistes.
+* **CTA Final** : Consultation & échantillonnage de teintes Travertin offerts.
 
 ---
 
@@ -127,6 +136,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Finition Satinée Lavable** | *Image : `assets/svc-paint-interior.jpg`* | Soyeuse, très résistante et lessivable, idéale pour chambres, couloirs et séjours.
   3. **Finition Brillante Laquée** | *Image : `assets/hero_phones.webp`* | Éclat lumineux tendu, idéale pour portes, boiseries intérieures et plinthes.
   4. **Peinture Plafonds Spéciale Anti-Trace** | *Image : `assets/svc-led-cove.webp`* | Blancheur éclatante avec formulation mate pour une planéité visuelle absolue.
+* **CTA Final** : Estimation rapide au m² pour vos travaux de peinture intérieure.
 
 ---
 
@@ -143,6 +153,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   4. **Effet Stuc / Stucco Vénitien** | *Image : `assets/svc-stucco.webp`* | Enduit à la chaux lustré effet marbre poli pour une élégance classique de prestige.
   5. **Effet Tadelakt Artisanal** | *Image : `assets/craftsman-1.webp`* | Doux, minéral, inspiré des techniques ancestrales marocaines au galet.
   6. **Finition Mate Poudrée** | *Image : `assets/minimal-3.webp`* | Texture feutrée et veloutée absorbant la lumière avec délicatesse.
+* **CTA Final** : Présentation du nuancier de matières et chiffrage sur mesure.
 
 ---
 
@@ -156,6 +167,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   1. **Cadrage & Chambranle** | *Image : `assets/minimal-3.webp`* | Profilés d'habillage soignés pour souligner le pourtour des fenêtres.
   2. **Cornières d'Angle Protectrices** | *Image : `assets/craftsman-1.webp`* | Protection et finition impeccable des angles saillants exposés aux chocs.
   3. **Habillage de Rénovation** | *Image : `assets/svc-facade.webp`* | Recouvrement élégant d'anciens dormants sans travaux de démolition.
+* **CTA Final** : Commande et pose rapide de moulures PVC pour vos fenêtres.
 
 ---
 
@@ -170,6 +182,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Suites Parentales & Dressings** | *Image : `assets/bathroom-1.webp`* | Rangements intégrés sur mesure, confort acoustique et finitions feutrées.
   3. **Bureaux & Espaces Professionnels** | *Image : `assets/minimal-1.jpg`* | Aménagement ergonomique pour sièges d'entreprises, cabinets et showrooms.
   4. **Menuiserie & Agencement Sur Mesure** | *Image : `assets/craftsman-1.webp`* | Claustras bois, bibliothèques murales et meubles sur mesure.
+* **CTA Final** : Réservez votre consultation initiale et esquisse 3D offerte.
 
 ---
 
@@ -183,6 +196,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   1. **Embellissement & Rénovation de Façades** | *Image : `assets/svc-facade1.webp`* | Traitement des fissures, enduits et mise en peinture protectrice.
   2. **Aménagement d'Entrées & Perrons** | *Image : `assets/hero_phones.webp`* | Seuils d'accueil en pierre/marbre, éclairages encastrés et sécurisation.
   3. **Terrasses & Balcons Panoramiques** | *Image : `assets/servisf.webp`* | Revêtements extérieurs étanches, garde-corps et finitions soignées.
+* **CTA Final** : Visite technique sur site offerte pour aménager votre extérieur.
 
 ---
 
@@ -197,6 +211,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Rénovation d'Appartements de Standing** | *Image : `assets/minimal-1.jpg`* | Optimisation des volumes, remise aux normes électriques et finitions haut de gamme.
   3. **Rénovation Riads & Bâtiments de Caractère** | *Image : `assets/moroccan-1.jpg`* | Restauration artisanale respectueuse des matériaux traditionnels.
   4. **Rénovation Bureaux & Espaces Commerciaux** | *Image : `assets/svc-epoxy.webp`* | Transformation rapide pour locaux professionnels, respect des délais d'ouverture.
+* **CTA Final** : Confiez votre projet clé en main à une équipe forte de 21 ans d'expérience.
 
 ---
 
@@ -211,6 +226,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Cuisine Linéaire Épurée & Minimaliste** | *Image : `assets/kitchen-3.jpg`* | Façades sans poignées avec système push-pull ou profilés gorge aluminium.
   3. **Cuisine en L avec Rangements d'Angle** | *Image : `assets/minimal-1.jpg`* | Optimisation maximale de l'espace avec paniers extractibles ergonomiques.
   4. **Plans de Travail en Quartz & Marbre** | *Image : `assets/svc-marble.webp`* | Découpes d'éviers sous plan et crédences coordonnées ultra-résistantes.
+* **CTA Final** : Obtenez votre plan de cuisine 3D et votre chiffrage détaillé.
 
 ---
 
@@ -224,6 +240,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   1. **Résine Époxy pour Garages & Ateliers** | *Image : `assets/svc-epoxy.webp`* | Résistance extrême aux pneus chauds, chocs et solvants industriels.
   2. **Résine Époxy Showrooms & Commerces** | *Image : `assets/minimal-1.jpg`* | Finitions brillantes miroir ou mates valorisant les espaces de vente.
   3. **Résine Décorative Effet Marbré 3D** | *Image : `assets/svc-stucco.webp`* | Nuances artistiques unies ou métallisées pour intérieurs modernes.
+* **CTA Final** : Devis gratuit pour vos sols techniques et industriels en résine.
 
 ---
 
@@ -238,6 +255,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Carrelage & Grès Cérame Rectifié** | *Image : `assets/bathroom-1.webp`* | Formats 60×120, 120×120 et dalles XXL avec joints ultra-fins de 1 mm.
   3. **Parquet Bois Massif & Contrecollé** | *Image : `assets/minimal-2.webp`* | Chaleur du bois noble, pose collée ou flottante haute isolation acoustique.
   4. **Faïences & Revêtements Pièces Humides** | *Image : `assets/bathroom-2.jpg`* | Murs de douches à l'italienne, hammams et crédences de cuisines.
+* **CTA Final** : Estimation de pose et matériauthèque disponible sur rendez-vous.
 
 ---
 
@@ -252,6 +270,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Baies Vitrées Coulissantes en Aluminium** | *Image : `assets/hero-living.webp`* | Profilés fins à rupture de pont thermique et vitrage isolant de standing.
   3. **Fenêtres & Portes-Fenêtres Oscillo-Battantes** | *Image : `assets/svc-facade.webp`* | Étanchéité à l'air et à l'eau maximale, quincaillerie invisible.
   4. **Verrières d'Intérieur Type Atelier** | *Image : `assets/minimal-1.jpg`* | Cloisons vitrées séparatives en aluminium pour séparer cuisine et salon.
+* **CTA Final** : Étude de faisabilité et métré gratuit pour votre vitrage panoramique.
 
 ---
 
@@ -265,6 +284,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   1. **Bardage Bois Composite** | *Image : `assets/minimal-3.webp`* | Lames imputrescibles résistantes aux UV et à l'air marin, sans entretien.
   2. **Panneaux Composites Aluminium (Alucobond)** | *Image : `assets/minimal-1.jpg`* | Façades ventilées métallisées lisses et rigides pour bâtiments modernes.
   3. **Claustras & Brise-Soleil Extérieurs** | *Image : `assets/craftsman-1.webp`* | Lattes verticales apportant ombre, intimité et signature architecturale.
+* **CTA Final** : Chiffrez votre habillage de façade avec nos ingénieurs.
 
 ---
 
@@ -279,6 +299,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Plafonds Démontables Armstrong (60×60 cm)** | *Image : `assets/minimal-1.jpg`* | Dalles acoustiques modulaires idéales pour bureaux et locaux professionnels.
   3. **Cloisons Séparatives à Isolation Phonique** | *Image : `assets/craftsman-1.webp`* | Doublages avec laine de roche dense pour un confort acoustique parfait.
   4. **Niches Murales & Meubles TV en Plâtre** | *Image : `assets/hero-living.webp`* | Coffrages sur mesure intégrant étagères et rubans LED encastrés.
+* **CTA Final** : Devis rapide pour vos travaux de faux plafonds et cloisons.
 
 ---
 
@@ -293,6 +314,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   2. **Système d'Étanchéité Liquide (SEL)** | *Image : `assets/svc-epoxy.webp`* | Résines polyuréthane armées sans raccord pour balcons, loggias et dômes.
   3. **Étanchéité Salles de Bains & Douches Italiennes** | *Image : `assets/bathroom-1.webp`* | Nattes d'étanchéité sous carrelage prévenant toute fuite d'eau vers les étages inférieurs.
   4. **Traitement des Fissures & Murs Enterrés** | *Image : `assets/craftsman-1.webp`* | Cuvelage et pontage élastomère des fissures de façade et points singuliers.
+* **CTA Final** : Diagnostic d'infiltration et devis d'étanchéité sous 48h.
 
 ---
 
@@ -306,6 +328,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   1. **Enduisage & Ponçage de Précision** | *Image : `assets/craftsman-1.webp`* | Lissage des murs sous projecteur pour une surface plane prête à peindre.
   2. **Pose de Plinthes & Profilés de Finition** | *Image : `assets/minimal-3.webp`* | Plinthes encastrées ou en applique, baguettes de seuil en laiton/inox.
   3. **Joints d'Étanchéité & Raccords Invisibles** | *Image : `assets/bathroom-1.webp`* | Calfeutrement acrylique et silicone net aux jonctions menuiserie/maçonnerie.
+* **CTA Final** : Sublimez votre chantier avec nos maîtres artisans de finition.
 
 ---
 
@@ -319,6 +342,7 @@ Chaque page de service dédiée respecte une **architecture narrative et visuell
   1. **Petite Maçonnerie & Reprises de Plâtre** | *Image : `assets/craftsman-1.webp`* | Rebouchage de trous, saignées, reprises après dégât des eaux.
   2. **Traitement de Fissures & Retouches Peinture** | *Image : `assets/svc-paint-interior.jpg`* | Raccords de teinte invisibles et assainissement des murs.
   3. **Remplacement de Revêtements & Petits Ajustements** | *Image : `assets/svc-marble.webp`* | Changement de carreaux fissurés, remise en état de plinthes et quincaillerie.
+* **CTA Final** : Contactez notre service d'intervention pour vos travaux d'entretien.
 
 ---
 
@@ -498,7 +522,7 @@ Placé en fin de chaque page, ce composant convertit le trafic froid en prospect
 
     <!-- TRIPLE BOUTON D'ACTION IMMÉDIATE -->
     <div style="display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
-      <!-- 1. WhatsApp direct ciblé -->
+      <!-- 1. WhatsApp direct ciblé avec message pré-rempli -->
       <a href="https://wa.me/212664329698?text=Bonjour%20RSF%20Travaux%2C%20je%20souhaite%20un%20renseignement%20pour%20la%20prestation%20[NOM_SERVICE]." 
          target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--accent); color: #0b132b; font-weight: 700; padding: 14px 28px;">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382...z"/></svg>
@@ -557,4 +581,9 @@ Placé en fin de chaque page, ce composant convertit le trafic froid en prospect
 ---
 
 ### 💡 CONCLUSION :
+Cette conception répond **exactement à vos attentes** :
+1. Le **titre H1** et la **présentation officielle** ouvrent chaque service.
+2. L'**image représentative haute résolution** ancre le prestige.
+3. Chaque variante ou finition est mise en valeur dans une **carte dédiée avec sa photo représentative, son titre et son explication courte**.
+4. Le **Call to Action de conception final** en pied de page offre les 3 canaux immédiats (WhatsApp ciblé, devis en ligne, appel direct).
 Ce document est désormais la **bible technique, ergonomique et SEO absolue** de RSF Travaux. Chaque page créée selon ces critères sera **techniquement parfaite à 100%**, visuellement prestigieuse et configurée pour truster les premières positions de Google Maroc.

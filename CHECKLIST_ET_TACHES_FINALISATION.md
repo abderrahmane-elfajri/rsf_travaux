@@ -80,9 +80,9 @@ Pour enrichir davantage votre écosystème commercial, vous pouvez fournir (quan
 * **Ce dont nous avons besoin** : Si vous possédez des photos haute résolution de chantiers récents réalisés à Casablanca, Rabat ou Marrakech (cuisines, façades, villas, vitrages accordéon).
 * **Action de notre part** : Nous les compresserons en WebP haute définition et les placerons directement dans les cartes de finitions de vos pages de services.
 
-### [ ] 3.4. Lien de votre Fiche Google Business Profile (Google Maps)
-* **Ce dont nous avons besoin** : Le lien de votre fiche Google Maps / avis clients si vous en avez une active.
-* **Résultat** : Nous pourrons ajouter le lien direct vers vos avis vérifiés 5 étoiles pour maximiser la confiance des visiteurs.
+### [x] 3.4. Fiche Google Business Profile & Avis Clients (Intégré ✅)
+* **Lien officiel configuré** : `https://g.page/r/CdTegbQHAXpcEAI/review`
+* **Emplacements actifs** : Intégré dans le bloc carte/contact de `contact.html`, sous les témoignages de `references.html` et dans le balisage Schema.org (`hasMap` & `sameAs`) de `index.html`.
 
 ---
 

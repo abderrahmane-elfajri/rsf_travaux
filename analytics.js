@@ -1,7 +1,8 @@
 /**
- * RSF Travaux — Script Universel d'Analyse, Tracking & Consentement
- * Gère Google Tag Manager / GA4, le suivi des conversions et le bandeau cookies.
- * @version 1.0.0
+ * RSF Travaux — Script Universel d'Analyse & Suivi des Conversions
+ * Gère Google Tag Manager / GA4 et le suivi des clics WhatsApp, Téléphone et Devis.
+ * Aucun cookie n'est déposé ni utilisé par ce script.
+ * @version 1.1.0
  */
 (function () {
   "use strict";
@@ -12,7 +13,7 @@
     window.dataLayer.push(arguments);
   };
 
-  // 2. FONCTION UNIVERSELLE DE TRACKING D'ÉVÉNEMENTS
+  // 2. FONCTION UNIVERSELLE DE TRACKING D'ÉVÉNEMENTS (IN-MEMORY SANS COOKIE)
   window.rsfTrackEvent = function (eventName, eventParams) {
     var payload = Object.assign({
       event: eventName,
@@ -29,7 +30,7 @@
       window.dispatchEvent(customEvt);
     } catch (e) {}
 
-    // Debug console informatif
+    // Debug console informatif en local
     if (window.location.hostname === "localhost" || window.location.protocol === "file:") {
       console.log("📊 [RSF Analytics]", eventName, payload);
     }
@@ -82,79 +83,15 @@
           source_page: window.location.pathname
         });
       }
-    });
 
-    // 4. GESTION DU BANDEAU DE CONSENTEMENT COOKIES HAUT DE GAMME
-    initCookieConsent();
+      // D. Clic Fiche & Avis Google Maps
+      var gReviewLink = e.target.closest('a[href*="g.page/r/"]');
+      if (gReviewLink) {
+        window.rsfTrackEvent("google_review_click", {
+          event_category: "Reputation",
+          event_label: "Fiche Google Maps & Avis"
+        });
+      }
+    });
   });
-
-  function initCookieConsent() {
-    var consent = localStorage.getItem("rsf_cookie_consent");
-    if (consent) {
-      applyConsent(consent === "granted");
-      return;
-    }
-
-    // Création du bandeau prestige
-    var banner = document.createElement("div");
-    banner.id = "rsf-cookie-banner";
-    banner.className = "rsf-cookie-banner";
-    banner.setAttribute("role", "dialog");
-    banner.setAttribute("aria-label", "Gestion des cookies");
-    banner.innerHTML = `
-      <div class="rsf-cookie-inner">
-        <div class="rsf-cookie-text">
-          <div class="rsf-cookie-title">
-            <span class="cookie-icon">🍪</span> Respect de votre vie privée
-          </div>
-          <p>
-            Nous utilisons des cookies analytiques pour mesurer notre audience et optimiser votre expérience de navigation. Aucune donnée personnelle n'est cédée à des tiers.
-            <a href="mentions-legales.html#cookies" class="rsf-cookie-link">En savoir plus</a>.
-          </p>
-        </div>
-        <div class="rsf-cookie-actions">
-          <button type="button" id="rsf-cookie-decline" class="rsf-cookie-btn rsf-cookie-btn-ghost">Refuser</button>
-          <button type="button" id="rsf-cookie-accept" class="rsf-cookie-btn rsf-cookie-btn-primary">Accepter</button>
-        </div>
-      </div>
-    `;
-
-    document.body.appendChild(banner);
-
-    // Animation d'apparition discrète
-    setTimeout(function () {
-      banner.classList.add("visible");
-    }, 400);
-
-    // Écouteurs de clics
-    document.getElementById("rsf-cookie-accept").addEventListener("click", function () {
-      localStorage.setItem("rsf_cookie_consent", "granted");
-      applyConsent(true);
-      closeBanner(banner);
-    });
-
-    document.getElementById("rsf-cookie-decline").addEventListener("click", function () {
-      localStorage.setItem("rsf_cookie_consent", "denied");
-      applyConsent(false);
-      closeBanner(banner);
-    });
-  }
-
-  function applyConsent(granted) {
-    window.gtag("consent", "update", {
-      analytics_storage: granted ? "granted" : "denied",
-      ad_storage: granted ? "granted" : "denied"
-    });
-    window.rsfTrackEvent("consent_update", {
-      consent_status: granted ? "granted" : "denied"
-    });
-  }
-
-  function closeBanner(banner) {
-    banner.classList.remove("visible");
-    setTimeout(function () {
-      if (banner.parentNode) banner.parentNode.removeChild(banner);
-    }, 400);
-  }
 })();
-

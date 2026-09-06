@@ -7,6 +7,13 @@
 (function () {
   "use strict";
 
+  // Nettoyage automatique de tout résidu de cache ou bannière précédente
+  try {
+    localStorage.removeItem("rsf_cookie_consent");
+    var residual = document.getElementById("rsf-cookie-banner");
+    if (residual && residual.parentNode) residual.parentNode.removeChild(residual);
+  } catch (e) {}
+
   // 1. INITIALISATION DATALAYER POUR GTM & GA4
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {

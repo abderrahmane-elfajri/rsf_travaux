@@ -35,80 +35,70 @@
 
   <!-- MAIN CONTENT -->
   <main id="main">
-    <!-- LUXURY HERO HEADER -->
+    <!-- INSTITUTIONAL HERO HEADER (CLEAN & SOBER) -->
     <header class="legal-header">
-      <div class="wrap" style="max-width: 960px; text-align: center;">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-bottom: 24px;">
+      <div class="wrap" style="max-width: 900px; text-align: center;">
+        <div style="font-size: 13px; color: var(--muted); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.08em;">
           <a href="index.html" style="color: inherit; text-decoration: none;">Accueil</a>
-          <span>›</span>
-          <span style="color: var(--accent); font-weight: 600;">Mentions Légales &amp; Confidentialité</span>
+          <span style="margin: 0 8px;">/</span>
+          <span style="color: var(--accent); font-weight: 600;">Mentions Légales</span>
         </div>
 
-        <span class="eyebrow" style="margin-bottom: 18px;">Gouvernance &amp; Transparence Contractuelle</span>
-        <h1 style="font-family: var(--font-display); font-size: clamp(30px, 4.5vw, 48px); color: var(--navy); margin-bottom: 20px; line-height: 1.15;">
-          Mentions Légales &amp; Confidentialité
+        <span class="eyebrow" style="margin-bottom: 16px;">Document d'Information Réglementaire</span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); color: var(--navy); margin-bottom: 18px; letter-spacing: -0.01em;">
+          Mentions Légales &amp; Cadre Juridique
         </h1>
-        <p style="font-size: 17px; color: var(--muted); line-height: 1.65; max-width: 68ch; margin: 0 auto 28px;">
-          Informations réglementaires régissant l'exploitation de la plateforme <strong>rsftravaux.ma</strong>, engagement strict de protection des données (Loi n° 09-08 CNDP Maroc), politique zéro-cookie et charte de garanties professionnelles.
+        <p style="font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 66ch; margin: 0 auto 24px;">
+          Informations réglementaires régissant la plateforme <strong>rsftravaux.ma</strong>, engagement strict de protection des données (Loi marocaine n° 09-08), politique de confidentialité et garanties contractuelles.
         </p>
 
-        <div style="display: inline-flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 30px; padding: 8px 20px; font-size: 12.5px; color: var(--muted);">
-          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981;"></span>
-          <span>Dernière révision : <strong>Septembre 2026</strong> · Document officiel certifié</span>
+        <div style="font-size: 12px; color: var(--muted); font-family: var(--font-mono, monospace);">
+          Dernière mise à jour : Septembre 2026 &middot; Réf : RSF-LEG-2026-V1
         </div>
       </div>
     </header>
 
-    <!-- CONTENT GRID WITH STICKY SIDEBAR -->
+    <!-- TWO-COLUMN LAYOUT -->
     <div class="wrap legal-layout">
-      <!-- STICKY SIDEBAR NAVIGATION -->
-      <aside class="legal-sidebar" aria-label="Sommaire juridique">
-        <div class="legal-sidebar-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
-          <span>Sommaire Rapide</span>
-        </div>
+      <!-- SIDEBAR TABLE OF CONTENTS (NO ICONS) -->
+      <aside class="legal-sidebar" aria-label="Sommaire du document">
+        <div class="legal-sidebar-title">Sommaire</div>
         <nav>
           <ul class="legal-nav-list">
-            <li><a href="#identification" class="legal-nav-link"><span class="legal-nav-num">01.</span> Identification Entreprise</a></li>
+            <li><a href="#identification" class="legal-nav-link"><span class="legal-nav-num">01.</span> Société éditrice</a></li>
             <li><a href="#hebergement" class="legal-nav-link"><span class="legal-nav-num">02.</span> Hébergement &amp; Sécurité</a></li>
-            <li><a href="#propriete" class="legal-nav-link"><span class="legal-nav-num">03.</span> Propriété Intellectuelle</a></li>
-            <li><a href="#donnees-cndp" class="legal-nav-link"><span class="legal-nav-num">04.</span> Protection Données (CNDP)</a></li>
-            <li><a href="#cookies" class="legal-nav-link"><span class="legal-nav-num">05.</span> Politique Zéro-Cookie</a></li>
-            <li><a href="#garanties" class="legal-nav-link"><span class="legal-nav-num">06.</span> Garanties Professionnelles</a></li>
-            <li><a href="#juridiction" class="legal-nav-link"><span class="legal-nav-num">07.</span> Droit &amp; Juridiction</a></li>
+            <li><a href="#propriete" class="legal-nav-link"><span class="legal-nav-num">03.</span> Propriété intellectuelle</a></li>
+            <li><a href="#donnees-cndp" class="legal-nav-link"><span class="legal-nav-num">04.</span> Données (Loi 09-08)</a></li>
+            <li><a href="#cookies" class="legal-nav-link"><span class="legal-nav-num">05.</span> Politique sans cookies</a></li>
+            <li><a href="#garanties" class="legal-nav-link"><span class="legal-nav-num">06.</span> Règles de l'art &amp; Garanties</a></li>
+            <li><a href="#juridiction" class="legal-nav-link"><span class="legal-nav-num">07.</span> Droit applicable &amp; Litiges</a></li>
           </ul>
         </nav>
 
-        <div class="legal-sidebar-cta">
-          <p>Besoin d'une clarification ?</p>
-          <a href="https://wa.me/212664329698?text=Bonjour%20RSF%20Travaux%2C%20je%20souhaite%20une%20information%20concernant%20vos%20conditions." target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; font-size: 13px; padding: 10px 14px; justify-content: center;">
-            <span>Échange WhatsApp direct</span>
-          </a>
+        <div class="legal-sidebar-contact">
+          <div class="legal-sidebar-contact-title">Contact Officiel</div>
+          <a href="tel:+212664329698">+212 6 64 32 96 98</a>
+          <a href="mailto:rsftravaux@gmail.com">rsftravaux@gmail.com</a>
         </div>
       </aside>
 
-      <!-- MAIN ARTICLES -->
+      <!-- ARTICLES COLUMN (CLEAN EDITORIAL) -->
       <section class="legal-articles" style="min-width: 0;">
-        <!-- 1. IDENTIFICATION -->
+        <!-- 01. IDENTIFICATION -->
         <article class="legal-card" id="identification">
-          <div class="legal-card-header">
-            <div class="legal-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
-            </div>
-            <div>
-              <span class="legal-point-tag">Section 01</span>
-              <h2 class="legal-card-title">Identification de l'Entreprise</h2>
-            </div>
+          <div class="legal-card-head">
+            <span class="legal-sec-num">Section 01</span>
+            <h2 class="legal-card-title">Identification de la Société Éditrice</h2>
           </div>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            Le présent portail accessible à l'adresse <strong>https://rsftravaux.ma</strong> est la propriété exclusive et est édité par la société <strong>RSF Travaux</strong>, entreprise générale de bâtiment et contractant général opérant sur l'ensemble du territoire marocain.
+          <p>
+            Le site web accessible à l'adresse <strong>https://rsftravaux.ma</strong> est édité et exploité par la société <strong>RSF Travaux</strong>, entreprise générale de bâtiment et d'aménagement de référence au Maroc.
           </p>
 
           <table class="legal-spec-table">
             <tbody>
               <tr>
                 <td class="legal-spec-label">Dénomination sociale</td>
-                <td class="legal-spec-val"><strong>RSF Travaux S.A.R.L. AU</strong></td>
+                <td class="legal-spec-val">RSF Travaux S.A.R.L. AU</td>
               </tr>
               <tr>
                 <td class="legal-spec-label">Forme juridique</td>
@@ -119,199 +109,166 @@
                 <td class="legal-spec-val">Casablanca, Royaume du Maroc</td>
               </tr>
               <tr>
-                <td class="legal-spec-label">Périmètre d'activité</td>
-                <td class="legal-spec-val">Travaux de bâtiment, aménagement d'intérieur, rénovation clé en main, revêtements décoratifs et menuiserie aluminium</td>
+                <td class="legal-spec-label">Activité principale</td>
+                <td class="legal-spec-val">Entreprise générale de bâtiment, rénovation tous corps d'état, aménagement d'intérieur, revêtements de sols/murs et menuiserie aluminium</td>
               </tr>
               <tr>
                 <td class="legal-spec-label">Expérience du pôle</td>
-                <td class="legal-spec-val">21 années d'expertise et chantiers de prestige livrés</td>
+                <td class="legal-spec-val">21 années d'exercice et de réalisations livrées</td>
               </tr>
               <tr>
-                <td class="legal-spec-label">Ligne directe &amp; WhatsApp</td>
+                <td class="legal-spec-label">Ligne directe / WhatsApp</td>
                 <td class="legal-spec-val">
-                  <a href="tel:+212664329698" style="color: var(--accent); font-weight: 700; text-decoration: none;">+212 6 64 32 96 98</a>
+                  <a href="tel:+212664329698" style="color: var(--accent); text-decoration: none;">+212 6 64 32 96 98</a>
                 </td>
               </tr>
               <tr>
                 <td class="legal-spec-label">Courriel officiel</td>
                 <td class="legal-spec-val">
-                  <a href="mailto:rsftravaux@gmail.com" style="color: var(--accent); font-weight: 600; text-decoration: none;">rsftravaux@gmail.com</a>
+                  <a href="mailto:rsftravaux@gmail.com" style="color: var(--accent); text-decoration: none;">rsftravaux@gmail.com</a>
                 </td>
               </tr>
             </tbody>
           </table>
         </article>
 
-        <!-- 2. HÉBERGEMENT -->
+        <!-- 02. HÉBERGEMENT -->
         <article class="legal-card" id="hebergement">
-          <div class="legal-card-header">
-            <div class="legal-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div>
-              <span class="legal-point-tag">Section 02</span>
-              <h2 class="legal-card-title">Hébergement &amp; Sécurité de l'Infrastructure</h2>
-            </div>
+          <div class="legal-card-head">
+            <span class="legal-sec-num">Section 02</span>
+            <h2 class="legal-card-title">Hébergement &amp; Sécurité de l'Infrastructure</h2>
           </div>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            Le site est déployé sur une architecture de diffusion de contenu haute performance (CDN) distribuée à l'échelle internationale, garantissant une disponibilité permanente (99.9%), un temps de chargement ultra-rapide et une protection proactive contre les cyberattaques.
+          <p>
+            Le portail est hébergé sur des infrastructures d'hébergement cloud sécurisées de premier ordre, assurant une disponibilité réseau continue et un acheminement sécurisé des flux de données.
           </p>
-          <div class="legal-highlight-box">
+          <div class="legal-notice-box">
             <p>
-              🔒 <strong>Chiffrement SSL / HTTPS natif :</strong> L'intégralité des flux échangés entre votre navigateur et notre infrastructure fait l'objet d'un chiffrement robuste de grade bancaire (certificat TLS 256 bits), interdisant toute interception frauduleuse de données.
+              <strong>Sécurité des échanges (Protocole SSL / TLS) :</strong> L'ensemble des connexions établies avec le site bénéficie d'un chiffrement complet HTTPS avec certificat SSL 256 bits, garantissant la parfaite confidentialité et l'intégrité de toutes vos interactions.
             </p>
           </div>
         </article>
 
-        <!-- 3. PROPRIÉTÉ INTELLECTUELLE -->
+        <!-- 03. PROPRIÉTÉ INTELLECTUELLE -->
         <article class="legal-card" id="propriete">
-          <div class="legal-card-header">
-            <div class="legal-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <span class="legal-point-tag">Section 03</span>
-              <h2 class="legal-card-title">Propriété Intellectuelle &amp; Droits Réservés</h2>
-            </div>
+          <div class="legal-card-head">
+            <span class="legal-sec-num">Section 03</span>
+            <h2 class="legal-card-title">Propriété Intellectuelle &amp; Droits d'Auteur</h2>
           </div>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            L'ensemble des éléments graphiques, photographies de chantiers réels, conceptions 3D, vidéos, logos, rédactions techniques, scripts et architecture visuelle figurant sur le site <strong>rsftravaux.ma</strong> constituent des créations originales protégées par la législation marocaine et internationale sur la propriété intellectuelle et le droit d'auteur.
+          <p>
+            La totalité du contenu diffusé sur <strong>rsftravaux.ma</strong> (textes techniques, photographies de chantiers, plans 3D, chartes graphiques, logos, iconographies et codes sources) est la propriété intellectuelle exclusive de <strong>RSF Travaux S.A.R.L. AU</strong> ou fait l'objet d'autorisations expresses d'exploitation.
           </p>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            Toute reproduction, représentation intégrale ou partielle, diffusion, modification ou exploitation commerciale sans l'accord exprès, préalable et écrit de <strong>RSF Travaux S.A.R.L. AU</strong> est constitutive de contrefaçon et fera l'objet de poursuites judiciaires conformément au droit en vigueur.
+          <p>
+            Toute reproduction, représentation intégrale ou partielle, modification, diffusion ou réutilisation sur quelque support que ce soit, sans l'accord écrit préalable de la direction de RSF Travaux, est formellement prohibée et passible des sanctions prévues par le Code de la propriété industrielle et intellectuelle au Maroc.
           </p>
         </article>
 
-        <!-- 4. PROTECTION DES DONNÉES (CNDP LOI 09-08) -->
+        <!-- 04. PROTECTION DES DONNÉES CNDP -->
         <article class="legal-card" id="donnees-cndp">
-          <div class="legal-card-header">
-            <div class="legal-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div>
-              <span class="legal-point-tag">Section 04</span>
-              <h2 class="legal-card-title">Protection des Données Personnelles (Loi n° 09-08)</h2>
-            </div>
+          <div class="legal-card-head">
+            <span class="legal-sec-num">Section 04</span>
+            <h2 class="legal-card-title">Protection des Données Personnelles (Loi n° 09-08)</h2>
           </div>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            En conformité stricte avec la <strong>Loi n° 09-08</strong> promulguée par le Dahir n° 1-09-15 du 18 février 2009 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, sous le contrôle de la <strong>CNDP</strong> (Commission Nationale de contrôle de la protection des Données à caractère Personnel) :
+          <p>
+            Le traitement des données à caractère personnel collectées sur ce site respecte scrupuleusement les exigences de la <strong>Loi n° 09-08</strong> promulguée par le Dahir n° 1-09-15 du 18 février 2009, sous l'autorité de la <strong>CNDP</strong> (Commission Nationale de contrôle de la protection des Données à caractère Personnel).
           </p>
 
-          <div class="legal-points-grid">
-            <div class="legal-point-card">
-              <span class="legal-point-tag">🎯 Finalité Exclusive</span>
-              <p class="legal-point-desc">
-                Les coordonnées transmises via notre formulaire de devis (nom, téléphone WhatsApp, email, ville, surface) sont rigoureusement réservées à l'établissement de propositions tarifaires et à la coordination des visites de chantiers.
-              </p>
+          <div class="legal-points-list">
+            <div class="legal-point-row">
+              <div class="legal-point-title">1. Finalité de la collecte</div>
+              <p class="legal-point-text">Les données transmises via notre formulaire de contact (nom, téléphone, adresse email, ville, descriptif de projet) sont exclusivement destinées à l'établissement d'estimations chiffrées et à la planification des visites techniques de chantiers.</p>
             </div>
-            <div class="legal-point-card">
-              <span class="legal-point-tag">🚫 Zéro Cession Commerciale</span>
-              <p class="legal-point-desc">
-                Vos données ne font l'objet d'aucune vente, location ou cession à des régies publicitaires externes ou tiers. Vos informations restent strictement confidentielles au sein du bureau d'études RSF.
-              </p>
+            <div class="legal-point-row">
+              <div class="legal-point-title">2. Absence totale de cession commerciale</div>
+              <p class="legal-point-text">Les informations collectées demeurent strictement confidentielles. Elles ne font l'objet d'aucune vente, location ou transmission à des régies publicitaires externes.</p>
             </div>
-            <div class="legal-point-card">
-              <span class="legal-point-tag">⏳ Conservation Limitée</span>
-              <p class="legal-point-desc">
-                Les dossiers d'études sont conservés pendant la durée de la relation commerciale et de la garantie décennale des travaux, puis supprimés de manière sécurisée.
-              </p>
+            <div class="legal-point-row">
+              <div class="legal-point-title">3. Durée de conservation</div>
+              <p class="legal-point-text">Les données de devis sont conservées pendant la durée de gestion de la relation client et la période de garantie décennale des réalisations, avant archivage ou suppression sécurisée.</p>
             </div>
-            <div class="legal-point-card">
-              <span class="legal-point-tag">✍️ Vos Droits d'Accès</span>
-              <p class="legal-point-desc">
-                Vous disposez d'un droit d'accès, d'actualisation et de suppression de vos données personnelles par simple demande écrite à <strong>rsftravaux@gmail.com</strong>.
-              </p>
+            <div class="legal-point-row">
+              <div class="legal-point-title">4. Droit d'accès, de rectification et d'opposition</div>
+              <p class="legal-point-text">Conformément aux articles 7 et suivants de la Loi 09-08, vous disposez d'un droit permanent d'accès, de modification ou de suppression de vos données en adressant une simple demande écrite à <strong>rsftravaux@gmail.com</strong>.</p>
             </div>
           </div>
         </article>
 
-        <!-- 5. POLITIQUE ZÉRO-COOKIE -->
+        <!-- 05. POLITIQUE SANS COOKIES -->
         <article class="legal-card" id="cookies">
-          <div class="legal-card-header">
-            <div class="legal-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7 7 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7 7 0 0 1 11 5.07V5a1 1 0 0 1 2 0v.07A7 7 0 0 1 18.93 11H19a1 1 0 0 1 0 2h-.07A7 7 0 0 1 13 16.93z"/></svg>
-            </div>
-            <div>
-              <span class="legal-point-tag">Section 05</span>
-              <h2 class="legal-card-title">Politique Zéro-Cookie &amp; Navigation Anonyme</h2>
-            </div>
+          <div class="legal-card-head">
+            <span class="legal-sec-num">Section 05</span>
+            <h2 class="legal-card-title">Absence de Cookies &amp; Traçage Anonyme</h2>
           </div>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            Le site <strong>rsftravaux.ma</strong> applique une charte d'éthique numérique intransigeante :
+          <p>
+            Le site <strong>rsftravaux.ma</strong> n'utilise <strong>aucun cookie publicitaire, commercial ou de pistage individuel</strong>.
           </p>
-          <div class="legal-highlight-box" style="border-left-color: #10b981; background: rgba(16, 185, 129, 0.06);">
-            <p style="color: #065f46; font-weight: 600;">
-              🌿 <strong>Aucun cookie publicitaire, commercial ou espion n'est déposé sur votre appareil.</strong>
-            </p>
-            <p style="font-size: 13.5px; color: var(--muted); margin-top: 6px;">
-              Votre navigation s'effectue en totale liberté et sans consentement forcé. Les éventuelles mesures de trafic sont réalisées de façon strictement anonyme, volatile et en mémoire vive sans aucune conservation de traceurs sur votre terminal.
+          <div class="legal-notice-box">
+            <p>
+              Votre navigation sur notre portail s'effectue librement, en toute confidentialité et sans aucun dépôt de fichiers témoins (cookies) sur votre ordinateur ou votre terminal mobile. Les métriques éventuelles de fréquentation sont traitées de manière purement volatile et anonyme.
             </p>
           </div>
         </article>
 
-        <!-- 6. GARANTIES & RÈGLES DE L'ART -->
+        <!-- 06. GARANTIES PROFESSIONNELLES -->
         <article class="legal-card" id="garanties">
-          <div class="legal-card-header">
-            <div class="legal-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          <div class="legal-card-head">
+            <span class="legal-sec-num">Section 06</span>
+            <h2 class="legal-card-title">Garanties d'Exécution &amp; Règles de l'Art</h2>
+          </div>
+          <p>
+            Chaque opération d'aménagement ou de rénovation pilotée par <strong>RSF Travaux</strong> est encadrée par des exigences d'exécution rigoureuses :
+          </p>
+          <div class="legal-points-list">
+            <div class="legal-point-row">
+              <div class="legal-point-title">Devis descriptif &amp; contractuel</div>
+              <p class="legal-point-text">Établissement préalable d'un chiffrage précis avec métré contradictoire, sans coûts imprévus ni révision unilatérale.</p>
             </div>
-            <div>
-              <span class="legal-point-tag">Section 06</span>
-              <h2 class="legal-card-title">Garanties d'Exécution &amp; Règles de l'Art</h2>
+            <div class="legal-point-row">
+              <div class="legal-point-title">Conformité aux D.T.U. &amp; Normes Marocaines</div>
+              <p class="legal-point-text">Respect des prescriptions techniques du bâtiment et mise en œuvre exclusive de matériaux certifiés de premier choix (Sika, Jotun, Saint-Gobain).</p>
+            </div>
+            <div class="legal-point-row">
+              <div class="legal-point-title">Conducteur de travaux dédié</div>
+              <p class="legal-point-text">Suivi régulier du planning d'intervention, coordination tous corps d'état et contrôle de conformité à chaque étape clé.</p>
+            </div>
+            <div class="legal-point-row">
+              <div class="legal-point-title">Procès-verbal de réception &amp; Garantie</div>
+              <p class="legal-point-text">Réception contradictoire en fin d'ouvrage avec levée minutieuse de toute réserve et accompagnement post-livraison.</p>
             </div>
           </div>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            Chaque chantier confié à <strong>RSF Travaux</strong> est encadré par des engagements contractuels rigoureux :
-          </p>
-          <ul style="padding-left: 20px; font-size: 14.5px; color: var(--muted); line-height: 1.8;">
-            <li><strong>Métré précis &amp; Devis contractuel :</strong> Chiffrage poste par poste, transparent et garanti sans révision unilatérale en cours d'ouvrage.</li>
-            <li><strong>Conformité D.T.U. &amp; Prescriptions fabricants :</strong> Respect strict des normes professionnelles du bâtiment et des fiches techniques des matériaux (Sika, Jotun, Saint-Gobain).</li>
-            <li><strong>Conducteur de travaux dédié :</strong> Un interlocuteur unique coordonne l'ensemble des corps d'état et assure le contrôle de qualité à chaque étape.</li>
-            <li><strong>Garantie de parfait achèvement :</strong> Réception contradictoire des travaux avec procès-verbal et levée minutieuse de toutes réserves éventuelles.</li>
-          </ul>
         </article>
 
-        <!-- 7. DROIT & JURIDICTION -->
+        <!-- 07. DROIT APPLICABLE -->
         <article class="legal-card" id="juridiction">
-          <div class="legal-card-header">
-            <div class="legal-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            </div>
-            <div>
-              <span class="legal-point-tag">Section 07</span>
-              <h2 class="legal-card-title">Droit Applicable &amp; Règlement des Litiges</h2>
-            </div>
+          <div class="legal-card-head">
+            <span class="legal-sec-num">Section 07</span>
+            <h2 class="legal-card-title">Droit Applicable &amp; Attribution de Compétence</h2>
           </div>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            Les présentes mentions légales et les relations contractuelles entre RSF Travaux et ses clients sont exclusivement soumises au <strong>droit marocain</strong>.
+          <p>
+            Les présentes mentions légales ainsi que toutes les relations contractuelles entre RSF Travaux et ses clients sont régies par la <strong>législation du Royaume du Maroc</strong>.
           </p>
-          <p style="font-size: 14.5px; color: var(--muted); line-height: 1.7;">
-            En cas de contestation ou de litige survenant lors de l'exécution d'un contrat, les parties privilégieront une résolution amiable. À défaut d'accord, compétence exclusive est expressément attribuée aux <strong>tribunaux compétents de la circonscription judiciaire de Casablanca</strong>.
+          <p>
+            En cas de différend relatif à l'interprétation ou à l'exécution des présentes, les parties privilégieront une conciliation amiable. À défaut de règlement amiable dans un délai raisonnable, compétence expresse et exclusive est conférée aux <strong>tribunaux compétents de Casablanca</strong>.
           </p>
         </article>
       </section>
     </div>
 
-    <!-- BOTTOM REASSURANCE & CONTACT BANNER -->
-    <section style="background: var(--navy); color: #ffffff; padding: 70px 0; text-align: center; border-top: 1px solid var(--line);">
-      <div class="wrap" style="max-width: 760px;">
-        <span class="eyebrow" style="color: var(--accent); border-color: rgba(197,155,39,0.4); background: rgba(197,155,39,0.1); margin-bottom: 18px;">
-          Un Projet, Une Question ?
-        </span>
-        <h2 style="font-family: var(--font-display); font-size: clamp(24px, 3.5vw, 36px); color: #ffffff; margin: 18px 0;">
-          Construisons votre projet avec clarté et sérénité.
+    <!-- CLEAN BOTTOM ASSISTANCE BANNER -->
+    <section style="background: var(--bg-2); border-top: 1px solid var(--line); padding: 60px 0; text-align: center;">
+      <div class="wrap" style="max-width: 700px;">
+        <span class="eyebrow" style="margin-bottom: 14px;">Assistance &amp; Projets</span>
+        <h2 style="font-family: var(--font-display); font-size: 26px; color: var(--navy); margin-bottom: 14px;">
+          Une question concernant nos prestations ou vos travaux ?
         </h2>
-        <p style="font-size: 16px; color: rgba(255,255,255,0.78); line-height: 1.6; margin-bottom: 32px;">
-          Nos chargés d'études et conducteurs de travaux vous accompagnent de la première esquisse jusqu'à la remise définitive des clés.
+        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 28px;">
+          Nos chargés d'affaires et notre direction technique sont à votre entière disposition pour échanger sur vos projets de rénovation.
         </p>
-        <div style="display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
-          <a href="https://wa.me/212664329698?text=Bonjour%20RSF%20Travaux%2C%20je%20souhaite%20un%20devis%20pour%20mon%20projet." target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--accent); color: #0b132b; font-weight: 700;">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wa.me/212664329698?text=Bonjour%20RSF%20Travaux%2C%20je%20souhaite%20un%20renseignement%20sur%20un%20projet%20de%20travaux." target="_blank" rel="noopener" class="btn btn-primary">
             <span>Discuter sur WhatsApp</span>
           </a>
-          <a href="contact.html" class="btn btn-ghost" style="border-color: rgba(255,255,255,0.4); color: #ffffff;">
-            <span>Demander un devis en ligne</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <a href="contact.html" class="btn btn-ghost">
+            <span>Demander une estimation en ligne</span>
           </a>
         </div>
       </div>

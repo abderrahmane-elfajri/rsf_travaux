@@ -3463,39 +3463,62 @@ img, svg, video { max-width: 100%; height: auto; }
   text-shadow: 0 4px 24px rgba(197, 155, 39, 0.2);
 }
 
+/* Legal Page Layout */
 /* Legal Page Layout — Édition Institutionnelle & Sobriété */
 .legal-header {
   padding: 130px 0 60px;
+  background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.08) 0%, var(--bg) 70%);
   background: var(--bg-2);
   border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.legal-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+/* ============================================================
+   LEGAL PAGE — Clean Editorial Luxury Typography
+   ============================================================ */
+.legal-header {
+  padding: 140px 0 60px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  text-align: center;
 }
 .legal-layout {
   display: grid;
   grid-template-columns: 260px 1fr;
-  gap: 56px;
+  gap: 52px;
   align-items: start;
   padding: 60px 0 100px;
 }
-
-/* Sidebar Sommaire — Typographie pure sans icône */
 .legal-sidebar {
   position: sticky;
   top: 100px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 24px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 .legal-sidebar-title {
   font-family: var(--font-display);
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: var(--accent);
-  font-weight: 700;
   margin-bottom: 16px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--line);
+  font-weight: 700;
 }
 .legal-nav-list {
   list-style: none;
@@ -3508,19 +3531,22 @@ img, svg, video { max-width: 100%; height: auto; }
 .legal-nav-link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-size: 13.5px;
   color: var(--muted);
   text-decoration: none;
-  padding: 9px 12px;
+  padding: 8px 12px;
   border-radius: 6px;
-  transition: color 0.15s ease, background 0.15s ease;
+  transition: all 0.2s ease;
 }
-.legal-nav-link:hover {
+.legal-nav-link:hover,
+.legal-nav-link.active {
   color: var(--navy);
   background: var(--bg-2);
+  font-weight: 600;
 }
-html[data-theme="dark"] .legal-nav-link:hover {
+html[data-theme="dark"] .legal-nav-link:hover,
+html[data-theme="dark"] .legal-nav-link.active {
   color: var(--gold-light);
 }
 .legal-nav-num {
@@ -3528,39 +3554,29 @@ html[data-theme="dark"] .legal-nav-link:hover {
   font-size: 11.5px;
   color: var(--accent);
   font-weight: 700;
-  opacity: 0.85;
 }
-.legal-sidebar-contact {
+.legal-sidebar-cta {
   margin-top: 24px;
-  padding-top: 18px;
+  padding-top: 20px;
   border-top: 1px solid var(--line);
+  text-align: center;
 }
-.legal-sidebar-contact-title {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.legal-sidebar-cta p {
+  font-size: 12.5px;
   color: var(--muted);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
-.legal-sidebar-contact a {
-  display: block;
-  font-size: 13px;
-  color: var(--navy);
-  font-weight: 600;
-  text-decoration: none;
-  margin-bottom: 6px;
-}
-html[data-theme="dark"] .legal-sidebar-contact a {
-  color: var(--gold-light);
-}
-
-/* Legal Cards — Sobriété Haute Précision */
 .legal-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 36px 44px;
-  margin-bottom: 36px;
+  border-radius: 10px;
+  padding: 36px 40px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s ease;
+}
+.legal-card:hover {
+  border-color: rgba(197, 155, 39, 0.4);
 }
 .legal-card-head {
   margin-bottom: 24px;
@@ -3569,7 +3585,7 @@ html[data-theme="dark"] .legal-sidebar-contact a {
 }
 .legal-sec-num {
   font-family: var(--font-mono, monospace);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.14em;
@@ -3597,38 +3613,57 @@ html[data-theme="dark"] .legal-card-title {
 .legal-card p:last-child {
   margin-bottom: 0;
 }
-
-/* Corporate Data Table */
 .legal-spec-table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
 }
 .legal-spec-table tr {
   border-bottom: 1px solid var(--line);
 }
-.legal-spec-table tr:first-child {
-  border-top: 1px solid var(--line);
+.legal-spec-table tr:last-child {
+  border-bottom: none;
+}
+.legal-spec-table tr:nth-child(even) {
+  background: var(--bg-2);
 }
 .legal-spec-label {
-  padding: 12px 0;
+  padding: 12px 18px;
   font-size: 13.5px;
+  font-weight: 600;
   color: var(--muted);
   width: 38%;
   vertical-align: top;
 }
 .legal-spec-val {
-  padding: 12px 0;
+  padding: 12px 18px;
   font-size: 14.5px;
   color: var(--navy);
-  font-weight: 600;
+  font-weight: 500;
   vertical-align: top;
 }
 html[data-theme="dark"] .legal-spec-val {
   color: #f1f5f9;
 }
-
-/* Structured Points */
+.legal-highlight-box {
+  background: rgba(197, 155, 39, 0.05);
+  border-left: 3px solid var(--accent);
+  padding: 18px 22px;
+  border-radius: 0 8px 8px 0;
+  margin: 20px 0;
+}
+.legal-highlight-box p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--navy);
+  margin: 0;
+}
+html[data-theme="dark"] .legal-highlight-box p {
+  color: #e2e8f0;
+}
 .legal-points-list {
   display: flex;
   flex-direction: column;
@@ -3641,6 +3676,7 @@ html[data-theme="dark"] .legal-spec-val {
 }
 .legal-point-title {
   font-size: 14px;
+  line-height: 1.65;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 4px;
@@ -3654,25 +3690,6 @@ html[data-theme="dark"] .legal-point-title {
   color: var(--muted);
   margin: 0;
 }
-
-.legal-notice-box {
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--accent);
-  padding: 16px 20px;
-  border-radius: 4px;
-  margin: 20px 0;
-}
-.legal-notice-box p {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--navy);
-  margin: 0;
-}
-html[data-theme="dark"] .legal-notice-box p {
-  color: #e2e8f0;
-}
-
 @media (max-width: 900px) {
   .legal-layout {
     grid-template-columns: 1fr;
@@ -3689,3 +3706,181 @@ html[data-theme="dark"] .legal-notice-box p {
   }
 }
 
+/* ============================================================
+   BILINGUAL & LANGUAGE SWITCHER (FR | عربي)
+   ============================================================ */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 4px;
+  gap: 2px;
+  font-size: 12px;
+  line-height: 1;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+html[data-theme="dark"] .lang-switcher {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.lang-switcher-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 11px;
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+.lang-switcher-btn:hover {
+  color: var(--navy);
+}
+html[data-theme="dark"] .lang-switcher-btn:hover {
+  color: #ffffff;
+}
+.lang-switcher-btn.active {
+  background: var(--accent);
+  color: #0b132b !important;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.lang-switcher-divider {
+  color: var(--line);
+  font-size: 10px;
+  user-select: none;
+}
+
+/* Mobile drawer lang switcher */
+.nav-mobile-lang {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 8px;
+}
+.nav-mobile-lang .lang-switcher {
+  padding: 3px 6px;
+  gap: 4px;
+}
+.nav-mobile-lang .lang-switcher-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+/* ============================================================
+   RTL SUPPORT (Arabic — العربية)
+   ============================================================ */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] .display,
+html[dir="rtl"] .brand-name,
+html[dir="rtl"] .font-display {
+  font-family: 'Cairo', 'Amiri', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  letter-spacing: normal !important;
+}
+
+html[dir="rtl"] .brand-sub,
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .chip,
+html[dir="rtl"] .tag,
+html[dir="rtl"] .kicker,
+html[dir="rtl"] .legal-sec-num,
+html[dir="rtl"] .svc-filter,
+html[dir="rtl"] .stat-sub {
+  letter-spacing: normal !important;
+}
+
+/* Mirrored navigation elements */
+html[dir="rtl"] .nav-links {
+  margin-left: 0;
+  margin-right: auto;
+}
+html[dir="rtl"] .link-num {
+  margin-right: 0;
+  margin-left: 6px;
+}
+html[dir="rtl"] .nav-actions {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Mirrored layout margins and paddings */
+html[dir="rtl"] .svc-card .arrow {
+  right: auto;
+  left: 20px;
+}
+html[dir="rtl"] .svc-card:hover .arrow {
+  transform: rotate(45deg);
+}
+
+/* Invert directional arrows for RTL reading flow */
+html[dir="rtl"] .btn svg:not(.floating-whatsapp svg):not(.nav-cta svg):not(.nav-mobile-cta svg):not(.footer-contact-link svg) {
+  transform: scaleX(-1);
+}
+
+/* Floating WhatsApp button placed comfortably on the left in RTL */
+html[dir="rtl"] .floating-whatsapp {
+  right: auto;
+  left: 24px;
+}
+html[dir="rtl"] .floating-whatsapp svg {
+  transform: none !important;
+}
+
+/* Footer alignment */
+html[dir="rtl"] .footer-col {
+  text-align: right;
+}
+html[dir="rtl"] .footer-contact-list li {
+  justify-content: flex-start;
+}
+html[dir="rtl"] .footer-contact-link svg {
+  margin-right: 0;
+  margin-left: 8px;
+  transform: none !important;
+}
+
+/* Contact form RTL */
+html[dir="rtl"] .form-group label {
+  text-align: right;
+}
+html[dir="rtl"] .form-radio-label {
+  text-align: right;
+}
+html[dir="rtl"] .contact-info-item {
+  text-align: right;
+}
+
+/* Legal page RTL adjustments */
+html[dir="rtl"] .legal-highlight-box {
+  border-left: none;
+  border-right: 3px solid var(--accent);
+  border-radius: 8px 0 0 8px;
+}
+html[dir="rtl"] .legal-point-row {
+  border-left: none;
+  border-right: 2px solid var(--accent);
+  padding: 4px 18px 4px 0;
+}
+html[dir="rtl"] .legal-nav-num {
+  margin-right: 0;
+  margin-left: 8px;
+}
+html[dir="rtl"] .legal-sidebar-title {
+  letter-spacing: normal;
+}

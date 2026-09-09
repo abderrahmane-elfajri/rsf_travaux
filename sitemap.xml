@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Accueil / Homepage -->
+  <!-- ================= ACCUEIL / HOMEPAGE ================= -->
+  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/"/>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -22,10 +24,30 @@
     </image:image>
   </url>
 
-  <!-- Services -->
+  <!-- Version Arabe -->
+  <url>
+    <loc>https://rsftravaux.ma/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/hero-living.webp</image:loc>
+      <image:title>تهيئة وتجديد داخلي فاخر بالدار البيضاء والمغرب</image:title>
+      <image:caption>مشروع تجديد صالون عصري من تنفيذ RSF Travaux</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ================= SERVICES ================= -->
+  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/services.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/services.html"/>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -34,10 +56,29 @@
     </image:image>
   </url>
 
-  <!-- Réalisations / Portfolio -->
+  <!-- Version Arabe -->
+  <url>
+    <loc>https://rsftravaux.ma/ar/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/services.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/servisf.webp</image:loc>
+      <image:title>أنظمة الزجاج الأكورديون القابل للطي والمتحرك بالمغرب</image:title>
+    </image:image>
+  </url>
+
+  <!-- ================= RÉALISATIONS / PORTFOLIO ================= -->
+  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/realisations.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/realisations.html"/>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -50,36 +91,115 @@
     </image:image>
   </url>
 
-  <!-- Notre Méthode -->
+  <!-- Version Arabe -->
+  <url>
+    <loc>https://rsftravaux.ma/ar/realisations.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/realisations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/realisations.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/kitchen-1.jpg</image:loc>
+      <image:title>تهيئة مطبخ عصري حديث على المقاس بمراكش</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/bathroom-1.webp</image:loc>
+      <image:title>تجديد جناح وحمام بحجر الترافرتين الطبيعي بالرباط</image:title>
+    </image:image>
+  </url>
+
+  <!-- ================= NOTRE MÉTHODE ================= -->
+  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/methode.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/methode.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/methode.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/methode.html"/>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Références & Avis -->
+  <!-- Version Arabe -->
+  <url>
+    <loc>https://rsftravaux.ma/ar/methode.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/methode.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/methode.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/methode.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ================= RÉFÉRENCES ================= -->
+  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/references.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/references.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/references.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/references.html"/>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Contact & Devis -->
+  <!-- Version Arabe -->
+  <url>
+    <loc>https://rsftravaux.ma/ar/references.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/references.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/references.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/references.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ================= CONTACT ================= -->
+  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/contact.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/contact.html"/>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Mentions Légales & Confidentialité -->
+  <!-- Version Arabe -->
+  <url>
+    <loc>https://rsftravaux.ma/ar/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/contact.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ================= MENTIONS LÉGALES ================= -->
+  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/mentions-legales.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/mentions-legales.html"/>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Version Arabe -->
+  <url>
+    <loc>https://rsftravaux.ma/ar/mentions-legales.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/mentions-legales.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
 </urlset>

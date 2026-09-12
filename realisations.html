@@ -43,40 +43,58 @@
 
   <!-- JSON-LD Structured Data: BreadcrumbList & CollectionPage -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Accueil",
-            "item": "https://rsftravaux.ma/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Réalisations",
-            "item": "https://rsftravaux.ma/realisations.html"
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://rsftravaux.ma/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Réalisations",
+          "item": "https://rsftravaux.ma/realisations.html"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Portfolio de Réalisations RSF Travaux",
+      "description": "Galerie de projets d'aménagement, rénovation et décoration d'intérieur réalisés au Maroc par RSF Travaux.",
+      "url": "https://rsftravaux.ma/realisations.html"
+    },
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "RSF Travaux S.A.R.L. AU",
+      "url": "https://rsftravaux.ma/",
+      "telephone": "+212664329698",
+      "email": "rsftravaux@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressRegion": "Grand Casablanca",
+        "addressCountry": "MA"
       },
-      {
-        "@type": "CollectionPage",
-        "name": "Portfolio de Réalisations RSF Travaux",
-        "description": "Galerie de projets d'aménagement, rénovation et décoration d'intérieur réalisés au Maroc par RSF Travaux.",
-        "url": "https://rsftravaux.ma/realisations.html"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.5731,
+        "longitude": -7.5898
       }
-    ]
-  }
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=43">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&family=Almarai:wght@300;400;700;800&family=El+Messiri:wght@500;600;700&family=Noto+Kufi+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=82">
 </head>
 <body data-page="realisations">
 
@@ -93,103 +111,273 @@
         </p>
       </div>
 
-      <div class="chips" style="margin-top: 56px;">
-        <button class="chip active" data-filter="all">Tout</button>
-        <button class="chip" data-filter="residentiel">Résidentiel</button>
-        <button class="chip" data-filter="cuisine">Cuisines</button>
-        <button class="chip" data-filter="bain">Salles de bain</button>
-        <button class="chip" data-filter="riad">Riads</button>
-        <button class="chip" data-filter="pro">Professionnel</button>
+      <!-- FILTER TABS BAR (STYLE IDENTIQUE SERVICES) -->
+      <div class="svc-filter-bar" id="project-filter-bar" role="toolbar" aria-label="Filtrer les réalisations par catégorie">
+        <button type="button" class="svc-filter-btn active" data-filter="all" aria-pressed="true">
+          <span>Toutes les réalisations</span>
+          <span class="svc-filter-count">12</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="residentiel" aria-pressed="false">
+          <span>Résidentiel &amp; Villas</span>
+          <span class="svc-filter-count">4</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="cuisine" aria-pressed="false">
+          <span>Cuisines d'architecte</span>
+          <span class="svc-filter-count">3</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="bain" aria-pressed="false">
+          <span>Suites &amp; Bains</span>
+          <span class="svc-filter-count">2</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="riad" aria-pressed="false">
+          <span>Riads d'exception</span>
+          <span class="svc-filter-count">2</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="pro" aria-pressed="false">
+          <span>Espaces Professionnels</span>
+          <span class="svc-filter-count">1</span>
+        </button>
       </div>
     </section>
 
     <!-- GALLERY -->
     <section class="wrap-wide" style="padding-top: 20px;">
-      <div class="projects-grid" id="gallery">
-        <a class="project p-a" data-tag="residentiel">
+            <div class="projects-grid" id="gallery">
+        <a class="project p-a" data-tag="residentiel"
+           data-title="Villa Bouskoura"
+           data-place="Casablanca · 2025"
+           data-surface="320 m²"
+           data-duration="5 mois"
+           data-type="Villa contemporaine haut standing"
+           data-materials="Marbre Carrare 120×120, Peinture Jotun Lady, Sika, Profilés aluminium thermolaqués"
+           data-scope="Démolition et redistribution 3D des volumes|Électricité et domotique encastrée Schneider|Plomberie multicouche et chauffe-eau solaire|Faux plafonds BA13 avec gorges lumineuses LED|Pose marbre Carrare posé en livre ouvert (bookmatch)|Peinture intérieure veloutée Jotun anti-taches|Vitrage accordéon panoramique 6 vantaux sur terrasse|Étanchéité complète des toitures-terrasses Sika">
           <img src="assets/hero-living.webp" alt="Rénovation haut de gamme salon moderne Villa Bouskoura Casablanca" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Villa Bouskoura</div>
             <div class="project-place">Casablanca · 2025 · 320 m²</div>
           </div>
         </a>
-        <a class="project p-b" data-tag="cuisine">
+        <a class="project p-b" data-tag="cuisine"
+           data-title="Cuisine Palmeraie"
+           data-place="Marrakech · 2024"
+           data-surface="45 m²"
+           data-duration="6 semaines"
+           data-type="Cuisine ouverte contemporaine"
+           data-materials="Quartz Calacatta Gold, MDF hydrofuge laqué, Chêne naturel, Quincaillerie Blum"
+           data-scope="Création d'un îlot central convivial avec espace repas|Plans de travail et crédence en Quartz Calacatta|Caissons hydrofuges haute densité sur mesure|Intégration d'électroménager encastré Bosch|Profilés gorge aluminium noir mat sans poignée|Éclairage d'ambiance LED chaud encastré sous caissons">
           <img src="assets/kitchen-1.jpg" alt="Aménagement cuisine moderne équipée sur mesure Palmeraie Marrakech" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Cuisine Palmeraie</div>
             <div class="project-place">Marrakech · 2024</div>
           </div>
         </a>
-        <a class="project p-c" data-tag="bain">
+        <a class="project p-c" data-tag="bain"
+           data-title="Suite Travertin"
+           data-place="Rabat · 2024"
+           data-surface="55 m²"
+           data-duration="8 semaines"
+           data-type="Suite parentale & Salle de bain de luxe"
+           data-materials="Travertin naturel beige mat, Robinetterie Grohe encastrée, Verre trempé 10 mm, SikaCeram"
+           data-scope="Rénovation intégrale de la suite parentale et du dressing|Douche à l'italienne XXL avec receveur étanché Sika|Habillage mural en dalles de travertin naturel grand format|Robinetterie encastrée thermostatique noir mat|Meuble double vasque suspendu sur mesure en bois traité|Dressing sur mesure rétroéclairé avec portes vitrées fumées">
           <img src="assets/bathroom-1.webp" alt="Rénovation suite parentale en travertin naturel et robinetterie noire Rabat" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Suite Travertin</div>
             <div class="project-place">Rabat · 2024</div>
           </div>
         </a>
-        <a class="project p-d" data-tag="riad">
+        <a class="project p-d" data-tag="riad"
+           data-title="Riad Bab Doukkala"
+           data-place="Marrakech · 2023"
+           data-surface="280 m²"
+           data-duration="8 mois"
+           data-type="Restauration patrimoniale de riad traditionnel"
+           data-materials="Cèdre sculpté de l'Atlas, Tadelakt traditionnel au galet, Zellige fassi artisanal"
+           data-scope="Consolidation des murs porteurs anciens à la chaux|Restauration artisanale des boiseries et moucharabiehs|Application de Tadelakt poli au galet de rivière dans les bains|Intégration invisible d'un système de climatisation gainée|Création d'un bassin de patio traditionnel en zellige de Fès|Réfection complète du réseau électrique et plomberie aux normes">
           <img src="assets/moroccan-1.jpg" alt="Restauration artisanale de riad traditionnel Bab Doukkala Médina Marrakech" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Riad Bab Doukkala</div>
             <div class="project-place">Marrakech · 2023</div>
           </div>
         </a>
-        <a class="project p-e" data-tag="residentiel">
+        <a class="project p-e" data-tag="residentiel"
+           data-title="Appartement Racine"
+           data-place="Casablanca · 2024"
+           data-surface="145 m²"
+           data-duration="3 mois"
+           data-type="Appartement résidentiel de prestige"
+           data-materials="Parquet chêne massif point de Hongrie, Peinture mate poudrée Astral, Faux plafonds BA13"
+           data-scope="Décloisonnement complet salon et salle à manger|Pose de parquet en chêne massif sur isolant phonique haute densité|Mise en peinture mate poudrée blanc velouté|Création de faux plafonds épurés avec éclairage architectural|Remplacement des portes intérieures par des blocs laqués chambranles invisibles|Rénovation complète de la cuisine et des salles d'eau">
           <img src="assets/minimal-1.jpg" alt="Aménagement d'intérieur appartement moderne quartier Racine Casablanca" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Appartement Racine</div>
             <div class="project-place">Casablanca · 2024 · 145 m²</div>
           </div>
         </a>
-        <a class="project p-f" data-tag="cuisine">
+        <a class="project p-f" data-tag="cuisine"
+           data-title="Cuisine Souissi"
+           data-place="Rabat · 2025"
+           data-surface="38 m²"
+           data-duration="5 semaines"
+           data-type="Cuisine d'architecte contemporaine"
+           data-materials="Dekton noir marbré, Façades polymère mates anti-traces, Grès cérame 120×120"
+           data-scope="Agencement de cuisine minimaliste linéaire avec grand îlot|Plan de travail en Dekton résistant aux rayures et à la chaleur|Table de cuisson avec hotte aspirante affleurante intégrée|Cave à vin sur mesure intégrée dans la colonne de rangement|Éclairage LED linéaire dissimulé à variateur d'intensité|Pose de carrelage grès cérame rectifié grand format">
           <img src="assets/kitchen-3.jpg" alt="Conception et pose de cuisine contemporaine minimaliste quartier Souissi Rabat" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Cuisine Souissi</div>
             <div class="project-place">Rabat · 2025</div>
           </div>
         </a>
-        <a class="project p-g" data-tag="residentiel">
+        <a class="project p-g" data-tag="residentiel"
+           data-title="Duplex Anfa Place"
+           data-place="Casablanca · 2025"
+           data-surface="210 m²"
+           data-duration="4 mois"
+           data-type="Duplex contemporain front de mer"
+           data-materials="Escalier acier & chêne massif, Baies aluminium Technal, Peinture Jotun Fenomastic"
+           data-scope="Restructuration des deux niveaux et redistribution spatiale|Fabrication et pose d'un escalier design limon acier central|Installation de grandes baies coulissantes aluminium à rupture thermique|Isolation acoustique renforcée sur cloisons séparatives et plancher|Peintures haut de gamme lavables sur l'ensemble des volumes|Aménagement complet de terrasse avec vue panoramique">
           <img src="assets/living-2.jpg" alt="Rénovation complète duplex de standing Anfa Place Casablanca" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Duplex Anfa Place</div>
             <div class="project-place">Casablanca · 2025 · 210 m²</div>
           </div>
         </a>
-        <a class="project p-c" data-tag="bain">
+        <a class="project p-c" data-tag="bain"
+           data-title="Salle de bain La Perle"
+           data-place="Casablanca · 2024"
+           data-surface="22 m²"
+           data-duration="4 semaines"
+           data-type="Salle de bain master & Espace spa"
+           data-materials="Marbre Noir Marquina, Robinetterie encastrée or brossé, Baignoire résine minérale"
+           data-scope="Transformation d'une salle de bain classique en spa privé de luxe|Baignoire îlot monobloc en résine minérale thermomoulée|Double douche à l'italienne à receveur affleurant invisible|Meuble double vasque sculpté dans la masse en marbre Noir Marquina|Miroirs antibuée XXL avec ruban LED périphérique|Étanchéité sous carrelage et ventilation motorisée silencieuse">
           <img src="assets/bathroom-2.jpg" alt="Aménagement salle de bain moderne avec douche à l'italienne Casablanca" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Salle de bain La Perle</div>
             <div class="project-place">Casablanca · 2024</div>
           </div>
         </a>
-        <a class="project p-d" data-tag="pro">
+        <a class="project p-d" data-tag="pro"
+           data-title="Bureau Studio"
+           data-place="Casablanca · 2025"
+           data-surface="220 m²"
+           data-duration="7 semaines"
+           data-type="Espace professionnel & Siège d'entreprise"
+           data-materials="Résine époxy autolissante, Cloisons vitrées acier type atelier, Dalles Armstrong"
+           data-scope="Aménagement tertiaire clé en main d'un plateau de bureaux|Coulage de sol en résine époxy autolissante sans joint|Pose de verrières amovibles acier noir mat à haute isolation acoustique|Faux plafonds modulaires acoustiques avec dalles micro-perforées|Câblage réseau RJ45 catégorie 6a et baies de brassage encastrées|Éclairage LED basse consommation calibré pour le travail sur écran">
           <img src="assets/Bureau_Studio.webp" alt="Aménagement espace de bureau professionnel moderne open space Casablanca" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Bureau Studio</div>
             <div class="project-place">Casablanca · 2025 · 220 m²</div>
           </div>
         </a>
-        <a class="project p-e" data-tag="riad">
+        <a class="project p-e" data-tag="riad"
+           data-title="Riad Fès Batha"
+           data-place="Fès · 2022"
+           data-surface="350 m²"
+           data-duration="10 mois"
+           data-type="Riad patrimonial historique"
+           data-materials="Bois peint Zouak traditionnel, Plâtre ciselé Gebs, Marbre royal de Khénifra"
+           data-scope="Reprise en sous-œuvre et consolidation des piliers anciens|Restauration minutieuse des plafonds Zouak par maîtres artisans|Rénovation discrète des réseaux sanitaires et thermiques|Aménagement de 6 salles de bains privatives en zellige et marbre|Étanchéité totale des toits en terrasse et des chéneaux d'évacuation|Mise en valeur lumineuse nocturne du patio et des arcades">
           <img src="assets/riad-1.jpg" alt="Rénovation architecture et boiseries traditionnelles Riad Batha Fès" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Riad Fès Batha</div>
             <div class="project-place">Fès · 2022</div>
           </div>
         </a>
-        <a class="project p-a" data-tag="residentiel">
+        <a class="project p-a" data-tag="residentiel"
+           data-title="Maison Bhalil"
+           data-place="Sefrou · 2023"
+           data-surface="180 m²"
+           data-duration="4 mois"
+           data-type="Demeure de caractère et villégiature"
+           data-materials="Pierres naturelles de taille, Enduits à la chaux aérienne, Fer forgé artisanal"
+           data-scope="Réhabilitation complète d'une maison de village traditionnelle|Décapage et rejointoiement des murs en pierres naturelles|Isolation thermique performante des toitures contre le froid montagnard|Création d'un grand salon avec cheminée contemporaine maçonnée|Menuiseries bois sur mesure avec double vitrage isolant|Revêtements de sol en terre cuite artisanale cirée">
           <img src="assets/living-3.jpg" alt="Rénovation maison de charme et villa traditionnelle Bhalil Sefrou" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Maison Bhalil</div>
             <div class="project-place">Sefrou · 2023 · 180 m²</div>
           </div>
         </a>
-        <a class="project p-b" data-tag="cuisine">
+        <a class="project p-b" data-tag="cuisine"
+           data-title="Cuisine Aïn Diab"
+           data-place="Casablanca · 2024"
+           data-surface="32 m²"
+           data-duration="4 semaines"
+           data-type="Cuisine familiale conviviale"
+           data-materials="Marbre Blanc Ibiza, Zellige nacré fait main, Noyer américain, Électroménager Siemens"
+           data-scope="Réaménagement ergonomique de la cuisine avec îlot central|Plan de travail d'îlot en marbre Blanc Ibiza avec chants adoucis|Crédence en zellige nacré fait main résistant à la chaleur|Conception d'une banquette dînatoire sur mesure en noyer|Réseaux électriques dédiés avec prises escamotables sur îlot|Pose d'une verrière séparative coulissante en aluminium">
           <img src="assets/kitchen-2.jpg" alt="Rénovation cuisine familiale conviviale avec îlot central Aïn Diab Casablanca" loading="lazy">
           <div class="project-meta">
             <div class="project-name">Cuisine Aïn Diab</div>
             <div class="project-place">Casablanca · 2024</div>
           </div>
         </a>
+      </div>
+    </section>
+
+
+    <!-- AVANT / APRÈS INTERACTIF MULTI-SCÈNES -->
+    <section class="wrap-wide before-after-section" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="sec-head" style="margin-bottom: 24px;">
+        <div>
+          <span class="eyebrow">Transformation d'exception</span>
+          <h2 style="margin-top: 16px;">Avant / Après : L'art de la métamorphose.</h2>
+        </div>
+        <p>Glissez le curseur central pour apprécier le niveau de finition RSF Travaux. Sélectionnez une scène pour visualiser nos métamorphoses dans différents espaces clés.</p>
+      </div>
+
+      <!-- Scène switcher tabs -->
+      <div class="ba-tabs-wrapper">
+        <div class="ba-tabs" role="tablist" aria-label="Sélectionnez une transformation">
+          <button type="button" class="ba-tab active" role="tab" aria-selected="true"
+                  data-scene-before="assets/living-2.jpg"
+                  data-scene-after="assets/hero-living.webp"
+                  data-alt-before="Salon brut avant travaux de rénovation"
+                  data-alt-after="Salon de prestige contemporain livré par RSF Travaux"
+                  data-caption="Salon & Espace de réception · Anfa, Casablanca">
+            <span class="ba-tab-dot"></span>
+            <span>Salon de réception</span>
+          </button>
+          <button type="button" class="ba-tab" role="tab" aria-selected="false"
+                  data-scene-before="assets/bathroom-2.jpg"
+                  data-scene-after="assets/bathroom-1.webp"
+                  data-alt-before="Salle de bain ancienne avant réfection"
+                  data-alt-after="Suite parentale & Bain en travertin naturel par RSF Travaux"
+                  data-caption="Suite & Bain en travertin · Rabat">
+            <span class="ba-tab-dot"></span>
+            <span>Suite & Bain Travertin</span>
+          </button>
+          <button type="button" class="ba-tab" role="tab" aria-selected="false"
+                  data-scene-before="assets/kitchen-2.jpg"
+                  data-scene-after="assets/kitchen-1.jpg"
+                  data-alt-before="Cuisine brute avant agencement moderne"
+                  data-alt-after="Cuisine contemporaine îlot central sur mesure par RSF Travaux"
+                  data-caption="Cuisine d'architecte avec îlot central · Palmeraie">
+            <span class="ba-tab-dot"></span>
+            <span>Cuisine Contemporaine</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="ba-container" id="ba-slider">
+        <div class="ba-before">
+          <img id="ba-img-before" src="assets/living-2.jpg" alt="Salon brut avant travaux de rénovation" loading="lazy">
+          <span class="ba-label ba-label-before">Avant Travaux</span>
+        </div>
+        <div class="ba-after" id="ba-after-layer">
+          <img id="ba-img-after" src="assets/hero-living.webp" alt="Salon de prestige contemporain livré par RSF Travaux" loading="lazy">
+          <span class="ba-label ba-label-after">Après Réalisation</span>
+        </div>
+        <div class="ba-handle" id="ba-handle" aria-label="Curseur de comparaison avant après">
+          <div class="ba-handle-line"></div>
+          <div class="ba-handle-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+          </div>
+          <div class="ba-handle-line"></div>
+        </div>
+      </div>
+      <div class="ba-caption-bar" id="ba-caption-bar">
+        <span class="ba-caption-badge">Réalisation Clé en Main</span>
+        <span class="ba-caption-text" id="ba-scene-title">Salon & Espace de réception · Anfa, Casablanca</span>
       </div>
     </section>
 
@@ -223,37 +411,63 @@
     <span class="floating-wa-text">Discuter</span>
   </a>
 
-  <!-- Project Modal / Lightbox -->
+    <!-- Project Modal / Lightbox Haute Précision -->
   <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog">
     <div class="project-modal-backdrop" id="modal-backdrop"></div>
     <div class="project-modal-dialog">
       <button class="project-modal-close" id="modal-close" aria-label="Fermer la vue agrandie">✕</button>
-      <div class="project-modal-img-wrap">
-        <img id="modal-img" src="" alt="">
-      </div>
-      <div class="project-modal-footer">
-        <div>
-          <h3 id="modal-title" class="project-modal-title"></h3>
-          <p id="modal-place" class="project-modal-place"></p>
+      <div class="project-modal-content-split">
+        <div class="project-modal-img-col">
+          <img id="modal-img" src="" alt="">
         </div>
-        <a id="modal-wa" href="" target="_blank" rel="noopener" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          <span>Discuter de ce projet</span>
-        </a>
+        <div class="project-modal-info-col">
+          <span class="modal-project-badge">Chantier Livré · RSF Travaux</span>
+          <h3 id="modal-title" class="modal-project-title"></h3>
+          <p id="modal-place" class="modal-project-place"></p>
+
+          <div class="modal-specs-strip">
+            <div class="modal-spec-item">
+              <span class="modal-spec-label">Surface traitée</span>
+              <span class="modal-spec-val" id="modal-surface">—</span>
+            </div>
+            <div class="modal-spec-item">
+              <span class="modal-spec-label">Durée des travaux</span>
+              <span class="modal-spec-val" id="modal-duration">—</span>
+            </div>
+            <div class="modal-spec-item" style="grid-column: 1 / -1;">
+              <span class="modal-spec-label">Typologie du bien</span>
+              <span class="modal-spec-val" id="modal-type">—</span>
+            </div>
+            <div class="modal-spec-item" style="grid-column: 1 / -1;">
+              <span class="modal-spec-label">Matériaux & Finitions clés</span>
+              <span class="modal-spec-val" id="modal-materials" style="font-weight: 500; font-size: 13px;">—</span>
+            </div>
+          </div>
+
+          <div class="modal-scope-title">Travaux Réalisés par nos Équipes</div>
+          <ul class="modal-scope-list" id="modal-scope-list">
+            <!-- Dynamically populated -->
+          </ul>
+
+          <div class="modal-actions">
+            <a id="modal-wa" href="" target="_blank" rel="noopener" class="btn btn-primary" style="flex: 1; justify-content: center;">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <span>Discuter de ce projet sur WhatsApp</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- SCRIPTS -->
-  <script src="analytics.js?v=43" defer></script>
-  <!-- SCRIPTS -->
-  <script src="analytics.js?v=43" defer></script>
-  <script src="nav.js?v=43"></script>
-  <script src="tweaks.js?v=43"></script>
+  <script src="analytics.js?v=82" defer></script>
+  <script src="nav.js?v=82"></script>
+  <script src="tweaks.js?v=82"></script>
   <script>
     // Filter chips & URL hash/query support
     function applyFilter(filterName) {
-      document.querySelectorAll(".chip").forEach(c => {
+      document.querySelectorAll(".svc-filter-btn, .chip").forEach(c => {
         c.classList.toggle("active", c.dataset.filter === filterName);
       });
       document.querySelectorAll("#gallery .project").forEach(p => {
@@ -262,12 +476,14 @@
       });
     }
 
-    document.querySelectorAll(".chip").forEach(chip => {
+    document.querySelectorAll(".svc-filter-btn, .chip").forEach(chip => {
       chip.addEventListener("click", () => {
         const f = chip.dataset.filter;
         applyFilter(f);
-        if (history.replaceState) {
-          history.replaceState(null, null, f === "all" ? window.location.pathname : "#filter=" + f);
+        if (history.replaceState && window.location.protocol !== "file:") {
+          try {
+            history.replaceState(null, null, f === "all" ? window.location.pathname : "#filter=" + f);
+          } catch (e) {}
         }
       });
     });
@@ -276,31 +492,48 @@
     const hashMatch = window.location.hash.match(/filter=([a-z]+)/);
     const paramMatch = new URLSearchParams(window.location.search).get("filter");
     const initialFilter = (hashMatch && hashMatch[1]) || paramMatch;
-    if (initialFilter && document.querySelector(`.chip[data-filter="${initialFilter}"]`)) {
+    if (initialFilter && document.querySelector(`[data-filter="${initialFilter}"]`)) {
       applyFilter(initialFilter);
     }
 
-    // Project Modal / Lightbox
+        // Project Modal / Lightbox Haute Précision
     const modal = document.getElementById("project-modal");
     const modalImg = document.getElementById("modal-img");
     const modalTitle = document.getElementById("modal-title");
     const modalPlace = document.getElementById("modal-place");
+    const modalSurface = document.getElementById("modal-surface");
+    const modalDuration = document.getElementById("modal-duration");
+    const modalType = document.getElementById("modal-type");
+    const modalMaterials = document.getElementById("modal-materials");
+    const modalScopeList = document.getElementById("modal-scope-list");
     const modalWa = document.getElementById("modal-wa");
     const modalClose = document.getElementById("modal-close");
     const modalBackdrop = document.getElementById("modal-backdrop");
 
     function openModal(project) {
       const img = project.querySelector("img");
-      const name = project.querySelector(".project-name");
-      const place = project.querySelector(".project-place");
       if (!img) return;
 
       modalImg.src = img.src;
       modalImg.alt = img.alt || "";
-      modalTitle.textContent = name ? name.textContent : "Projet RSF Travaux";
-      modalPlace.textContent = place ? place.textContent : "Maroc";
-      
-      const pName = name ? name.textContent.trim() : "Rénovation";
+      modalTitle.textContent = project.dataset.title || "Projet RSF Travaux";
+      modalPlace.textContent = project.dataset.place || "Maroc";
+      modalSurface.textContent = project.dataset.surface || "Non spécifiée";
+      modalDuration.textContent = project.dataset.duration || "Selon cahier des charges";
+      modalType.textContent = project.dataset.type || "Rénovation & Aménagement";
+      modalMaterials.textContent = project.dataset.materials || "Matériaux haut de gamme certifiés";
+
+      // Render Scope of Work items
+      const rawScope = project.dataset.scope || "";
+      const items = rawScope.split("|").filter(Boolean);
+      modalScopeList.innerHTML = items.map(item => `
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>${item.trim()}</span>
+        </li>
+      `).join("");
+
+      const pName = project.dataset.title || "Rénovation";
       modalWa.href = "https://wa.me/212664329698?text=" + encodeURIComponent("Bonjour RSF Travaux, je souhaiterais des informations pour un projet similaire à : " + pName);
 
       modal.classList.add("active");

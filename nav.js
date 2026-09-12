@@ -32,11 +32,11 @@
     <div class="lang-switcher" role="group" aria-label="${isAr ? 'اختيار اللغة' : 'Sélecteur de langue'}">
       <a href="${frUrl}" class="lang-switcher-btn ${!isAr ? 'active' : ''}" aria-label="Version Française" hreflang="fr">FR</a>
       <span class="lang-switcher-divider" aria-hidden="true">|</span>
-      <a href="${arUrl}" class="lang-switcher-btn ${isAr ? 'active' : ''}" aria-label="النسخة العربية" hreflang="ar">عربي</a>
+      <a href="${arUrl}" class="lang-switcher-btn ${isAr ? 'active' : ''}" aria-label="النسخة العربية" hreflang="ar">AR</a>
     </div>
   `;
 
-  const WA_ICON = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
+  const WA_ICON = `<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true" style="flex-shrink: 0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
 
   const waMsg = isAr
     ? encodeURIComponent("مرحباً RSF Travaux، أود الاستفسار حول مشروع تهيئة / تجديد.")
@@ -60,7 +60,7 @@
   ];
 
   const navLinksHTML = links.map(l => `
-    <li><a href="${l.href}" class="${active === l.page ? 'active' : ''}"><span class="link-num">${l.num}</span><span class="link-title">${l.title}</span></a></li>
+    <li><a href="${l.href}" class="${(active === l.page || (active === 'service-detail' && l.page === 'services')) ? 'active' : ''}"><span class="link-num">${l.num}</span><span class="link-title">${l.title}</span></a></li>
   `).join("");
 
   const brandSub = isAr ? "تهيئة وتجديد شامل" : "Aménagement &amp; Rénovation";
@@ -144,31 +144,63 @@
     ? "شركة عامة للمقاولات وأشغال البناء بخبرة تفوق 21 عاماً بالدار البيضاء وكافة ربوع المملكة المغربية. مشاريع متكاملة تسليم المفتاح."
     : "Entreprise générale de bâtiment forte de 21 ans d'expérience à Casablanca et partout au Maroc. Travaux clé en main.";
   const footerNavTitle = isAr ? "الملاحة" : "Navigation";
-  const footerServicesTitle = isAr ? "تخصصاتنا" : "Nos métiers";
+  const footerServicesTitle = isAr ? "تخصصاتنا الـ 18" : "Nos métiers (18)";
   const footerContactTitle = isAr ? "معلومات الاتصال" : "Contact";
   const footerWaLabel = isAr ? "واتساب المباشر" : "WhatsApp direct";
   const footerRights = isAr
     ? `© 2026 RSF TRAVAUX S.A.R.L. AU · جميع الحقوق محفوظة · <a href="mentions-legales.html" style="color: inherit; text-decoration: underline; margin-right: 6px;">الشروط القانونية والخصوصية</a>`
     : `© 2026 RSF TRAVAUX S.A.R.L. AU · Tous droits réservés · <a href="mentions-legales.html" style="color: inherit; text-decoration: underline; margin-left: 6px;">Mentions Légales &amp; Confidentialité</a>`;
 
-  const footerServicesList = isAr ? `
-    <li><a href="services.html">أنظمة الزجاج الأكورديون والمتحرك</a></li>
-    <li><a href="services.html">التهيئة والتصميم الداخلي</a></li>
-    <li><a href="services.html">التجديد الشامل للعقارات</a></li>
-    <li><a href="services.html">الصباغة الديكورية والحديثة</a></li>
-    <li><a href="services.html">الرخام، السيراميك والبورسلان</a></li>
-    <li><a href="services.html">أشغال الجبس والستاف العصري</a></li>
-    <li><a href="services.html">العزل المائي والحراري المعتمد</a></li>
-    <li><a href="services.html">أرضيات الإيبوكسي الديكورية والصناعية</a></li>
+  const footerServicesHTML = isAr ? `
+    <div class="footer-services-grid">
+      <ul class="footer-services-subcol">
+        <li><a href="service-peinture-pasta-espagnole.html">صباغة الباستا الإسبانية للواجهات</a></li>
+        <li><a href="service-peinture-exterieure.html">صباغة وتكسية الواجهات الخارجية</a></li>
+        <li><a href="service-effet-travertin.html">طلاء وتكسية تأثير حجر الترافرتين</a></li>
+        <li><a href="service-peinture-interieure.html">أشغال الصباغة الداخلية الفاخرة</a></li>
+        <li><a href="service-peinture-decorative.html">الصباغات الديكورية واللمسات الفنية</a></li>
+        <li><a href="service-moulures-pvc.html">قوالب وكرانيش PVC المقاومة للماء</a></li>
+        <li><a href="service-amenagement-interieur.html">التهيئة والتصميم الداخلي 3D</a></li>
+        <li><a href="service-amenagement-exterieur.html">التهيئة الخارجية والتراسات والحدائق</a></li>
+        <li><a href="service-renovation-complete.html">التجديد الشامل للعقارات تسليم المفتاح</a></li>
+      </ul>
+      <ul class="footer-services-subcol">
+        <li><a href="service-amenagement-cuisine.html">تصميم وتهيئة المطابخ العصرية</a></li>
+        <li><a href="service-sols-resine-epoxy.html">أرضيات الإيبوكسي الديكورية والصناعية</a></li>
+        <li><a href="service-revetements-sols-murs.html">تركيب الرخام، السيراميك والزليج</a></li>
+        <li><a href="service-vitrage-accordeon.html">أنظمة الزجاج الأكورديون والمتحرك</a></li>
+        <li><a href="service-bardage-habillage-facade.html">تكسية الواجهات بالخشب والألوكوبوند</a></li>
+        <li><a href="service-platrerie-faux-plafonds.html">الجبس العصري والأسقف المعلقة BA13</a></li>
+        <li><a href="service-etancheite.html">العزل المائي والحراري للأسطح</a></li>
+        <li><a href="service-travaux-finition.html">أشغال التشطيبات المعمارية الدقيقة</a></li>
+        <li><a href="service-travaux-divers-maintenance.html">الإصلاحات السريعة والصيانة العقارية</a></li>
+      </ul>
+    </div>
   ` : `
-    <li><a href="services.html">Vitrage accordéon &amp; pivotant</a></li>
-    <li><a href="services.html">Aménagement intérieur</a></li>
-    <li><a href="services.html">Rénovation complète</a></li>
-    <li><a href="services.html">Peinture &amp; finitions</a></li>
-    <li><a href="services.html">Revêtements &amp; marbre</a></li>
-    <li><a href="services.html">Plâtrerie &amp; staff</a></li>
-    <li><a href="services.html">Étanchéité</a></li>
-    <li><a href="services.html">Sols époxy</a></li>
+    <div class="footer-services-grid">
+      <ul class="footer-services-subcol">
+        <li><a href="service-peinture-pasta-espagnole.html">Peinture Pasta Espagnole</a></li>
+        <li><a href="service-peinture-exterieure.html">Peinture Façades Extérieures</a></li>
+        <li><a href="service-effet-travertin.html">Enduit Effet Travertin</a></li>
+        <li><a href="service-peinture-interieure.html">Peinture Intérieure Standing</a></li>
+        <li><a href="service-peinture-decorative.html">Peintures Décoratives &amp; Art</a></li>
+        <li><a href="service-moulures-pvc.html">Moulures &amp; Encadrements PVC</a></li>
+        <li><a href="service-amenagement-interieur.html">Aménagement Intérieur &amp; 3D</a></li>
+        <li><a href="service-amenagement-exterieur.html">Aménagement Extérieur</a></li>
+        <li><a href="service-renovation-complete.html">Rénovation Complète Clé en Main</a></li>
+      </ul>
+      <ul class="footer-services-subcol">
+        <li><a href="service-amenagement-cuisine.html">Conception &amp; Pose Cuisines</a></li>
+        <li><a href="service-sols-resine-epoxy.html">Sols Résine Époxy &amp; PU</a></li>
+        <li><a href="service-revetements-sols-murs.html">Pose Marbre, Carrelage &amp; Zellige</a></li>
+        <li><a href="service-vitrage-accordeon.html">Systèmes Vitrage Accordéon</a></li>
+        <li><a href="service-bardage-habillage-facade.html">Bardage Composite &amp; Alucobond</a></li>
+        <li><a href="service-platrerie-faux-plafonds.html">Plâtrerie &amp; Faux Plafonds BA13</a></li>
+        <li><a href="service-etancheite.html">Étanchéité Toitures &amp; Terrasses</a></li>
+        <li><a href="service-travaux-finition.html">Travaux Finition Haute Précision</a></li>
+        <li><a href="service-travaux-divers-maintenance.html">Petite Rénovation &amp; Maintenance</a></li>
+      </ul>
+    </div>
   `;
 
   const footerHTML = `
@@ -191,9 +223,7 @@
           </div>
           <div class="footer-col footer-col-services">
             <h4>${footerServicesTitle}</h4>
-            <ul>
-              ${footerServicesList}
-            </ul>
+            ${footerServicesHTML}
           </div>
           <div class="footer-col footer-col-contact">
             <h4>${footerContactTitle}</h4>
@@ -336,4 +366,33 @@
       setMobileMenu(false);
     }
   }, { passive: true });
+
+  // Back to Top floating button (Bilingual FR / AR)
+  const bttLabel = isAr ? "العودة للأعلى" : "Retour en haut";
+  const bttBtn = document.createElement("button");
+  bttBtn.className = "back-to-top";
+  bttBtn.setAttribute("type", "button");
+  bttBtn.setAttribute("aria-label", bttLabel);
+  bttBtn.setAttribute("title", bttLabel);
+  bttBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>`;
+  document.body.appendChild(bttBtn);
+
+  let bttTicking = false;
+  window.addEventListener("scroll", () => {
+    if (!bttTicking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 420) {
+          bttBtn.classList.add("visible");
+        } else {
+          bttBtn.classList.remove("visible");
+        }
+        bttTicking = false;
+      });
+      bttTicking = true;
+    }
+  }, { passive: true });
+
+  bttBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 })();

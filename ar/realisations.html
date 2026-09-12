@@ -41,10 +41,62 @@
   <meta name="twitter:description" content="مختارات من مشاريعنا المنجزة بالمغرب."/>
   <meta name="twitter:image" content="https://rsftravaux.ma/assets/hero-living.webp"/>
 
+  <!-- JSON-LD Structured Data: BreadcrumbList & CollectionPage in Arabic -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://rsftravaux.ma/ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "إنجازاتنا",
+          "item": "https://rsftravaux.ma/ar/realisations.html"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://rsftravaux.ma/ar/realisations.html",
+      "url": "https://rsftravaux.ma/ar/realisations.html",
+      "name": "معرض المشاريع والإنجازات المعمارية بالمغرب | RSF Travaux",
+      "description": "مختارات من أرقى مشاريع التهيئة الداخلية والتجديد الشامل للفيلات والشقق والمقرات الإدارية بالمغرب.",
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "RSF Travaux S.A.R.L. AU",
+      "url": "https://rsftravaux.ma/ar/",
+      "telephone": "+212664329698",
+      "email": "rsftravaux@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressRegion": "Grand Casablanca",
+        "addressCountry": "MA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.5731,
+        "longitude": -7.5898
+      }
+    }
+  ]
+}
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=43">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&family=Almarai:wght@300;400;700;800&family=El+Messiri:wght@500;600;700&family=Noto+Kufi+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=82">
 </head>
 <body data-page="realisations">
 
@@ -61,116 +113,272 @@
         </p>
       </div>
 
-      <div class="chips" style="margin-top: 56px;">
-        <button class="chip active" data-filter="all">الكل</button>
-        <button class="chip" data-filter="residentiel">سكني وفيلات</button>
-        <button class="chip" data-filter="cuisine">مطابخ عصرية</button>
-        <button class="chip" data-filter="bain">حمامات وأجنحة</button>
-        <button class="chip" data-filter="riad">رياضات أصيلة</button>
-        <button class="chip" data-filter="pro">مساحات مهنية ومكاتب</button>
+      <!-- FILTER TABS BAR (STYLE IDENTIQUE SERVICES - AR) -->
+      <div class="svc-filter-bar" id="project-filter-bar" role="toolbar" aria-label="تصفية المشاريع حسب الفئة">
+        <button type="button" class="svc-filter-btn active" data-filter="all" aria-pressed="true">
+          <span>كافة المشاريع</span>
+          <span class="svc-filter-count">12</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="residentiel" aria-pressed="false">
+          <span>سكني وفيلات</span>
+          <span class="svc-filter-count">4</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="cuisine" aria-pressed="false">
+          <span>مطابخ عصرية</span>
+          <span class="svc-filter-count">3</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="bain" aria-pressed="false">
+          <span>حمامات وأجنحة</span>
+          <span class="svc-filter-count">2</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="riad" aria-pressed="false">
+          <span>رياضات أصيلة</span>
+          <span class="svc-filter-count">2</span>
+        </button>
+        <button type="button" class="svc-filter-btn" data-filter="pro" aria-pressed="false">
+          <span>مساحات مهنية ومكاتب</span>
+          <span class="svc-filter-count">1</span>
+        </button>
       </div>
     </section>
 
     <!-- GALLERY -->
     <section class="wrap-wide" style="padding-top: 20px;">
-      <div class="projects-grid" id="gallery">
-
-        <a class="project p-a" data-tag="residentiel">
+            <div class="projects-grid" id="gallery">
+        <a class="project p-a" data-tag="residentiel"
+           data-title="فيلا بوسكورة الفاخرة"
+           data-place="الدار البيضاء · 2025"
+           data-surface="320 م²"
+           data-duration="5 أشهر"
+           data-type="فيلا معاصرة فاخرة"
+           data-materials="رخام كارارا 120×120، صباغة جوتن ليدي، سيكا، مقاطع ألمنيوم عازلة"
+           data-scope="هدم وإعادة تصميم وتوزيع المساحات بـ 3D|تمديدات كهربائية ونظام سمارت هوم شنايدر|شبكة سباكة متطورة متعددة الطبقات وسخانات شمسية|أسقف جبسية BA13 مع مسارات إضاءة مخفية LED|تركيب رخام كارارا الإيطالي بتقنية الكتاب المفتوح (Bookmatch)|صباغة داخلية حريرية قابلة للغسل ومقاومة للبقع|تركيب نظام زجاج أكورديون بانورامي 6 درفات للتراس|عزل مائي وحراري معتمد لكافة الأسطح بمركبات سيكا">
           <img src="../assets/hero-living.webp" alt="تجديد راقي لصالون عصري فيلا ببوسكورة الدار البيضاء" loading="lazy">
           <div class="project-meta">
             <div class="project-name">فيلا بوسكورة الفاخرة</div>
             <div class="project-place">الدار البيضاء · 2025 · 320 م²</div>
           </div>
         </a>
-
-        <a class="project p-b" data-tag="cuisine">
+        <a class="project p-b" data-tag="cuisine"
+           data-title="مطبخ النخيل المعاصر"
+           data-place="مراكش · 2024"
+           data-surface="45 م²"
+           data-duration="6 أسابيع"
+           data-type="مطبخ حديث مفتوح راقي"
+           data-materials="كوارتز كالاكاتا جولد، خشب MDF هيدروفوج معالج، خشب السنديان الطبيعي، إكسسوارات بلوم"
+           data-scope="تصميم جزيرة وسطى عصرية مع منطقة تناول طعام|أسطح عمل وجدران من حجر الكوارتز كالاكاتا المقاوم|صناديق مطبخ مقاومة للرطوبة بتفصيل على المقاس|دمج أجهزة كهرومنزلية مدمجة من بوش العالمية|مقاطع فتح ألمنيوم أسود مطفي عصرية بدون مقابض|إنارة ليد دافئة مدمجة مخفية تحت الخزائن">
           <img src="../assets/kitchen-1.jpg" alt="تهيئة مطبخ مجهز حديث على المقاس بنخيل مراكش" loading="lazy">
           <div class="project-meta">
             <div class="project-name">مطبخ النخيل الحديث</div>
             <div class="project-place">مراكش · 2024</div>
           </div>
         </a>
-
-        <a class="project p-c" data-tag="bain">
+        <a class="project p-c" data-tag="bain"
+           data-title="جناح الترافرتين الطبيعي"
+           data-place="الرباط · 2024"
+           data-surface="55 م²"
+           data-duration="8 أسابيع"
+           data-type="جناح رئيسي وحمام فاخر"
+           data-materials="حجر الترافرتين الطبيعي بيج، صنابير جروهي سوداء مدمجة، زجاج سيكوريت 10 ملم"
+           data-scope="تجديد شامل للجناح الرئيسي وغرفة الملابس|دش إيطالي بمساحة واسعة مع عزل مائي بنظام سيكا|تكسية الجدران بألواح حجر الترافرتين الطبيعي|صنابير ودش مدمج بالحائط بلون أسود مطفي فاخر|خزانة حمام بحوضين رخاميين بتفصيل معلق على المقاس|غرفة ملابس مخصصة بإضاءة ليد ذكية وأبواب زجاجية مدخنة">
           <img src="../assets/bathroom-1.webp" alt="تجديد جناح وحمام راقي بحجر الترافرتين الطبيعي بالرباط" loading="lazy">
           <div class="project-meta">
             <div class="project-name">جناح الترافرتين الطبيعي</div>
             <div class="project-place">الرباط · 2024</div>
           </div>
         </a>
-
-        <a class="project p-d" data-tag="riad">
+        <a class="project p-d" data-tag="riad"
+           data-title="رياض باب دكالة العريق"
+           data-place="مراكش · 2023"
+           data-surface="280 م²"
+           data-duration="8 أشهر"
+           data-type="ترميم أثري لرياض تقليدي أصيل"
+           data-materials="خشب الأرز المنقوش، تدلاكت أصيل مصقول بالحجر، زليج فاسي يدوي"
+           data-scope="تدعيم الجدران الحاملة التاريخية بملاط الجير الطبيعي|ترميم أخشاب الأرز العتيقة ونقوش المشربية الحرفية|تطبيق صباغة التادلاكت التقليدية المصقولة بحجر الواد في الحمامات|دمج شبكة تكييف مركزي مخفية دون تشويه الطابع الأثري|إعادة إنشاء حوض السباحة بالبهو بزليج فاسي أصيل|تجديد كامل للشبكات الكهربائية والصحية وفق المعايير المعاصرة">
           <img src="../assets/moroccan-1.jpg" alt="ترميم حرفي لرياض تقليدي بباب دكالة المدينة القديمة مراكش" loading="lazy">
           <div class="project-meta">
             <div class="project-name">رياض باب دكالة العريق</div>
             <div class="project-place">مراكش · 2023</div>
           </div>
         </a>
-
-        <a class="project p-e" data-tag="residentiel">
+        <a class="project p-e" data-tag="residentiel"
+           data-title="شقة حي راسين الراقية"
+           data-place="الدار البيضاء · 2024"
+           data-surface="145 م²"
+           data-duration="3 أشهر"
+           data-type="شقة سكنية رفيعة المستوى"
+           data-materials="باركيه خشب البلوط الصلب، صباغة أسترال مطفية مخملية، جبس BA13"
+           data-scope="إزالة الجدران الفاصلة لدمج الصالون وغرفة الطعام|تركيب باركيه خشب البلوط الصلب على عازل صوتي كثيف|صباغة جدران مخملية راقية بتركيبة عازلة ومقاومة للغبار|أسقف معلقة عصرية بإضاءة دقيقة موجهة|أبواب داخلية مخفية الحواف مطلية باللكر الأبيض|تجديد كامل للمطبخ ودورات المياه بالمواد الراقية">
           <img src="../assets/minimal-1.jpg" alt="تهيئة داخلية لشقة حديثة بحي راسين الدار البيضاء" loading="lazy">
           <div class="project-meta">
             <div class="project-name">شقة حي راسين الراقية</div>
             <div class="project-place">الدار البيضاء · 2024 · 145 م²</div>
           </div>
         </a>
-
-        <a class="project p-f" data-tag="cuisine">
+        <a class="project p-f" data-tag="cuisine"
+           data-title="مطبخ فيلا السويسي"
+           data-place="الرباط · 2025"
+           data-surface="38 م²"
+           data-duration="5 أسابيع"
+           data-type="مطبخ هندسي معاصر مينيماليست"
+           data-materials="حجر الديكتون الإسباني الأسود، واجهات بوليمر مقاومة للبصمات، بورسلان 120×120"
+           data-scope="تصميم مطبخ عصري بكبائن ممتدة للسقف دون مقابض|أسطح عمل فاخرة من حجر الديكتون المقاوم للحرارة والخدش|موقد طهي مزود بشفاط هواء مدمج مسطح|خزانة مدمجة على المقاس لحفظ المشروبات|إضاءة شريطية ليد مخفية بتحكم ذكي في شدة النور|تركيب أرضيات بورسلان إسباني كبير الحجم ومصقول">
           <img src="../assets/kitchen-3.jpg" alt="تصميم وتركيب مطبخ معاصر مينيماليست بحي السويسي الرباط" loading="lazy">
           <div class="project-meta">
             <div class="project-name">مطبخ فيلا السويسي</div>
             <div class="project-place">الرباط · 2025</div>
           </div>
         </a>
-
-        <a class="project p-g" data-tag="residentiel">
+        <a class="project p-g" data-tag="residentiel"
+           data-title="دوبلكس أنفا بلاس"
+           data-place="الدار البيضاء · 2025"
+           data-surface="210 m²"
+           data-duration="4 أشهر"
+           data-type="دوبلكس عصري مطل على المحيط"
+           data-materials="درج حديد مع خشب السنديان، واجهات ألمنيوم تيكنال، صباغة جوتن فينوماتيك"
+           data-scope="إعادة تخطيط الطابقين وتوسيع الفضاءات المطلة على البحر|تصميم وتركيب درج داخلي معلق بهيكل فولاذي ودرجات خشبية|تركيب نوافذ ألمنيوم كبيرة بعوازل حرارية وصوتية مقاومة للرطوبة|عزل صوتي متطور للجدران والأرضيات|صباغات جوتن عالية الجودة مقاومة للمناخ البحري|تهيئة تراس بانورامي كامل للاسترخاء">
           <img src="../assets/living-2.jpg" alt="تجديد شامل لدوبلكس راقي بأنفا بلاس الدار البيضاء" loading="lazy">
           <div class="project-meta">
             <div class="project-name">دوبلكس أنفا بلاس</div>
             <div class="project-place">الدار البيضاء · 2025 · 210 م²</div>
           </div>
         </a>
-
-        <a class="project p-c" data-tag="bain">
+        <a class="project p-c" data-tag="bain"
+           data-title="حمام جناح لابليرل"
+           data-place="الدار البيضاء · 2024"
+           data-surface="22 م²"
+           data-duration="4 أسابيع"
+           data-type="حمام ماستر رئيسي بنمط سبا خاص"
+           data-materials="رخام ماركينا الأسود، صنابير مدمجة ذهبية معتقة، حوض استحمام راتنجي"
+           data-scope="تحويل الحمام التقليدي إلى سبا فاخر مريح|حوض استحمام بيضاوي قائم بذاته من الراتنج المعدني|دش إيطالي مزدوج مع أرضية رخامية مانعة للانزلاق|خزانة حوضين منحوتة من كتلة واحدة من رخام ماركينا الأسود|مرايا ذكية بإضاءة ليد محيطية ونظام مانع لتشكل البخار|عزل مائي مزدوج ونظام تهوية صامت ومتطور">
           <img src="../assets/bathroom-2.jpg" alt="تهيئة حمام عصري بدش إيطالي بالدار البيضاء" loading="lazy">
           <div class="project-meta">
             <div class="project-name">حمام جناح لابليرل</div>
             <div class="project-place">الدار البيضاء · 2024</div>
           </div>
         </a>
-
-        <a class="project p-d" data-tag="pro">
+        <a class="project p-d" data-tag="pro"
+           data-title="مقر عمل استوديو ديزاين"
+           data-place="الدار البيضاء · 2025"
+           data-surface="220 م²"
+           data-duration="7 أسابيع"
+           data-type="مقر مهني ومكاتب أوبن سبيس"
+           data-materials="راتنج إيبوكسي ذاتي التسوية، زجاج ورشات أسود، أسقف أرمسترونغ الصوتية"
+           data-scope="تهيئة مكاتب متكاملة تسليم المفتاح لشركة استشارية|صب وتلميع أرضيات إيبوكسي رمادية بدون فواصل|قواطع زجاجية معدنية عازلة للصوت للمكاتب وقاعات الاجتماعات|أسقف مستعارة أرمسترونغ ممتصة للصوت والصدى|تمديدات شبكة إنترنت سلكية RJ45 Cat6a مدمجة بالحوائط|إنارة ليد معمارية هندسية مريحة للعين وموفرة للطاقة">
           <img src="../assets/Bureau_Studio.webp" alt="تهيئة مقر شركة ومكتب عمل احترافي أوبن سبيس بالدار البيضاء" loading="lazy">
           <div class="project-meta">
             <div class="project-name">مقر عمل استوديو ديزاين</div>
             <div class="project-place">الدار البيضاء · 2025 · 220 م²</div>
           </div>
         </a>
-
-        <a class="project p-e" data-tag="riad">
+        <a class="project p-e" data-tag="riad"
+           data-title="رياض البطحاء العتيق"
+           data-place="فاس · 2022"
+           data-surface="350 م²"
+           data-duration="10 أشهر"
+           data-type="رياض تاريخي عريق من التراث المغربي"
+           data-materials="خشب زواق ملون، جبس منقوش يدوياً، رخام خنيفرة الطبيعي"
+           data-scope="تدعيم الأساسات والأعمدة التاريخية القديمة|ترميم نقوش الزواق الخشبية للأسقف بأيدي معلمين مهرة|تجديد شبكات المياه والصرف والكهرباء بطريقة خفية تامة|تهيئة 6 أجنحة فاخرة بحمامات خاصة من الرخام والزليج|عزل مائي متكامل للسطح والتراسات العلوية|إنارة ليلية دراماتيكية تبرز جمالية الأقواس والزخارف المعمارية">
           <img src="../assets/riad-1.jpg" alt="تجديد وترميم نقوش وأخشاب تقليدية برياض البطحاء فاس" loading="lazy">
           <div class="project-meta">
             <div class="project-name">رياض البطحاء العتيق</div>
             <div class="project-place">فاس · 2022</div>
           </div>
         </a>
-
-        <a class="project p-a" data-tag="residentiel">
+        <a class="project p-a" data-tag="residentiel"
+           data-title="دار بهاليل الجبلية"
+           data-place="صفرو · 2023"
+           data-surface="180 م²"
+           data-duration="4 أشهر"
+           data-type="دار إقامة جبلية أصيلة"
+           data-materials="أحجار طبيعية محلية، ملاط الجير الطبيعي، حديد مشغول فني"
+           data-scope="إعادة ترميم منزل قروي جبلي بالحجارة الأصلية|تنظيف وإعادة تثبيت فواصل الجدران الحجرية الطبيعية|عزل حراري متين للأسقف لمقاومة البرد الشتوي|بناء مدفأة حطب عصرية مدمجة بجدران الصالون|نجارة خشبية سميكة بنوافذ ذات زجاج مزدوج عازل|أرضيات قرميد طيني تقليدي مشمع ومقاوم للرطوبة">
           <img src="../assets/living-3.jpg" alt="تجديد دار ضيافة وفيلا تقليدية ببهاليل صفرو" loading="lazy">
           <div class="project-meta">
             <div class="project-name">دار بهاليل الجبلية</div>
             <div class="project-place">صفرو · 2023 · 180 م²</div>
           </div>
         </a>
-
-        <a class="project p-b" data-tag="cuisine">
+        <a class="project p-b" data-tag="cuisine"
+           data-title="مطبخ عين الذئاب"
+           data-place="الدار البيضاء · 2024"
+           data-surface="32 م²"
+           data-duration="4 أسابيع"
+           data-type="مطبخ عائلي عصري متكامل"
+           data-materials="رخام إيبيزا الأبيض المصقول، زليج أبيض لؤلؤي، خشب الجوز الأمريكي"
+           data-scope="إعادة تخطيط المطبخ وفق معايير الحركة المريحة|سطح جزيرة العمل من رخام إيبيزا الأبيض الفاخر|تكسية الجدران بزليج لؤلؤي مقاوم للحرارة وسهل التنظيف|تصميم ركن جلوس وتناول طعام مدمج بخشب الجوز|توزيع مقابس كهربائية مخفية بالجزيرة المركزية|تركيب قاطع زجاجي ألمنيوم منزلق لعزل الروائح">
           <img src="../assets/kitchen-2.jpg" alt="تجديد مطبخ عائلي بجزيرة وسطى عين الذئاب الدار البيضاء" loading="lazy">
           <div class="project-meta">
             <div class="project-name">مطبخ عين الذئاب</div>
             <div class="project-place">الدار البيضاء · 2024</div>
           </div>
         </a>
+      </div>
+    </section>
 
+    <!-- AVANT / APRÈS INTERACTIF MULTI-SCÈNES (AR) -->
+    <section class="wrap-wide before-after-section" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="sec-head" style="margin-bottom: 24px;">
+        <div>
+          <span class="eyebrow">تحول معماري استثنائي</span>
+          <h2 style="margin-top: 16px;">قبل وبعد : فن التحول الهندسي والإتقان.</h2>
+        </div>
+        <p>حركوا المؤشر لاكتشاف الفارق المذهل بين العقار قبل الأشغال والنتيجة النهائية المسلمة بأرقى المعايير. اختر فضاءً لاستعراض نماذج التحول.</p>
+      </div>
+
+      <!-- Scène switcher tabs -->
+      <div class="ba-tabs-wrapper">
+        <div class="ba-tabs" role="tablist" aria-label="اختر فضاء المعاينة">
+          <button type="button" class="ba-tab active" role="tab" aria-selected="true"
+                  data-scene-before="../assets/living-2.jpg"
+                  data-scene-after="../assets/hero-living.webp"
+                  data-alt-before="الصالون قبل بداية أشغال التجديد"
+                  data-alt-after="صالون فخم بتشطيبات راقية تم تسليمه من طرف RSF Travaux"
+                  data-caption="صالون استقبال فخم وفضاء معيشة رحب · حي أنفا، الدار البيضاء">
+            <span class="ba-tab-dot"></span>
+            <span>صالون الاستقبال</span>
+          </button>
+          <button type="button" class="ba-tab" role="tab" aria-selected="false"
+                  data-scene-before="../assets/bathroom-2.jpg"
+                  data-scene-after="../assets/bathroom-1.webp"
+                  data-alt-before="حمام قديم قبل عملية التجديد"
+                  data-alt-after="جناح وحمام بحجر الترافرتين الطبيعي تم تنفيذه بواسطة RSF Travaux"
+                  data-caption="جناح وحمام بحجر الترافرتين الطبيعي · الرباط">
+            <span class="ba-tab-dot"></span>
+            <span>جناح الترافرتين</span>
+          </button>
+          <button type="button" class="ba-tab" role="tab" aria-selected="false"
+                  data-scene-before="../assets/kitchen-2.jpg"
+                  data-scene-after="../assets/kitchen-1.jpg"
+                  data-alt-before="مطبخ قبل أعمال التهيئة العصرية"
+                  data-alt-after="مطبخ عصري مدمج بجزيرة وسطى ورخام تم تسليمه من طرف RSF Travaux"
+                  data-caption="مطبخ عصري مدمج بتصميم مهندس ديكور · النخيل">
+            <span class="ba-tab-dot"></span>
+            <span>مطبخ عصري مدمج</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="ba-container" id="ba-slider">
+        <div class="ba-before">
+          <img id="ba-img-before" src="../assets/living-2.jpg" alt="الصالون قبل بداية أشغال التجديد" loading="lazy">
+          <span class="ba-label ba-label-before">قبل الأشغال</span>
+        </div>
+        <div class="ba-after" id="ba-after-layer">
+          <img id="ba-img-after" src="../assets/hero-living.webp" alt="صالون فخم بتشطيبات راقية تم تسليمه من طرف RSF Travaux" loading="lazy">
+          <span class="ba-label ba-label-after">بعد التسليم</span>
+        </div>
+        <div class="ba-handle" id="ba-handle" aria-label="مؤشر مقارنة قبل وبعد">
+          <div class="ba-handle-line"></div>
+          <div class="ba-handle-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+          </div>
+          <div class="ba-handle-line"></div>
+        </div>
+      </div>
+      <div class="ba-caption-bar" id="ba-caption-bar">
+        <span class="ba-caption-badge">تسليم المفتاح في اليد</span>
+        <span class="ba-caption-text" id="ba-scene-title">صالون استقبال فخم وفضاء معيشة رحب · حي أنفا، الدار البيضاء</span>
       </div>
     </section>
 
@@ -196,31 +404,159 @@
 
   <div id="footer-slot"></div>
 
-  <!-- Interactive Filter Script -->
-  <script>
-  (function () {
-    const chips = document.querySelectorAll(".chip");
-    const items = document.querySelectorAll("#gallery .project");
-    chips.forEach(chip => {
-      chip.addEventListener("click", () => {
-        chips.forEach(c => c.classList.remove("active"));
-        chip.classList.add("active");
-        const f = chip.dataset.filter;
-        items.forEach(it => {
-          if (f === "all" || it.dataset.tag === f) {
-            it.style.display = "";
-          } else {
-            it.style.display = "none";
-          }
-        });
-      });
-    });
-  })();
-  </script>
+  <!-- Floating WhatsApp Button -->
+  <a class="floating-whatsapp" href="https://wa.me/212664329698" target="_blank" rel="noopener" aria-label="محادثة عبر واتساب مع RSF Travaux">
+    <span class="floating-wa-pulse"></span>
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="floating-wa-text">محادثة</span>
+  </a>
+
+  <!-- Project Modal / Lightbox Haute Précision (Arabic) -->
+  <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="project-modal-backdrop" id="modal-backdrop"></div>
+    <div class="project-modal-dialog">
+      <button class="project-modal-close" id="modal-close" aria-label="إغلاق العرض المكبر">✕</button>
+      <div class="project-modal-content-split">
+        <div class="project-modal-img-col">
+          <img id="modal-img" src="" alt="">
+        </div>
+        <div class="project-modal-info-col">
+          <span class="modal-project-badge">مشروع منجز · RSF Travaux</span>
+          <h3 id="modal-title" class="modal-project-title"></h3>
+          <p id="modal-place" class="modal-project-place"></p>
+
+          <div class="modal-specs-strip">
+            <div class="modal-spec-item">
+              <span class="modal-spec-label">المساحة المعالجة</span>
+              <span class="modal-spec-val" id="modal-surface">—</span>
+            </div>
+            <div class="modal-spec-item">
+              <span class="modal-spec-label">مدة الإنجاز</span>
+              <span class="modal-spec-val" id="modal-duration">—</span>
+            </div>
+            <div class="modal-spec-item" style="grid-column: 1 / -1;">
+              <span class="modal-spec-label">نوع العقار</span>
+              <span class="modal-spec-val" id="modal-type">—</span>
+            </div>
+            <div class="modal-spec-item" style="grid-column: 1 / -1;">
+              <span class="modal-spec-label">المواد والتشطيبات الرئيسية</span>
+              <span class="modal-spec-val" id="modal-materials" style="font-weight: 500; font-size: 13px;">—</span>
+            </div>
+          </div>
+
+          <div class="modal-scope-title">الأشغال المنجزة بواسطة فرقنا المتخصصة</div>
+          <ul class="modal-scope-list" id="modal-scope-list">
+            <!-- Dynamically populated -->
+          </ul>
+
+          <div class="modal-actions">
+            <a id="modal-wa" href="" target="_blank" rel="noopener" class="btn btn-primary" style="flex: 1; justify-content: center;">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <span>مناقشة هذا المشروع عبر واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- SCRIPTS -->
-  <script src="../analytics.js?v=43" defer></script>
-  <script src="../nav.js?v=43"></script>
-  <script src="../tweaks.js?v=43"></script>
+  <script src="../analytics.js?v=82" defer></script>
+  <script src="../nav.js?v=82"></script>
+  <script src="../tweaks.js?v=82"></script>
+  <script>
+    // Filter chips
+    (function () {
+      const chips = document.querySelectorAll(".svc-filter-btn, .chip");
+      const items = document.querySelectorAll("#gallery .project");
+      chips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          chips.forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          const f = chip.dataset.filter;
+          items.forEach(it => {
+            if (f === "all" || it.dataset.tag === f) {
+              it.style.display = "";
+            } else {
+              it.style.display = "none";
+            }
+          });
+        });
+      });
+    })();
+
+    // Project Modal / Lightbox Haute Précision (Arabic)
+    const modal = document.getElementById("project-modal");
+    const modalImg = document.getElementById("modal-img");
+    const modalTitle = document.getElementById("modal-title");
+    const modalPlace = document.getElementById("modal-place");
+    const modalSurface = document.getElementById("modal-surface");
+    const modalDuration = document.getElementById("modal-duration");
+    const modalType = document.getElementById("modal-type");
+    const modalMaterials = document.getElementById("modal-materials");
+    const modalScopeList = document.getElementById("modal-scope-list");
+    const modalWa = document.getElementById("modal-wa");
+    const modalClose = document.getElementById("modal-close");
+    const modalBackdrop = document.getElementById("modal-backdrop");
+
+    function openModal(project) {
+      const img = project.querySelector("img");
+      if (!img) return;
+
+      modalImg.src = img.src;
+      modalImg.alt = img.alt || "";
+      modalTitle.textContent = project.dataset.title || "مشروع RSF Travaux";
+      modalPlace.textContent = project.dataset.place || "المغرب";
+      modalSurface.textContent = project.dataset.surface || "غير محددة";
+      modalDuration.textContent = project.dataset.duration || "حسب نطاق الأشغال";
+      modalType.textContent = project.dataset.type || "تهيئة وتجديد شامل";
+      modalMaterials.textContent = project.dataset.materials || "مواد راقية معتمدة عالمياً";
+
+      const rawScope = project.dataset.scope || "";
+      const items = rawScope.split("|").filter(Boolean);
+      modalScopeList.innerHTML = items.map(item => `
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>${item.trim()}</span>
+        </li>
+      `).join("");
+
+      const pName = project.dataset.title || "مشروع";
+      modalWa.href = "https://wa.me/212664329698?text=" + encodeURIComponent("مرحباً RSF Travaux، أود الاستفسار حول إنجاز مشروع مماثل لـ : " + pName);
+
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    modalClose.addEventListener("click", closeModal);
+    modalBackdrop.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("active")) {
+        closeModal();
+      }
+    });
+
+    document.querySelectorAll("#gallery .project").forEach(p => {
+      p.setAttribute("role", "button");
+      p.setAttribute("tabindex", "0");
+      p.addEventListener("click", (e) => {
+        e.preventDefault();
+        openModal(p);
+      });
+      p.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openModal(p);
+        }
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+  </script>
 </body>
 </html>

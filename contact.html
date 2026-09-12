@@ -78,6 +78,11 @@
             "addressLocality": "Casablanca",
             "addressRegion": "Grand Casablanca",
             "addressCountry": "MA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.5731,
+            "longitude": -7.5898
           }
         }
       }
@@ -87,8 +92,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=43">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&family=Almarai:wght@300;400;700;800&family=El+Messiri:wght@500;600;700&family=Noto+Kufi+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=82">
 </head>
 <body data-page="contact">
 
@@ -232,6 +237,20 @@
               <label>Décrivez votre projet</label>
               <textarea name="details" placeholder="Ce que vous aimeriez transformer, l'ambiance visée, vos contraintes de délai…"></textarea>
             </div>
+                        <div class="field" style="margin-top: 6px;">
+              <label>Plans ou photos du projet (facultatif)</label>
+              <div class="file-upload-box">
+                <input type="file" name="attachment" id="contact-attachment" accept=".pdf,.jpg,.jpeg,.png,.dwg" style="display:none;" />
+                <button type="button" class="file-upload-btn" onclick="document.getElementById('contact-attachment').click();">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
+                  <span id="file-upload-name">Joindre un plan ou des photos (.pdf, .jpg, .png)</span>
+                </button>
+              </div>
+            </div>
+            <div id="contact-success-banner" class="form-success-banner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Demande transmise avec succès ! Notre chef de projet vous recontactera sous 2h ouvrées.</span>
+            </div>
             <div style="margin-top: 8px;">
               <button type="submit" class="btn btn-primary" id="rsf-submit" style="width: 100%; justify-content: center;">
                 <span class="btn-label">Envoyer ma demande</span>
@@ -239,6 +258,20 @@
                 <svg class="btn-spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-opacity="0.25"/><path d="M21 12a9 9 0 0 0-9-9"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></path></svg>
               </button>
               <p style="font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center;">Nous ne partageons vos informations avec aucun tiers.</p>
+              <div class="reassurance-strip">
+                <div class="reassurance-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Devis sous 24h ouvrées</span>
+                </div>
+                <div class="reassurance-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>Garantie décennale &amp; contrat</span>
+                </div>
+                <div class="reassurance-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Visite offerte à Casablanca</span>
+                </div>
+              </div>
               <div id="rsf-form-status" role="status" aria-live="polite"></div>
             </div>
           </form>
@@ -392,8 +425,8 @@
   </a>
 
   <!-- SCRIPTS -->
-  <script src="analytics.js?v=43" defer></script>
-  <script src="nav.js?v=43"></script>
-  <script src="tweaks.js?v=43"></script>
+  <script src="analytics.js?v=82" defer></script>
+  <script src="nav.js?v=82"></script>
+  <script src="tweaks.js?v=82"></script>
 </body>
 </html>

@@ -3,8 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- ================= ACCUEIL / HOMEPAGE ================= -->
-  <!-- Version Française -->
+  <!-- ================= PAGES PRINCIPALES ================= -->
   <url>
     <loc>https://rsftravaux.ma/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/"/>
@@ -16,15 +15,8 @@
     <image:image>
       <image:loc>https://rsftravaux.ma/assets/hero-living.webp</image:loc>
       <image:title>Rénovation et aménagement intérieur haut de gamme Casablanca</image:title>
-      <image:caption>Projet de rénovation salon moderne par RSF Travaux à Casablanca</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://rsftravaux.ma/assets/rsf-logo.webp</image:loc>
-      <image:title>Logo RSF Travaux Entreprise Générale de Bâtiment</image:title>
     </image:image>
   </url>
-
-  <!-- Version Arabe -->
   <url>
     <loc>https://rsftravaux.ma/ar/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/"/>
@@ -36,43 +28,60 @@
     <image:image>
       <image:loc>https://rsftravaux.ma/assets/hero-living.webp</image:loc>
       <image:title>تهيئة وتجديد داخلي فاخر بالدار البيضاء والمغرب</image:title>
-      <image:caption>مشروع تجديد صالون عصري من تنفيذ RSF Travaux</image:caption>
     </image:image>
   </url>
-
-  <!-- ================= SERVICES ================= -->
-  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/services.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/services.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/services.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/services.html"/>
     <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://rsftravaux.ma/assets/servisf.webp</image:loc>
-      <image:title>Système de vitrage accordéon panoramique Maroc</image:title>
+      <image:title>Services d'aménagement et de rénovation</image:title>
     </image:image>
   </url>
-
-  <!-- Version Arabe -->
   <url>
     <loc>https://rsftravaux.ma/ar/services.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/services.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/services.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/services.html"/>
     <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://rsftravaux.ma/assets/servisf.webp</image:loc>
-      <image:title>أنظمة الزجاج الأكورديون القابل للطي والمتحرك بالمغرب</image:title>
+      <image:title>خدمات التهيئة والتجديد المعماري</image:title>
     </image:image>
   </url>
-
-  <!-- ================= RÉALISATIONS / PORTFOLIO ================= -->
-  <!-- Version Française -->
+  <url>
+    <loc>https://rsftravaux.ma/methode.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/methode.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/methode.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/methode.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/minimal-2.webp</image:loc>
+      <image:title>Notre méthode de travail en 5 étapes</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/methode.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/methode.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/methode.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/methode.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/minimal-2.webp</image:loc>
+      <image:title>منهجية العمل والتحكم في الجودة</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://rsftravaux.ma/realisations.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/realisations.html"/>
@@ -82,16 +91,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://rsftravaux.ma/assets/kitchen-1.jpg</image:loc>
-      <image:title>Aménagement cuisine moderne sur mesure Marrakech</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://rsftravaux.ma/assets/bathroom-1.webp</image:loc>
-      <image:title>Rénovation salle de bain travertin naturel Rabat</image:title>
+      <image:loc>https://rsftravaux.ma/assets/riad-1.jpg</image:loc>
+      <image:title>Réalisations et projets rénovés</image:title>
     </image:image>
   </url>
-
-  <!-- Version Arabe -->
   <url>
     <loc>https://rsftravaux.ma/ar/realisations.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/realisations.html"/>
@@ -101,40 +104,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://rsftravaux.ma/assets/kitchen-1.jpg</image:loc>
-      <image:title>تهيئة مطبخ عصري حديث على المقاس بمراكش</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://rsftravaux.ma/assets/bathroom-1.webp</image:loc>
-      <image:title>تجديد جناح وحمام بحجر الترافرتين الطبيعي بالرباط</image:title>
+      <image:loc>https://rsftravaux.ma/assets/riad-1.jpg</image:loc>
+      <image:title>مشاريع وإنجازات معمارية منجزة</image:title>
     </image:image>
   </url>
-
-  <!-- ================= NOTRE MÉTHODE ================= -->
-  <!-- Version Française -->
-  <url>
-    <loc>https://rsftravaux.ma/methode.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/methode.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/methode.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/methode.html"/>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Version Arabe -->
-  <url>
-    <loc>https://rsftravaux.ma/ar/methode.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/methode.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/methode.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/methode.html"/>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ================= RÉFÉRENCES ================= -->
-  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/references.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/references.html"/>
@@ -143,9 +116,11 @@
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/minimal-3.webp</image:loc>
+      <image:title>Témoignages et avis clients</image:title>
+    </image:image>
   </url>
-
-  <!-- Version Arabe -->
   <url>
     <loc>https://rsftravaux.ma/ar/references.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/references.html"/>
@@ -154,10 +129,11 @@
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/minimal-3.webp</image:loc>
+      <image:title>آراء العملاء والشركاء المؤسساتيين</image:title>
+    </image:image>
   </url>
-
-  <!-- ================= CONTACT ================= -->
-  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/contact.html"/>
@@ -166,9 +142,11 @@
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/hero_phones.webp</image:loc>
+      <image:title>Contact et demande de devis</image:title>
+    </image:image>
   </url>
-
-  <!-- Version Arabe -->
   <url>
     <loc>https://rsftravaux.ma/ar/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/contact.html"/>
@@ -177,10 +155,11 @@
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/hero_phones.webp</image:loc>
+      <image:title>اتصل بنا وطلب مقايسة سريعة</image:title>
+    </image:image>
   </url>
-
-  <!-- ================= MENTIONS LÉGALES ================= -->
-  <!-- Version Française -->
   <url>
     <loc>https://rsftravaux.ma/mentions-legales.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/mentions-legales.html"/>
@@ -188,10 +167,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/mentions-legales.html"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/rsf-logo.webp</image:loc>
+      <image:title>Mentions Légales RSF Travaux</image:title>
+    </image:image>
   </url>
-
-  <!-- Version Arabe -->
   <url>
     <loc>https://rsftravaux.ma/ar/mentions-legales.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/mentions-legales.html"/>
@@ -199,7 +180,480 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/mentions-legales.html"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/rsf-logo.webp</image:loc>
+      <image:title>الشروط القانونية وسياسة الخصوصية</image:title>
+    </image:image>
   </url>
 
+  <!-- ================= 18 PAGES DE SERVICES DÉDIÉES ================= -->
+  <url>
+    <loc>https://rsftravaux.ma/service-peinture-pasta-espagnole.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-peinture-pasta-espagnole.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-peinture-pasta-espagnole.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-peinture-pasta-espagnole.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/facade-peinture-pasta-espagnole-moderne.webp</image:loc>
+      <image:title>Peinture Pasta Espagnole : Revêtement de Façade &amp; Protection Extérieure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-peinture-pasta-espagnole.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-peinture-pasta-espagnole.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-peinture-pasta-espagnole.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-peinture-pasta-espagnole.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/facade-peinture-pasta-espagnole-moderne.webp</image:loc>
+      <image:title>صباغة الباستا الإسبانية : تكسية معمارية وحماية دائمة للواجهات</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-peinture-exterieure.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-peinture-exterieure.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-peinture-exterieure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-peinture-exterieure.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/peinture-revetements-facades-exterieures.webp</image:loc>
+      <image:title>Revêtements &amp; Finitions de Façades Extérieures au Maroc</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-peinture-exterieure.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-peinture-exterieure.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-peinture-exterieure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-peinture-exterieure.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/peinture-revetements-facades-exterieures.webp</image:loc>
+      <image:title>صباغة وكسوة الواجهات الخارجية وحمايتها بالمغرب</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-effet-travertin.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-effet-travertin.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-effet-travertin.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-effet-travertin.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/bathroom-1.webp</image:loc>
+      <image:title>Enduit Décoratif Effet Travertin : L'Élégance de la Pierre Naturelle</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-effet-travertin.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-effet-travertin.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-effet-travertin.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-effet-travertin.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/bathroom-1.webp</image:loc>
+      <image:title>صباغة وتكسية تأثير حجر الترافرتين الطبيعي الفاخر</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-peinture-interieure.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-peinture-interieure.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-peinture-interieure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-peinture-interieure.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-paint-interior.jpg</image:loc>
+      <image:title>Peinture Intérieure : Murs, Plafonds &amp; Boiseries de Standing</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-peinture-interieure.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-peinture-interieure.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-peinture-interieure.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-peinture-interieure.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-paint-interior.jpg</image:loc>
+      <image:title>أشغال الصباغة الداخلية الفاخرة للجدران والأسقف والنجارة</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-peinture-decorative.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-peinture-decorative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-peinture-decorative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-peinture-decorative.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-stucco.webp</image:loc>
+      <image:title>Peintures Décoratives Intérieures : Effets de Matière &amp; Textures Rares</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-peinture-decorative.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-peinture-decorative.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-peinture-decorative.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-peinture-decorative.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-stucco.webp</image:loc>
+      <image:title>الصباغات الديكورية الفاخرة : خامات فنية وتأثيرات راقية</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-moulures-pvc.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-moulures-pvc.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-moulures-pvc.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-moulures-pvc.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/minimal-3.webp</image:loc>
+      <image:title>Moulures &amp; Encadrements PVC pour Fenêtres et Finitions Décoratives</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-moulures-pvc.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-moulures-pvc.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-moulures-pvc.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-moulures-pvc.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/minimal-3.webp</image:loc>
+      <image:title>قوالب وكرانيش PVC للنوافذ والديكور المقاوم للرطوبة</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-amenagement-interieur.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-amenagement-interieur.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-amenagement-interieur.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-amenagement-interieur.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/aminagement-interieur.webp</image:loc>
+      <image:title>Aménagement Immobilier Intérieur : Ergonomie, Espaces &amp; Plans 3D</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-amenagement-interieur.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-amenagement-interieur.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-amenagement-interieur.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-amenagement-interieur.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/aminagement-interieur.webp</image:loc>
+      <image:title>التهيئة والتصميم الداخلي المعماري ودراسات 3D المتطورة</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-amenagement-exterieur.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-amenagement-exterieur.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-amenagement-exterieur.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-amenagement-exterieur.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-facade.webp</image:loc>
+      <image:title>Aménagement Immobilier Extérieur : Façades, Terrasses &amp; Accès</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-amenagement-exterieur.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-amenagement-exterieur.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-amenagement-exterieur.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-amenagement-exterieur.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-facade.webp</image:loc>
+      <image:title>التهيئة الخارجية للعقارات : الواجهات، المداخل والتراسات البانورامية</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-renovation-complete.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-renovation-complete.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-renovation-complete.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-renovation-complete.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/minimal-1.jpg</image:loc>
+      <image:title>Rénovation Complète Clé en Main de Villas, Appartements &amp; Locaux</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-renovation-complete.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-renovation-complete.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-renovation-complete.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-renovation-complete.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/minimal-1.jpg</image:loc>
+      <image:title>التجديد الشامل للعقارات بمفتاح في اليد (Clé en Main)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-amenagement-cuisine.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-amenagement-cuisine.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-amenagement-cuisine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-amenagement-cuisine.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/kitchen-1.jpg</image:loc>
+      <image:title>Conception &amp; Aménagement de Cuisines Équipées sur Mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-amenagement-cuisine.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-amenagement-cuisine.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-amenagement-cuisine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-amenagement-cuisine.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/kitchen-1.jpg</image:loc>
+      <image:title>تصميم وتركيب المطابخ العصرية المجهزة على المقاس</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-sols-resine-epoxy.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-sols-resine-epoxy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-sols-resine-epoxy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-sols-resine-epoxy.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-epoxy.webp</image:loc>
+      <image:title>Sols en Résine Époxy &amp; Polyuréthane Autolissante au Maroc</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-sols-resine-epoxy.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-sols-resine-epoxy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-sols-resine-epoxy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-sols-resine-epoxy.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-epoxy.webp</image:loc>
+      <image:title>أرضيات الإيبوكسي والراتنج ذاتية التسوية الصناعية والديكورية</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-revetements-sols-murs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-revetements-sols-murs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-revetements-sols-murs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-revetements-sols-murs.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-marble.webp</image:loc>
+      <image:title>Travaux de Revêtements : Marbre, Carrelage, Parquet &amp; Faïence</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-revetements-sols-murs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-revetements-sols-murs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-revetements-sols-murs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-revetements-sols-murs.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-marble.webp</image:loc>
+      <image:title>أشغال تركيب وتكسية الأرضيات والجدران بالرخام والبورسلان والباركيه</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-vitrage-accordeon.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-vitrage-accordeon.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-vitrage-accordeon.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-vitrage-accordeon.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/servisf.webp</image:loc>
+      <image:title>Vitrage Accordéon Panoramique &amp; Menuiserie Aluminium</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-vitrage-accordeon.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-vitrage-accordeon.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-vitrage-accordeon.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-vitrage-accordeon.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/servisf.webp</image:loc>
+      <image:title>أنظمة الزجاج الأكورديون البانورامي القابل للطي ونجارة الألمنيوم</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-bardage-habillage-facade.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-bardage-habillage-facade.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-bardage-habillage-facade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-bardage-habillage-facade.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-facade.webp</image:loc>
+      <image:title>Bardage &amp; Habillage Architectural de Façades (Bois, Composite, Aluminium)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-bardage-habillage-facade.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-bardage-habillage-facade.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-bardage-habillage-facade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-bardage-habillage-facade.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-facade.webp</image:loc>
+      <image:title>تكسية وكسوة الواجهات المعمارية بالخشب المركب وألواح الألومنيوم</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-platrerie-faux-plafonds.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-platrerie-faux-plafonds.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-platrerie-faux-plafonds.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-platrerie-faux-plafonds.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-led-cove.webp</image:loc>
+      <image:title>Plâtrerie Moderne, Faux Plafonds BA13 &amp; Dalles Armstrong</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-platrerie-faux-plafonds.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-platrerie-faux-plafonds.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-platrerie-faux-plafonds.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-platrerie-faux-plafonds.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-led-cove.webp</image:loc>
+      <image:title>الجبس العصري، الأسقف المعلقة BA13 ومسارات الإضاءة المخفية</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-etancheite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-etancheite.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-etancheite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-etancheite.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-waterproof.webp</image:loc>
+      <image:title>Travaux d'Étanchéité : Toitures-Terrasses, Balcons &amp; Pièces Humides</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-etancheite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-etancheite.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-etancheite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-etancheite.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/svc-waterproof.webp</image:loc>
+      <image:title>أشغال العزل المائي والحراري للأسطح والتراسات والمسابح والمناطق الرطبة</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-travaux-finition.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-travaux-finition.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-travaux-finition.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-travaux-finition.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/craftsman-1.webp</image:loc>
+      <image:title>Travaux de Finition Haute Précision &amp; Perfection des Détails</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-travaux-finition.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-travaux-finition.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-travaux-finition.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-travaux-finition.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/craftsman-1.webp</image:loc>
+      <image:title>أشغال التشطيبات المعمارية الدقيقة وعناية التفاصيل الراقية</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/service-travaux-divers-maintenance.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-travaux-divers-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-travaux-divers-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-travaux-divers-maintenance.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/craftsman-1.webp</image:loc>
+      <image:title>Travaux Divers, Petites Rénovations &amp; Maintenance Immobilière</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rsftravaux.ma/ar/service-travaux-divers-maintenance.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rsftravaux.ma/service-travaux-divers-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rsftravaux.ma/ar/service-travaux-divers-maintenance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rsftravaux.ma/service-travaux-divers-maintenance.html"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://rsftravaux.ma/assets/craftsman-1.webp</image:loc>
+      <image:title>الأشغال المتنوعة والصيانة العقارية الدورية للمباني والفيلات</image:title>
+    </image:image>
+  </url>
 </urlset>

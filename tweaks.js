@@ -60,7 +60,9 @@
       applyAll();
       // Persist to disk via edit-mode protocol
       try {
-        window.parent.postMessage({ type: "__edit_mode_set_keys", edits: patch }, "*");
+        if (window.location.protocol !== "file:" && window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: "__edit_mode_set_keys", edits: patch }, "*");
+        }
       } catch (e) {}
       // Refresh panel controls if open
       if (typeof window.__rsfRenderPanel === "function") window.__rsfRenderPanel();
@@ -222,6 +224,150 @@
     }
   });
   try {
-    window.parent.postMessage({ type: "__edit_mode_available" }, "*");
+    if (window.location.protocol !== "file:" && window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: "__edit_mode_available" }, "*");
+    }
   } catch (e) {}
+
+  // Before / After interactive slider (Multi-Scene - Mobile Optimized)
+  (function initBeforeAfter() {
+    const container = document.getElementById('ba-slider');
+    const afterLayer = document.getElementById('ba-after-layer');
+    const handle = document.getElementById('ba-handle');
+    if (!container || !afterLayer || !handle) return;
+
+    let isDown = false;
+
+    function setWidthVar() {
+      const rect = container.getBoundingClientRect();
+      if (rect.width > 0) {
+        container.style.setProperty('--ba-w', rect.width + 'px');
+      }
+    }
+    setWidthVar();
+    window.addEventListener('resize', setWidthVar);
+    window.addEventListener('orientationchange', () => setTimeout(setWidthVar, 100));
+
+    function updatePos(clientX) {
+      const rect = container.getBoundingClientRect();
+      if (rect.width <= 0) return;
+      let x = clientX - rect.left;
+      if (x < 0) x = 0;
+      if (x > rect.width) x = rect.width;
+      const pct = (x / rect.width) * 100;
+      
+      afterLayer.style.width = pct + '%';
+      handle.style.left = pct + '%';
+    }
+
+    // Use modern Pointer Events with pointer capture for buttery-smooth mobile drag
+    if (window.PointerEvent) {
+      container.addEventListener('pointerdown', e => {
+        isDown = true;
+        setWidthVar();
+        try { container.setPointerCapture(e.pointerId); } catch(err) {}
+        updatePos(e.clientX);
+      });
+      container.addEventListener('pointermove', e => {
+        if (isDown) {
+          updatePos(e.clientX);
+        }
+      });
+      const endDrag = e => {
+        if (isDown) {
+          isDown = false;
+          try { container.releasePointerCapture(e.pointerId); } catch(err) {}
+        }
+      };
+      container.addEventListener('pointerup', endDrag);
+      container.addEventListener('pointercancel', endDrag);
+    } else {
+      container.addEventListener('mousedown', e => { isDown = true; setWidthVar(); updatePos(e.clientX); });
+      window.addEventListener('mouseup', () => { isDown = false; });
+      window.addEventListener('mousemove', e => { if (isDown) updatePos(e.clientX); });
+
+      container.addEventListener('touchstart', e => {
+        isDown = true;
+        setWidthVar();
+        updatePos(e.touches[0].clientX);
+      }, { passive: true });
+      window.addEventListener('touchend', () => { isDown = false; });
+      window.addEventListener('touchmove', e => {
+        if (isDown) updatePos(e.touches[0].clientX);
+      }, { passive: true });
+    }
+
+    // Multi-scene tabs switcher
+    const tabs = document.querySelectorAll('.ba-tab');
+    const imgBefore = document.getElementById('ba-img-before');
+    const imgAfter = document.getElementById('ba-img-after');
+    const sceneTitle = document.getElementById('ba-scene-title');
+
+    if (imgBefore) imgBefore.addEventListener('load', setWidthVar);
+    if (imgAfter) imgAfter.addEventListener('load', setWidthVar);
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const newBefore = tab.getAttribute('data-scene-before');
+        const newAfter = tab.getAttribute('data-scene-after');
+        const altBefore = tab.getAttribute('data-alt-before');
+        const altAfter = tab.getAttribute('data-alt-after');
+        const caption = tab.getAttribute('data-caption');
+
+        if (imgBefore && newBefore) {
+          imgBefore.src = newBefore;
+          if (altBefore) imgBefore.alt = altBefore;
+        }
+        if (imgAfter && newAfter) {
+          imgAfter.src = newAfter;
+          if (altAfter) imgAfter.alt = altAfter;
+        }
+        if (sceneTitle && caption) {
+          sceneTitle.textContent = caption;
+        }
+
+        // Smooth center tab into view on mobile
+        try {
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } catch (e) {}
+
+        // Reset handle to 50%
+        afterLayer.style.width = '50%';
+        handle.style.left = '50%';
+        setWidthVar();
+      });
+    });
+  })();
+
+  // Contact form enhancements
+  (function initContactForm() {
+    const fileInput = document.getElementById('contact-attachment');
+    const fileNameSpan = document.getElementById('file-upload-name');
+    if (fileInput && fileNameSpan) {
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+          fileNameSpan.textContent = 'Fichier sélectionné : ' + fileInput.files[0].name;
+          fileNameSpan.style.fontWeight = '600';
+          fileNameSpan.style.color = 'var(--accent)';
+        }
+      });
+    }
+
+    const form = document.querySelector('form[action*="formspree"], form#contact-form, .contact-form form');
+    const banner = document.getElementById('contact-success-banner');
+    if (form && banner) {
+      form.addEventListener('submit', (e) => {
+        banner.style.display = 'flex';
+        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    }
+  })();
+
 })();

@@ -54,6 +54,31 @@
         ]
       },
       {
+        "@type": "HomeAndConstructionBusiness",
+        "name": "RSF Travaux S.A.R.L. AU",
+        "url": "https://rsftravaux.ma/ar/",
+        "telephone": "+212664329698",
+        "email": "rsftravaux@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Casablanca",
+          "addressRegion": "Grand Casablanca",
+          "addressCountry": "MA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 33.5731,
+          "longitude": -7.5898
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "100",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -112,8 +137,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=43">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Amiri:wght@400;700&family=Almarai:wght@300;400;700;800&family=El+Messiri:wght@500;600;700&family=Noto+Kufi+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=82">
 </head>
 <body data-page="references">
 
@@ -165,22 +190,34 @@
 
       <div class="client-grid">
         <div class="client-cell" title="مجموعة الضحى — Groupe Addoha">
-          <img class="client-logo-img" src="../assets/clients/addoha.jpg" alt="Groupe Addoha">
+          <img class="client-logo-img" src="../assets/clients/addoha.jpg" alt="Groupe Addoha" width="160" height="70" loading="lazy">
         </div>
         <div class="client-cell" title="مجموعة العمران — Al Omrane">
-          <img class="client-logo-img" src="../assets/clients/al-omrane.png" alt="Groupe Al Omrane">
+          <img class="client-logo-img" src="../assets/clients/al-omrane.png" alt="Groupe Al Omrane" width="160" height="70" loading="lazy">
+        </div>
+        <div class="client-cell" title="التجاري وفا بنك — Attijariwafa bank">
+          <img class="client-logo-img" src="../assets/clients/attijariwafa-bank.png" alt="Attijariwafa bank" width="160" height="70" loading="lazy">
+        </div>
+        <div class="client-cell" title="البريد بنك — Al Barid Bank">
+          <img class="client-logo-img" src="../assets/clients/barid-bank.png" alt="Al Barid Bank" width="160" height="70" loading="lazy">
+        </div>
+        <div class="client-cell" title="بنك سَهام — Saham Bank">
+          <img class="client-logo-img" src="../assets/clients/saham-bank.png" alt="Saham Bank" width="160" height="70" loading="lazy">
+        </div>
+        <div class="client-cell" title="اتصالات المغرب — Maroc Telecom">
+          <img class="client-logo-img" src="../assets/clients/telemaroc.png" alt="Maroc Telecom" width="160" height="70" loading="lazy">
         </div>
         <div class="client-cell" title="أورنج المغرب — Orange Maroc">
-          <img class="client-logo-img" src="../assets/clients/orange.jpg" alt="Orange Maroc">
+          <img class="client-logo-img" src="../assets/clients/orange.jpg" alt="Orange Maroc" width="160" height="70" loading="lazy">
         </div>
         <div class="client-cell" title="إنوي — Inwi">
-          <img class="client-logo-img" src="../assets/clients/inwi.jpg" alt="Inwi">
+          <img class="client-logo-img" src="../assets/clients/inwi.jpg" alt="Inwi" width="160" height="70" loading="lazy">
         </div>
         <div class="client-cell" title="فضاءات السعادة — Fadaa Saada">
-          <img class="client-logo-img" src="../assets/clients/fadaa_saada.jpg" alt="Fadaa Saada">
+          <img class="client-logo-img" src="../assets/clients/fadaa_saada.jpg" alt="Fadaa Saada" width="160" height="70" loading="lazy">
         </div>
         <div class="client-cell" title="مجموعة الجامعي — Groupe Jamaï">
-          <img class="client-logo-img" src="../assets/clients/jamai.jpg" alt="Groupe Jamaï">
+          <img class="client-logo-img" src="../assets/clients/jamai.jpg" alt="Groupe Jamaï" width="160" height="70" loading="lazy">
         </div>
       </div>
     </section>
@@ -274,40 +311,65 @@
         <p>إجابات واضحة وشفافة حول طرق العمل، التكاليف، والضمانات المهنية.</p>
       </div>
 
-      <div style="max-width: 840px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 20px;">
-        <details style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px;">
-          <summary style="font-weight: 700; font-size: 16px; cursor: pointer; color: var(--navy);">هل تنفذون مشاريعكم في كافة المدن المغربية ؟</summary>
-          <p style="margin-top: 14px; font-size: 15px; color: var(--muted); line-height: 1.7;">
-            انطلاقاً من مقرنا الرئيسي بالدار البيضاء، نتدخل بانتظام في الرباط، مراكش، طنجة، فاس وأكادير دون أي مصاريف إضافية. بالنسبة للمدن الأخرى، ندرس كل طلب على حدة وفق حجم المشروع.
-          </p>
+      <div class="faq-list" style="max-width: 920px; margin: 40px auto 0;">
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>هل تنفذون مشاريعكم في كافة المدن المغربية ؟</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>انطلاقاً من مقرنا الرئيسي بالدار البيضاء، نتدخل بانتظام في الرباط، مراكش، طنجة، فاس وأكادير دون أي مصاريف إضافية. بالنسبة للمدن الأخرى، ندرس كل طلب على حدة وفق حجم المشروع.</p>
+          </div>
         </details>
 
-        <details style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px;">
-          <summary style="font-weight: 700; font-size: 16px; cursor: pointer; color: var(--navy);">ما هي الميزانية التقديرية لإطلاق مشروع تجديد ؟</summary>
-          <p style="margin-top: 14px; font-size: 15px; color: var(--muted); line-height: 1.7;">
-            بالنسبة لمشاريع التجديد الشامل للفيلات أو الشقق، تبدأ الأشغال عادة من 250 ألف درهم مغربي. أما بالنسبة للخدمات الفنية المحددة مثل زجاج الأكورديون، العزل المائي، أو الصباغة الديكورية، فنقوم بإعداد مقايسة مخصصة على المقاس بدون حد أدنى.
-          </p>
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>ما هي الميزانية التقديرية لإطلاق مشروع تجديد ؟</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>بالنسبة لمشاريع التجديد الشامل للفيلات أو الشقق، تبدأ الأشغال عادة من 250 ألف درهم مغربي. أما بالنسبة للخدمات الفنية المحددة مثل زجاج الأكورديون، العزل المائي، أو الصباغة الديكورية، فنقوم بإعداد مقايسة مخصصة على المقاس بدون حد أدنى.</p>
+          </div>
         </details>
 
-        <details style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px;">
-          <summary style="font-weight: 700; font-size: 16px; cursor: pointer; color: var(--navy);">كم تستغرق مدة إنجاز المشروع النموذجي ؟</summary>
-          <p style="margin-top: 14px; font-size: 15px; color: var(--muted); line-height: 1.7;">
-            من المعاينة الأولى وحتى تسليم المفاتيح، تتراوح المدة عادة بين 3 إلى 5 أشهر للشقق، و6 إلى 10 أشهر للفيلات الكاملة. ونسلمكم جدولاً زمنياً تعاقدياً مفصلاً عند توقيع العقد.
-          </p>
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>كم تستغرق مدة إنجاز المشروع النموذجي ؟</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>من المعاينة الأولى وحتى تسليم المفاتيح، تتراوح المدة عادة بين 3 إلى 5 أشهر للشقق، و6 إلى 10 أشهر للفيلات الكاملة. ونسلمكم جدولاً زمنياً تعاقدياً مفصلاً عند توقيع العقد.</p>
+          </div>
         </details>
 
-        <details style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px;">
-          <summary style="font-weight: 700; font-size: 16px; cursor: pointer; color: var(--navy);">هل يمكنني توفير بعض المواد الخاصة بي ؟</summary>
-          <p style="margin-top: 14px; font-size: 15px; color: var(--muted); line-height: 1.7;">
-            نعم بالتأكيد. ونقوم بتكييف المقايسة وفقاً لذلك. علماً بأن ضماننا المهني يشمل جودة التركيب والإتقان، بينما تخضع المواد الموردة من طرف العميل لضمان المصنع الخاص بها.
-          </p>
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>هل يمكنني توفير بعض المواد الخاصة بي ؟</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>نعم بالتأكيد. ونقوم بتكييف المقايسة وفقاً لذلك. علماً بأن ضماننا المهني يشمل جودة التركيب والإتقان، بينما تخضع المواد الموردة من طرف العميل لضمان المصنع الخاص بها.</p>
+          </div>
         </details>
 
-        <details style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px;">
-          <summary style="font-weight: 700; font-size: 16px; cursor: pointer; color: var(--navy);">ماذا يحدث في حال وجود أي ملاحظة بعد التسليم ؟</summary>
-          <p style="margin-top: 14px; font-size: 15px; color: var(--muted); line-height: 1.7;">
-            خدمة ما بعد التسليم تبقى في تصرفكم دائماً. نضمن تدخلاً سريعاً ومجانياً لمعالجة أي ملاحظة أو تعديل لضمان راحتكم ورضاكم التام.
-          </p>
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>هل نحتاج إلى مهندس معماري خارجي إضافي ؟</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>نضم في فريقنا مهندسي تصميم داخلي معتمدين. وبالنسبة للمشاريع الكبرى التي تتطلب تعديلات هيكلية أو تراخيص رسمية، نتعاون مع مكاتب هندسية شريكة ونتولى كافة الإجراءات الإدارية بالكامل.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>ماذا يحدث في حال وجود أي ملاحظة بعد التسليم ؟</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>خدمة ما بعد التسليم تبقى في تصرفكم دائماً. نضمن تدخلاً سريعاً ومجانياً لمعالجة أي ملاحظة أو تعديل لضمان راحتكم ورضاكم التام مع شهادة ضمان معتمدة.</p>
+          </div>
         </details>
       </div>
     </section>
@@ -335,8 +397,8 @@
   <div id="footer-slot"></div>
 
   <!-- SCRIPTS -->
-  <script src="../analytics.js?v=43" defer></script>
-  <script src="../nav.js?v=43"></script>
-  <script src="../tweaks.js?v=43"></script>
+  <script src="../analytics.js?v=82" defer></script>
+  <script src="../nav.js?v=82"></script>
+  <script src="../tweaks.js?v=82"></script>
 </body>
 </html>

@@ -248,6 +248,9 @@
     window.addEventListener('resize', setWidthVar);
     window.addEventListener('orientationchange', () => setTimeout(setWidthVar, 100));
 
+    const labelAfter = container.querySelector('.ba-label-after');
+    const labelBefore = container.querySelector('.ba-label-before');
+
     function updatePos(clientX) {
       const rect = container.getBoundingClientRect();
       if (rect.width <= 0) return;
@@ -258,6 +261,9 @@
       
       afterLayer.style.width = pct + '%';
       handle.style.left = pct + '%';
+
+      if (labelAfter) labelAfter.style.opacity = pct < 10 ? '0' : '1';
+      if (labelBefore) labelBefore.style.opacity = pct > 90 ? '0' : '1';
     }
 
     // Use modern Pointer Events with pointer capture for buttery-smooth mobile drag
@@ -303,6 +309,14 @@
     const imgAfter = document.getElementById('ba-img-after');
     const sceneTitle = document.getElementById('ba-scene-title');
 
+    // Preload all scene images immediately for instant switching
+    tabs.forEach(tab => {
+      const b = tab.getAttribute('data-scene-before');
+      const a = tab.getAttribute('data-scene-after');
+      if (b) { const i1 = new Image(); i1.src = b; }
+      if (a) { const i2 = new Image(); i2.src = a; }
+    });
+
     if (imgBefore) imgBefore.addEventListener('load', setWidthVar);
     if (imgAfter) imgAfter.addEventListener('load', setWidthVar);
 
@@ -341,6 +355,8 @@
         // Reset handle to 50%
         afterLayer.style.width = '50%';
         handle.style.left = '50%';
+        if (labelAfter) labelAfter.style.opacity = '1';
+        if (labelBefore) labelBefore.style.opacity = '1';
         setWidthVar();
       });
     });

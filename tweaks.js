@@ -369,19 +369,11 @@
     if (fileInput && fileNameSpan) {
       fileInput.addEventListener('change', () => {
         if (fileInput.files.length > 0) {
-          fileNameSpan.textContent = 'Fichier sélectionné : ' + fileInput.files[0].name;
+          const isAr = document.documentElement.lang === 'ar' || window.location.pathname.includes('/ar/');
+          fileNameSpan.textContent = (isAr ? 'تم اختيار الملف : ' : 'Fichier sélectionné : ') + fileInput.files[0].name;
           fileNameSpan.style.fontWeight = '600';
           fileNameSpan.style.color = 'var(--accent)';
         }
-      });
-    }
-
-    const form = document.querySelector('form[action*="formspree"], form#contact-form, .contact-form form');
-    const banner = document.getElementById('contact-success-banner');
-    if (form && banner) {
-      form.addEventListener('submit', (e) => {
-        banner.style.display = 'flex';
-        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     }
   })();

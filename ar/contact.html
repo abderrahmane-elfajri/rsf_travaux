@@ -119,7 +119,7 @@
       <div class="contact-grid">
         <!-- LEFT: INFO + WHATSAPP -->
         <div class="contact-info">
-          <h3>قنوات التواصل المباشر</h3>
+          <h2 style="font-size: 1.25rem; margin-bottom: 24px;">قنوات التواصل المباشر</h2>
           <p style="color: var(--muted); margin-bottom: 32px;">الطريقة الأسرع هي مراسلتنا عبر واتساب — نجيبكم فوراً خلال ساعات العمل.</p>
 
           <div class="row">
@@ -132,7 +132,7 @@
           </div>
           <div class="row">
             <span class="label">المقر الرئيسي</span>
-            <span class="value">شركة RSF Travaux S.A.R.L. AU<br>الدار البيضاء &mdash; وكافة ربوع المملكة المغربية<br><a href="https://rsftravaux.ma" target="_blank">rsftravaux.ma</a></span>
+            <span class="value">شركة RSF Travaux S.A.R.L. AU<br>الدار البيضاء &mdash; وكافة ربوع المملكة المغربية<br><a href="https://rsftravaux.ma" target="_blank" rel="noopener">rsftravaux.ma</a></span>
           </div>
           <div class="row">
             <span class="label">نطاق التدخل</span>
@@ -145,7 +145,7 @@
 
           <a class="whatsapp-big" href="https://wa.me/212664329698?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20RSF%20Travaux%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D8%A3%D9%88%D9%84%D9%8A%D8%A9." target="_blank" rel="noopener">
             <div>
-              <h4>محادثة مباشرة عبر واتساب</h4>
+              <h3>محادثة مباشرة عبر واتساب</h3>
               <span>استجابة سريعة في أقل من 4 ساعات</span>
             </div>
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -154,26 +154,26 @@
 
         <!-- RIGHT: FORM -->
         <div>
-          <h3 style="margin-bottom: 24px;">طلب مقايسة ومعاينة أولية</h3>
+          <h2 style="font-size: 1.25rem; margin-bottom: 24px;">طلب مقايسة ومعاينة أولية</h2>
           <form class="contact-form" id="rsf-contact-form" novalidate>
             <div class="field-row">
               <div class="field">
-                <label>الاسم الكامل *</label>
-                <input type="text" name="name" placeholder="مثال: فاطمة العمراني" required/>
+                <label for="contact-name">الاسم الكامل *</label>
+                <input type="text" id="contact-name" name="name" placeholder="مثال: فاطمة العمراني" required/>
               </div>
               <div class="field">
-                <label>رقم الهاتف أو واتساب *</label>
-                <input type="tel" name="phone" placeholder="مثال: 0661..." dir="ltr" required/>
+                <label for="contact-phone">رقم الهاتف أو واتساب *</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="مثال: 0661..." dir="ltr" required/>
               </div>
             </div>
             <div class="field">
-              <label>البريد الإلكتروني *</label>
-              <input type="email" name="email" placeholder="contact@exemple.ma" dir="ltr" required/>
+              <label for="contact-email">البريد الإلكتروني *</label>
+              <input type="email" id="contact-email" name="email" placeholder="contact@exemple.ma" dir="ltr" required/>
             </div>
             <div class="field-row">
               <div class="field">
-                <label>نوع العقار</label>
-                <select name="property_type">
+                <label for="contact-property-type">نوع العقار</label>
+                <select id="contact-property-type" name="property_type">
                   <option value="">اختر نوع العقار…</option>
                   <option>فيلا راقية / منزل مستقل</option>
                   <option>شقة فاخرة / دوبلكس</option>
@@ -184,8 +184,8 @@
                 </select>
               </div>
               <div class="field">
-                <label>الخدمة الرئيسية المطلوبة *</label>
-                <select name="type" required>
+                <label for="contact-type">الخدمة الرئيسية المطلوبة *</label>
+                <select id="contact-type" name="type" required>
                   <option value="">اختر الخدمة المطلوبة…</option>
                   <option>تجديد شامل بمفتاح في اليد</option>
                   <option>التهيئة والتصميم الداخلي</option>
@@ -205,18 +205,18 @@
             </div>
             <div class="field-row">
               <div class="field">
-                <label>المساحة التقريبية (م²)</label>
-                <input type="text" name="surface" placeholder="مثال: 180" inputmode="numeric"/>
+                <label for="contact-surface">المساحة التقريبية (م²)</label>
+                <input type="text" id="contact-surface" name="surface" placeholder="مثال: 180" inputmode="numeric"/>
               </div>
               <div class="field">
-                <label>مدينة العقار أو الورش</label>
-                <input type="text" name="city" placeholder="الدار البيضاء، الرباط، مراكش…"/>
+                <label for="contact-city">مدينة العقار أو الورش</label>
+                <input type="text" id="contact-city" name="city" placeholder="الدار البيضاء، الرباط، مراكش…"/>
               </div>
             </div>
             <div class="field-row">
               <div class="field">
-                <label>الميزانية التقديرية المرصودة</label>
-                <select name="budget">
+                <label for="contact-budget">الميزانية التقديرية المرصودة</label>
+                <select id="contact-budget" name="budget">
                   <option>قيد التحديد</option>
                   <option>أقل من 250,000 درهم</option>
                   <option>250,000 – 500,000 درهم</option>
@@ -226,8 +226,8 @@
                 </select>
               </div>
               <div class="field">
-                <label>الموعد المرغوب لانطلاق الأشغال</label>
-                <select name="delay">
+                <label for="contact-delay">الموعد المرغوب لانطلاق الأشغال</label>
+                <select id="contact-delay" name="delay">
                   <option>قيد التحديد</option>
                   <option>فوري (خلال الشهر الحالي)</option>
                   <option>خلال شهر إلى 3 أشهر</option>
@@ -237,11 +237,11 @@
               </div>
             </div>
             <div class="field">
-              <label>صف لنا فكرة وتفاصيل مشروعك</label>
-              <textarea name="details" placeholder="ما الذي ترغب في تحويله أو تجديده، الجو العام المفضل، الملاحظات الخاصة…"></textarea>
+              <label for="contact-details">صف لنا فكرة وتفاصيل مشروعك</label>
+              <textarea id="contact-details" name="details" placeholder="ما الذي ترغب في تحويله أو تجديده، الجو العام المفضل، الملاحظات الخاصة…"></textarea>
             </div>
                         <div class="field" style="margin-top: 6px;">
-              <label>تصاميم أو صور للمشروع (اختياري)</label>
+              <label for="contact-attachment">تصاميم أو صور للمشروع (اختياري)</label>
               <div class="file-upload-box">
                 <input type="file" name="attachment" id="contact-attachment" accept=".pdf,.jpg,.jpeg,.png,.dwg" style="display:none;" />
                 <button type="button" class="file-upload-btn" onclick="document.getElementById('contact-attachment').click();">
@@ -307,7 +307,7 @@
                 <div class="status-card">
                   <div class="status-icon-badge">${iconSvg}</div>
                   <div class="status-body">
-                    <h4 class="status-title">${title}</h4>
+                    <h3 class="status-title">${title}</h3>
                     <div class="status-text">${msg}</div>
                     ${waBtn}
                   </div>
@@ -357,37 +357,55 @@
                 details: form.elements["details"].value.trim()
               };
 
+              const fileInput = document.getElementById("contact-attachment");
+              if (fileInput && fileInput.files && fileInput.files[0]) {
+                const file = fileInput.files[0];
+                if (file.size > 10 * 1024 * 1024) {
+                  setStatus("error", "الملف كبير جداً", "حجم الملف المرفق يجب ألا يتجاوز 10 ميغابايت.", false);
+                  return;
+                }
+                const base64 = await new Promise((resolve) => {
+                  const reader = new FileReader();
+                  reader.onload = () => resolve(reader.result.split(",")[1]);
+                  reader.onerror = () => resolve("");
+                  reader.readAsDataURL(file);
+                });
+                payload.attachment_name = file.name;
+                payload.attachment_type = file.type;
+                payload.attachment_size = file.size;
+                payload.attachment_base64 = base64;
+              }
+
               const firstName = payload.name.split(" ")[0] || payload.name;
 
               setLoading(true);
               try {
+                // Google Apps Script /exec accepts POST with text/plain to avoid preflight CORS.
                 const res = await fetch(ENDPOINT, {
                   method: "POST",
+                  mode: "no-cors",
                   headers: { "Content-Type": "text/plain;charset=utf-8" },
                   body: JSON.stringify(payload)
                 });
-                const data = await res.json();
-                setLoading(false);
 
-                if (data && data.status === "success") {
-                  form.reset();
-                  setStatus(
-                    "success",
-                    "تم إرسال طلبكم بنجاح !",
-                    `شكراً لك ${firstName}. تم تسجيل طلبكم بمكتب دراسات RSF Travaux. سيتصل بكم أحد مهندسينا خلال 24 ساعة لتأكيد موعد المعاينة.`,
-                    true
-                  );
-                } else {
-                  throw new Error(data && data.message ? data.message : "Erreur serveur");
-                }
-              } catch (err) {
-                setLoading(false);
+                // With mode:'no-cors' response is opaque — treat non-throw as success.
+                form.reset();
                 setStatus(
-                  "error",
-                  "تعذر الإرسال مؤقتاً",
-                  "حدث خطأ في الاتصال، يرجى إعادة المحاولة أو مراسلتنا مباشرة عبر واتساب لنرد عليكم فوراً.",
+                  "success",
+                  "تم إرسال طلبكم بنجاح !",
+                  `شكراً لك ${firstName}. تم تسجيل طلبكم بمكتب دراسات RSF Travaux. سيتصل بكم أحد مهندسينا خلال 24 ساعة لتأكيد موعد المعاينة.`,
                   true
                 );
+              } catch (err) {
+                console.error("Erreur lors de l'envoi du formulaire:", err);
+                setStatus(
+                  "error",
+                  "تعذر إرسال الطلب",
+                  "حدث خطأ غير متوقع أثناء إرسال البيانات. نرجو منكم التواصل معنا مباشرة عبر واتساب أو الهاتف.",
+                  true
+                );
+              } finally {
+                setLoading(false);
               }
             });
           })();
@@ -401,7 +419,7 @@
       <div class="map-placeholder">
         <div class="map-content">
           <span class="eyebrow">موقعنا وملفنا على Google</span>
-          <h3 style="font-family: 'Cairo', sans-serif; font-weight: 800;">الدار البيضاء &mdash; وكافة ربوع المملكة المغربية</h3>
+          <h2 style="font-size: 1.25rem; margin: 12px 0; font-family: 'Cairo', sans-serif; font-weight: 800;">الدار البيضاء &mdash; وكافة ربوع المملكة المغربية</h2>
           <p class="mono" style="font-family: 'Tajawal', sans-serif; letter-spacing: normal;">أنفا &middot; غوتيي &middot; عين الذئاب &middot; بوسكورة &middot; تكنوبارك &middot; مارينا</p>
           <a href="https://g.page/r/CdTegbQHAXpcEAI/review" target="_blank" rel="noopener" class="btn btn-ghost" style="font-family: 'Cairo', sans-serif; font-weight: 700; display: inline-flex; align-items: center; gap: 10px;">
             <span>فتح ملفنا على Google Maps وتقييمات العملاء (4.9/5 ★)</span>

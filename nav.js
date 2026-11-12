@@ -63,7 +63,7 @@
     <li><a href="${l.href}" class="${(active === l.page || (active === 'service-detail' && l.page === 'services')) ? 'active' : ''}"><span class="link-num">${l.num}</span><span class="link-title">${l.title}</span></a></li>
   `).join("");
 
-  const brandSub = isAr ? "تهيئة وتجديد شامل" : "Aménagement &amp; Rénovation";
+  const brandSub = isAr ? "تهيئة وأشغال شاملة" : "Aménagement &amp; Travaux";
   const mobileEyebrow = isAr ? "RSF TRAVAUX · هندسة، تهيئة وتجديد شامل" : "RSF TRAVAUX · ARCHITECTURE &amp; RÉNOVATION";
   const mobileLocation = isAr ? "الدار البيضاء وكافة ربوع المملكة المغربية" : "Casablanca et partout au Maroc";
   const mobileCtaText = isAr ? "تواصل معنا عبر واتساب" : "Discuter sur WhatsApp";
@@ -138,11 +138,11 @@
 
   // Footer Content
   const footerTagline = isAr
-    ? "شركة ذات مسؤولية محدودة بشريك وحيد · تهيئة وتجديد شامل"
-    : "S.A.R.L. AU · Aménagement &amp; Rénovation";
+    ? "ش.م.م بشريك وحيد · التهيئة الداخلية والخارجية والأشغال"
+    : "S.A.R.L. AU · Aménagement Intérieur, Extérieur &amp; Travaux";
   const footerDesc = isAr
-    ? "شركة عامة للمقاولات وأشغال البناء بخبرة تفوق 21 عاماً بالدار البيضاء وكافة ربوع المملكة المغربية. مشاريع متكاملة تسليم المفتاح."
-    : "Entreprise générale de bâtiment forte de 21 ans d'expérience à Casablanca et partout au Maroc. Travaux clé en main.";
+    ? "شركة متخصصة في التهيئة الداخلية والخارجية وأشغال التجديد تسليم المفتاح بخبرة تفوق 21 عاماً بالدار البيضاء وكافة مدن المغرب."
+    : "Société d'aménagement intérieur, extérieur et travaux clé en main forte de 21 ans d'expérience à Casablanca et partout au Maroc.";
   const footerNavTitle = isAr ? "الملاحة" : "Navigation";
   const footerServicesTitle = isAr ? "تخصصاتنا الـ 18" : "Nos métiers (18)";
   const footerContactTitle = isAr ? "معلومات الاتصال" : "Contact";

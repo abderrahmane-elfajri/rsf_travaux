@@ -5,7 +5,7 @@
     primaryColor: "#c59b27",
     fontPairing: "architectural",
     theme: "light",
-    heroHeadline: "Nous transformons votre bâtiment en un espace moderne qui vous *ressemble*."
+    heroHeadline: "Aménagement intérieur & travaux *clé en main* au Maroc."
   };
 
   // Load from localStorage first (survives across pages)

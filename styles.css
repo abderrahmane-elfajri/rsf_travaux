@@ -7026,3 +7026,83 @@ html[dir="rtl"] .faq-q {
 html[data-theme="dark"] .faq-item {
   background: #0f182e;
 }
+
+/* Contextual inline SEO links in editorial copy */
+.about-inline-link {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(197, 155, 39, 0.55);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.about-inline-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* Related services internal linking block on service pages */
+.svc-related-section {
+  padding: 64px 0;
+  border-top: 1px solid var(--line);
+}
+.svc-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+.svc-related-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.svc-related-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(11, 19, 43, 0.08);
+}
+.svc-related-cat {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 600;
+}
+html[dir="rtl"] .svc-related-cat {
+  letter-spacing: 0;
+}
+.svc-related-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0;
+}
+.svc-related-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+}
+html[dir="rtl"] .svc-related-arrow svg {
+  transform: scaleX(-1);
+}
+@media (max-width: 900px) {
+  .svc-related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+html[data-theme="dark"] .svc-related-card {
+  background: #0f182e;
+}

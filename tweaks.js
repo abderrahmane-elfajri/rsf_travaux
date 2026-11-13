@@ -1,31 +1,40 @@
-// Shared Tweaks controller across all pages.
-// Persists to localStorage AND to the /*EDITMODE-BEGIN*/ block on index.html.
+/**
+ * RSF Travaux & Aménagement — Production Interactions & State Controller
+ * Gère les variables de marque, le curseur interactif Avant/Après (Multi-scènes),
+ * le feedback des pièces jointes et les protocoles d'affichage réactif.
+ * @version 2.0.0
+ */
 (function () {
-  const DEFAULTS = {
+  "use strict";
+
+  // 1. Configuration par défaut & Personnalisation de marque
+  const DEFAULTS = (typeof TWEAK_DEFAULTS !== "undefined") ? TWEAK_DEFAULTS : {
     primaryColor: "#c59b27",
-    fontPairing: "architectural",
+    fontPairing: "classic",
     theme: "light",
     heroHeadline: "Aménagement intérieur & travaux *clé en main* au Maroc."
   };
 
-  // Load from localStorage first (survives across pages)
-  function load() {
+  function loadState() {
     try {
       const raw = localStorage.getItem("rsf_tweaks");
-      if (raw) return { ...DEFAULTS, ...JSON.parse(raw) };
+      if (raw) return Object.assign({}, DEFAULTS, JSON.parse(raw));
     } catch (e) {}
-    return { ...DEFAULTS };
-  }
-  function save(state) {
-    try { localStorage.setItem("rsf_tweaks", JSON.stringify(state)); } catch (e) {}
+    return Object.assign({}, DEFAULTS);
   }
 
-  const state = load();
+  function saveState(s) {
+    try {
+      localStorage.setItem("rsf_tweaks", JSON.stringify(s));
+    } catch (e) {}
+  }
+
+  const state = loadState();
 
   function applyPrimary(color) {
+    if (!color) return;
     const root = document.documentElement;
     root.style.setProperty("--accent", color);
-    // Derive darker variant
     const c = color.replace("#", "");
     if (c.length === 6) {
       const r = Math.max(0, parseInt(c.slice(0, 2), 16) - 40);
@@ -35,9 +44,17 @@
       root.style.setProperty("--accent-2", hex);
     }
   }
-  function applyFont(name) { document.documentElement.setAttribute("data-font", name); }
-  function applyTheme(mode) { document.documentElement.setAttribute("data-theme", mode); }
+
+  function applyFont(name) {
+    if (name) document.documentElement.setAttribute("data-font", name);
+  }
+
+  function applyTheme(mode) {
+    if (mode) document.documentElement.setAttribute("data-theme", mode);
+  }
+
   function applyHeadline(text) {
+    if (!text) return;
     document.querySelectorAll("[data-hero-headline]").forEach(el => {
       el.innerHTML = text.replace(/\*([^*]+)\*/g, "<em>$1</em>");
     });
@@ -49,191 +66,35 @@
     applyTheme(state.theme);
     applyHeadline(state.heroHeadline);
   }
+
+  // Appliquer immédiatement les variables de marque
   applyAll();
 
-  // Expose for the panel
+  // API publique __rsf pour personnalisation et persistance
   window.__rsf = {
-    getState: () => ({ ...state }),
-    set: (patch) => {
+    getState: function () {
+      return Object.assign({}, state);
+    },
+    set: function (patch) {
       Object.assign(state, patch);
-      save(state);
+      saveState(state);
       applyAll();
-      // Persist to disk via edit-mode protocol
       try {
         if (window.location.protocol !== "file:" && window.parent && window.parent !== window) {
           window.parent.postMessage({ type: "__edit_mode_set_keys", edits: patch }, "*");
         }
       } catch (e) {}
-      // Refresh panel controls if open
-      if (typeof window.__rsfRenderPanel === "function") window.__rsfRenderPanel();
+      if (typeof window.__rsfRenderPanel === "function") {
+        window.__rsfRenderPanel();
+      }
     }
   };
 
-  // -------- Tweaks panel --------
-  let panelEl = null;
-  function buildPanel() {
-    if (panelEl) return panelEl;
-    panelEl = document.createElement("div");
-    panelEl.id = "rsf-tweaks-panel";
-    panelEl.innerHTML = `
-      <style>
-        #rsf-tweaks-panel {
-          position: fixed; right: 20px; bottom: 20px;
-          width: 320px;
-          background: #fbf7ef;
-          color: #1c1712;
-          border: 1px solid #d8ccb4;
-          border-radius: 8px;
-          padding: 18px;
-          font-family: "DM Sans", Helvetica, sans-serif;
-          font-size: 13px;
-          box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-          z-index: 99999;
-          display: none;
-        }
-        #rsf-tweaks-panel.open { display: block; }
-        #rsf-tweaks-panel h5 {
-          margin: 0 0 4px;
-          font-family: "Instrument Serif", Georgia, serif;
-          font-weight: 400;
-          font-size: 20px;
-        }
-        #rsf-tweaks-panel .sub {
-          font-size: 10px;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
-          color: #7a6e5f;
-          margin-bottom: 16px;
-        }
-        #rsf-tweaks-panel .tw-section { margin-top: 16px; border-top: 1px solid #ebe1cf; padding-top: 14px; }
-        #rsf-tweaks-panel .tw-label {
-          font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
-          color: #7a6e5f; margin-bottom: 10px; display: block;
-        }
-        #rsf-tweaks-panel .swatches { display: flex; gap: 8px; }
-        #rsf-tweaks-panel .sw {
-          width: 36px; height: 36px; border-radius: 50%;
-          border: 2px solid transparent; cursor: pointer;
-          transition: transform 0.15s;
-        }
-        #rsf-tweaks-panel .sw:hover { transform: scale(1.08); }
-        #rsf-tweaks-panel .sw.active { border-color: #1c1712; }
-        #rsf-tweaks-panel .segs { display: flex; gap: 4px; }
-        #rsf-tweaks-panel .seg {
-          flex: 1; padding: 8px 6px; border-radius: 4px;
-          background: #ebe1cf; border: 0; cursor: pointer;
-          font-family: inherit; font-size: 11px; color: #3a3129;
-          transition: all 0.15s;
-        }
-        #rsf-tweaks-panel .seg.active { background: #1c1712; color: #f4ede1; }
-        #rsf-tweaks-panel textarea {
-          width: 100%; box-sizing: border-box;
-          padding: 8px; border: 1px solid #d8ccb4; border-radius: 4px;
-          font-family: inherit; font-size: 13px; resize: vertical;
-          background: #f4ede1; color: #1c1712;
-        }
-        #rsf-tweaks-panel .hint {
-          font-size: 10px; color: #7a6e5f; margin-top: 6px;
-        }
-        #rsf-close {
-          position: absolute; top: 12px; right: 12px;
-          background: none; border: 0; cursor: pointer; font-size: 16px; color: #7a6e5f;
-        }
-      </style>
-      <button id="rsf-close" aria-label="Close">✕</button>
-      <h5>Tweaks</h5>
-      <div class="sub">RSF Travaux — style</div>
-
-      <div class="tw-section">
-        <label class="tw-label">Couleur primaire</label>
-        <div class="swatches" id="tw-colors">
-          <button class="sw" data-c="#c59b27" style="background:#c59b27" title="Or construction (marque)"></button>
-          <button class="sw" data-c="#e5c158" style="background:#e5c158" title="Or clair"></button>
-          <button class="sw" data-c="#b8624a" style="background:#b8624a" title="Terracotta"></button>
-          <button class="sw" data-c="#5c6f6a" style="background:#5c6f6a" title="Sauge"></button>
-          <button class="sw" data-c="#111e38" style="background:#111e38" title="Navy (marque)"></button>
-        </div>
-      </div>
-
-      <div class="tw-section">
-        <label class="tw-label">Pairing typographique</label>
-        <div class="segs" id="tw-fonts">
-          <button class="seg" data-f="editorial">Éditorial</button>
-          <button class="seg" data-f="architectural">Archi</button>
-          <button class="seg" data-f="classic">Classique</button>
-        </div>
-      </div>
-
-      <div class="tw-section">
-        <label class="tw-label">Thème</label>
-        <div class="segs" id="tw-theme">
-          <button class="seg" data-t="light">Clair</button>
-          <button class="seg" data-t="dark">Sombre</button>
-        </div>
-      </div>
-
-      <div class="tw-section">
-        <label class="tw-label">Titre du héros</label>
-        <textarea id="tw-headline" rows="3"></textarea>
-        <div class="hint">Utilisez *étoiles* pour la mise en italique / accent.</div>
-      </div>
-    `;
-    document.body.appendChild(panelEl);
-
-    panelEl.querySelector("#rsf-close").addEventListener("click", () => {
-      panelEl.classList.remove("open");
-    });
-    panelEl.querySelectorAll("#tw-colors .sw").forEach(el => {
-      el.addEventListener("click", () => window.__rsf.set({ primaryColor: el.dataset.c }));
-    });
-    panelEl.querySelectorAll("#tw-fonts .seg").forEach(el => {
-      el.addEventListener("click", () => window.__rsf.set({ fontPairing: el.dataset.f }));
-    });
-    panelEl.querySelectorAll("#tw-theme .seg").forEach(el => {
-      el.addEventListener("click", () => window.__rsf.set({ theme: el.dataset.t }));
-    });
-    const ta = panelEl.querySelector("#tw-headline");
-    ta.addEventListener("input", () => window.__rsf.set({ heroHeadline: ta.value }));
-    return panelEl;
-  }
-
-  window.__rsfRenderPanel = function () {
-    if (!panelEl) return;
-    panelEl.querySelectorAll("#tw-colors .sw").forEach(el => {
-      el.classList.toggle("active", el.dataset.c === state.primaryColor);
-    });
-    panelEl.querySelectorAll("#tw-fonts .seg").forEach(el => {
-      el.classList.toggle("active", el.dataset.f === state.fontPairing);
-    });
-    panelEl.querySelectorAll("#tw-theme .seg").forEach(el => {
-      el.classList.toggle("active", el.dataset.t === state.theme);
-    });
-    const ta = panelEl.querySelector("#tw-headline");
-    if (ta && document.activeElement !== ta) ta.value = state.heroHeadline;
-  };
-
-  // Edit-mode protocol
-  window.addEventListener("message", (e) => {
-    const d = e.data || {};
-    if (d.type === "__activate_edit_mode") {
-      buildPanel();
-      panelEl.classList.add("open");
-      window.__rsfRenderPanel();
-    } else if (d.type === "__deactivate_edit_mode") {
-      if (panelEl) panelEl.classList.remove("open");
-    }
-  });
-  try {
-    if (window.location.protocol !== "file:" && window.parent && window.parent !== window) {
-      window.parent.postMessage({ type: "__edit_mode_available" }, "*");
-    }
-  } catch (e) {}
-
-  // Before / After interactive slider (Multi-Scene - Mobile Optimized)
-  (function initBeforeAfter() {
-    const container = document.getElementById('ba-slider');
-    const afterLayer = document.getElementById('ba-after-layer');
-    const handle = document.getElementById('ba-handle');
+  // 2. Curseur interactif Avant / Après (Multi-Scènes — Optimisé Mobile & Tactile)
+  function initBeforeAfter() {
+    const container = document.getElementById("ba-slider");
+    const afterLayer = document.getElementById("ba-after-layer");
+    const handle = document.getElementById("ba-handle");
     if (!container || !afterLayer || !handle) return;
 
     let isDown = false;
@@ -241,15 +102,17 @@
     function setWidthVar() {
       const rect = container.getBoundingClientRect();
       if (rect.width > 0) {
-        container.style.setProperty('--ba-w', rect.width + 'px');
+        container.style.setProperty("--ba-w", rect.width + "px");
       }
     }
     setWidthVar();
-    window.addEventListener('resize', setWidthVar);
-    window.addEventListener('orientationchange', () => setTimeout(setWidthVar, 100));
+    window.addEventListener("resize", setWidthVar);
+    window.addEventListener("orientationchange", function () {
+      setTimeout(setWidthVar, 120);
+    });
 
-    const labelAfter = container.querySelector('.ba-label-after');
-    const labelBefore = container.querySelector('.ba-label-before');
+    const labelAfter = container.querySelector(".ba-label-after");
+    const labelBefore = container.querySelector(".ba-label-before");
 
     function updatePos(clientX) {
       const rect = container.getBoundingClientRect();
@@ -258,82 +121,92 @@
       if (x < 0) x = 0;
       if (x > rect.width) x = rect.width;
       const pct = (x / rect.width) * 100;
-      
-      afterLayer.style.width = pct + '%';
-      handle.style.left = pct + '%';
 
-      if (labelAfter) labelAfter.style.opacity = pct < 10 ? '0' : '1';
-      if (labelBefore) labelBefore.style.opacity = pct > 90 ? '0' : '1';
+      afterLayer.style.width = pct + "%";
+      handle.style.left = pct + "%";
+
+      if (labelAfter) labelAfter.style.opacity = pct < 10 ? "0" : "1";
+      if (labelBefore) labelBefore.style.opacity = pct > 90 ? "0" : "1";
     }
 
-    // Use modern Pointer Events with pointer capture for buttery-smooth mobile drag
     if (window.PointerEvent) {
-      container.addEventListener('pointerdown', e => {
+      container.addEventListener("pointerdown", function (e) {
         isDown = true;
         setWidthVar();
-        try { container.setPointerCapture(e.pointerId); } catch(err) {}
+        try {
+          container.setPointerCapture(e.pointerId);
+        } catch (err) {}
         updatePos(e.clientX);
       });
-      container.addEventListener('pointermove', e => {
-        if (isDown) {
-          updatePos(e.clientX);
-        }
+      container.addEventListener("pointermove", function (e) {
+        if (isDown) updatePos(e.clientX);
       });
-      const endDrag = e => {
+      const endDrag = function (e) {
         if (isDown) {
           isDown = false;
-          try { container.releasePointerCapture(e.pointerId); } catch(err) {}
+          try {
+            container.releasePointerCapture(e.pointerId);
+          } catch (err) {}
         }
       };
-      container.addEventListener('pointerup', endDrag);
-      container.addEventListener('pointercancel', endDrag);
+      container.addEventListener("pointerup", endDrag);
+      container.addEventListener("pointercancel", endDrag);
     } else {
-      container.addEventListener('mousedown', e => { isDown = true; setWidthVar(); updatePos(e.clientX); });
-      window.addEventListener('mouseup', () => { isDown = false; });
-      window.addEventListener('mousemove', e => { if (isDown) updatePos(e.clientX); });
-
-      container.addEventListener('touchstart', e => {
+      container.addEventListener("mousedown", function (e) {
         isDown = true;
         setWidthVar();
-        updatePos(e.touches[0].clientX);
+        updatePos(e.clientX);
+      });
+      window.addEventListener("mouseup", function () {
+        isDown = false;
+      });
+      window.addEventListener("mousemove", function (e) {
+        if (isDown) updatePos(e.clientX);
+      });
+
+      container.addEventListener("touchstart", function (e) {
+        isDown = true;
+        setWidthVar();
+        if (e.touches && e.touches[0]) updatePos(e.touches[0].clientX);
       }, { passive: true });
-      window.addEventListener('touchend', () => { isDown = false; });
-      window.addEventListener('touchmove', e => {
-        if (isDown) updatePos(e.touches[0].clientX);
+      window.addEventListener("touchend", function () {
+        isDown = false;
+      });
+      window.addEventListener("touchmove", function (e) {
+        if (isDown && e.touches && e.touches[0]) updatePos(e.touches[0].clientX);
       }, { passive: true });
     }
 
-    // Multi-scene tabs switcher
-    const tabs = document.querySelectorAll('.ba-tab');
-    const imgBefore = document.getElementById('ba-img-before');
-    const imgAfter = document.getElementById('ba-img-after');
-    const sceneTitle = document.getElementById('ba-scene-title');
+    // Gestion des onglets multi-chantiers (Préchargement instantané)
+    const tabs = document.querySelectorAll(".ba-tab");
+    const imgBefore = document.getElementById("ba-img-before");
+    const imgAfter = document.getElementById("ba-img-after");
+    const sceneTitle = document.getElementById("ba-scene-title");
 
-    // Preload all scene images immediately for instant switching
-    tabs.forEach(tab => {
-      const b = tab.getAttribute('data-scene-before');
-      const a = tab.getAttribute('data-scene-after');
+    tabs.forEach(function (tab) {
+      const b = tab.getAttribute("data-scene-before");
+      const a = tab.getAttribute("data-scene-after");
       if (b) { const i1 = new Image(); i1.src = b; }
       if (a) { const i2 = new Image(); i2.src = a; }
     });
 
-    if (imgBefore) imgBefore.addEventListener('load', setWidthVar);
-    if (imgAfter) imgAfter.addEventListener('load', setWidthVar);
+    if (imgBefore) imgBefore.addEventListener("load", setWidthVar);
+    if (imgAfter) imgAfter.addEventListener("load", setWidthVar);
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (t) {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
         });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
 
-        const newBefore = tab.getAttribute('data-scene-before');
-        const newAfter = tab.getAttribute('data-scene-after');
-        const altBefore = tab.getAttribute('data-alt-before');
-        const altAfter = tab.getAttribute('data-alt-after');
-        const caption = tab.getAttribute('data-caption');
+        const newBefore = tab.getAttribute("data-scene-before");
+        const newAfter = tab.getAttribute("data-scene-after");
+        const altBefore = tab.getAttribute("data-alt-before");
+        const altAfter = tab.getAttribute("data-alt-after");
+        const caption = tab.getAttribute("data-caption");
 
         if (imgBefore && newBefore) {
           imgBefore.src = newBefore;
@@ -347,35 +220,58 @@
           sceneTitle.textContent = caption;
         }
 
-        // Smooth center tab into view on mobile
         try {
-          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          tab.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
         } catch (e) {}
 
-        // Reset handle to 50%
-        afterLayer.style.width = '50%';
-        handle.style.left = '50%';
-        if (labelAfter) labelAfter.style.opacity = '1';
-        if (labelBefore) labelBefore.style.opacity = '1';
+        afterLayer.style.width = "50%";
+        handle.style.left = "50%";
+        if (labelAfter) labelAfter.style.opacity = "1";
+        if (labelBefore) labelBefore.style.opacity = "1";
         setWidthVar();
       });
     });
-  })();
+  }
 
-  // Contact form enhancements
-  (function initContactForm() {
-    const fileInput = document.getElementById('contact-attachment');
-    const fileNameSpan = document.getElementById('file-upload-name');
+  // 3. Feedback interactif pour upload de plans / photos dans les formulaires de contact
+  function initContactForm() {
+    const fileInput = document.getElementById("contact-attachment");
+    const fileNameSpan = document.getElementById("file-upload-name");
     if (fileInput && fileNameSpan) {
-      fileInput.addEventListener('change', () => {
-        if (fileInput.files.length > 0) {
-          const isAr = document.documentElement.lang === 'ar' || window.location.pathname.includes('/ar/');
-          fileNameSpan.textContent = (isAr ? 'تم اختيار الملف : ' : 'Fichier sélectionné : ') + fileInput.files[0].name;
-          fileNameSpan.style.fontWeight = '600';
-          fileNameSpan.style.color = 'var(--accent)';
+      fileInput.addEventListener("change", function () {
+        if (fileInput.files && fileInput.files.length > 0) {
+          const isAr = document.documentElement.lang === "ar" || window.location.pathname.includes("/ar/");
+          fileNameSpan.textContent = (isAr ? "تم اختيار الملف : " : "Fichier sélectionné : ") + fileInput.files[0].name;
+          fileNameSpan.style.fontWeight = "600";
+          fileNameSpan.style.color = "var(--accent)";
         }
       });
     }
-  })();
+  }
 
+  // 4. Initialisation sécurisée au chargement du DOM
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      initBeforeAfter();
+      initContactForm();
+    });
+  } else {
+    initBeforeAfter();
+    initContactForm();
+  }
+
+  // 5. Protocole optionnel pour l'éditeur iframe de développement (chargé uniquement si embarqué)
+  try {
+    if (window.location.protocol !== "file:" && window.parent && window.parent !== window) {
+      window.addEventListener("message", function (e) {
+        const d = e.data || {};
+        if (d.type === "__activate_edit_mode") {
+          document.documentElement.setAttribute("data-edit-mode", "true");
+        } else if (d.type === "__deactivate_edit_mode") {
+          document.documentElement.removeAttribute("data-edit-mode");
+        }
+      });
+      window.parent.postMessage({ type: "__edit_mode_available" }, "*");
+    }
+  } catch (e) {}
 })();
